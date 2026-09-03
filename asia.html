@@ -1,0 +1,9815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asia Tourist Places | Explore Asia</title>
+<meta name="description"
+      content="Explore 48 countries in Asia and discover famous cities, landmarks, beaches, temples, mountains and natural attractions.">
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --primary:#087b73;
+    --primary-dark:#064f4a;
+    --heading:#123d3d;
+    --text:#60738c;
+    --light-bg:#f7f9fa;
+    --white:#ffffff;
+    --border:#e1e8eb;
+    --shadow:0 8px 25px rgba(28,55,70,.07);
+    --shadow-hover:0 18px 40px rgba(28,55,70,.15);
+}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light-bg);
+    color:var(--heading);
+    line-height:1.6;
+}
+/* HERO */
+.asia-hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(
+
+            rgba(6,55,58,.68),
+
+            rgba(6,55,58,.68)
+
+        ),
+
+        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2000&q=85")
+
+        center/cover no-repeat;
+
+}
+
+
+
+.hero-content{
+
+    max-width:900px;
+
+    color:white;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero-eyebrow{
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+    color:#9ee7df;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.hero-content h1{
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:clamp(48px,7vw,82px);
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+
+
+.hero-content p{
+
+    max-width:720px;
+
+    margin:0 auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.9);
+
+}
+
+
+
+.country-count{
+
+    margin-top:30px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.14);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    backdrop-filter:blur(8px);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+
+/* MAIN */
+
+
+
+.destinations{
+
+    width:100%;
+
+    padding:85px 0;
+
+    background:var(--light-bg);
+
+}
+
+
+
+.container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+}
+
+
+
+/* HEADING */
+
+
+
+.section-heading{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:40px;
+
+    padding:0 5%;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.eyebrow{
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.section-heading h2{
+
+    color:var(--heading);
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:52px;
+
+    line-height:1.05;
+
+    font-weight:600;
+
+}
+
+
+
+.section-description{
+
+    max-width:520px;
+
+    color:var(--text);
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* CONTROLS */
+
+
+
+.controls{
+
+    padding:0 5%;
+
+    margin-bottom:45px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.search-box{
+
+    position:relative;
+
+    flex:1;
+
+    min-width:280px;
+
+    max-width:480px;
+
+}
+
+
+
+.search-box input{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 20px 0 48px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    background:white;
+
+    color:var(--heading);
+
+    font-size:15px;
+
+    outline:none;
+
+    box-shadow:0 5px 18px rgba(28,55,70,.05);
+
+}
+
+
+
+.search-box input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(8,123,115,.1);
+
+}
+
+
+
+.search-icon{
+
+    position:absolute;
+
+    left:19px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:19px;
+
+    color:var(--text);
+
+}
+
+
+
+.filters{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.filter-btn{
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    color:var(--heading);
+
+    padding:10px 16px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+}
+
+
+
+.filter-btn:hover,
+
+.filter-btn.active{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    color:white;
+
+}
+
+
+
+/* GRID */
+
+
+
+.destination-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+    padding:0 5%;
+
+}
+
+
+
+/* CARD */
+
+
+
+.destination-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+    animation:cardAppear .45s ease both;
+
+    cursor:pointer;
+
+}
+
+
+
+.destination-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+
+@keyframes cardAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* IMAGE */
+
+
+
+.card-image{
+
+    width:100%;
+
+    height:270px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:transform .45s ease;
+
+}
+
+
+
+.destination-card:hover .card-image img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.country-number{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    min-width:42px;
+
+    height:42px;
+
+    padding:0 12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    color:var(--heading);
+
+    font-size:14px;
+
+    font-weight:800;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+
+}
+
+
+
+.location-tag{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:white;
+
+    color:var(--heading);
+
+    padding:9px 15px;
+
+    border-radius:25px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+
+}
+
+
+
+/* CONTENT */
+
+
+
+.card-content{
+
+    padding:27px 27px 30px;
+
+}
+
+
+
+.card-location{
+
+    color:var(--primary);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.2px;
+
+    margin-bottom:9px;
+
+}
+
+
+
+.card-content h3{
+
+    color:var(--heading);
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:31px;
+
+    line-height:1.15;
+
+    font-weight:600;
+
+    margin-bottom:13px;
+
+}
+
+
+
+.card-description{
+
+    color:var(--text);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* FOOTER */
+
+
+
+.card-footer{
+
+    margin-top:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.region{
+
+    color:#8090a0;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+
+}
+
+
+
+.explore-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:800;
+
+}
+
+
+
+.explore-link span{
+
+    font-size:18px;
+
+    transition:transform .25s ease;
+
+}
+
+
+
+.destination-card:hover .explore-link span{
+
+    transform:translateX(5px);
+
+}
+
+
+
+/* NO RESULTS */
+
+
+
+.no-results{
+
+    display:none;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    color:var(--text);
+
+}
+
+
+
+.no-results h3{
+
+    color:var(--heading);
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+/* FOOTER */
+
+
+
+.asia-footer{
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:#123d3d;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+
+
+.asia-footer h2{
+
+    color:white;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.asia-footer p{
+
+    font-size:14px;
+
+}
+
+
+
+/* TABLET */
+
+
+
+@media(max-width:1100px){
+
+
+
+    .destination-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+
+    .section-heading{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+    }
+
+
+
+    .section-heading h2{
+
+        font-size:45px;
+
+    }
+
+}
+
+
+
+/* MOBILE */
+
+
+
+@media(max-width:700px){
+
+
+
+    .asia-hero{
+
+        min-height:440px;
+
+        padding:60px 20px;
+
+    }
+
+
+
+    .hero-content h1{
+
+        font-size:52px;
+
+    }
+
+
+
+    .hero-content p{
+
+        font-size:15px;
+
+    }
+
+
+
+    .destinations{
+
+        padding:60px 0;
+
+    }
+
+
+
+    .section-heading{
+
+        padding:0 20px;
+
+        margin-bottom:30px;
+
+        gap:18px;
+
+    }
+
+
+
+    .section-heading h2{
+
+        font-size:38px;
+
+    }
+
+
+
+    .section-description{
+
+        font-size:15px;
+
+    }
+
+
+
+    .controls{
+
+        padding:0 20px;
+
+        margin-bottom:35px;
+
+    }
+
+
+
+    .search-box{
+
+        min-width:100%;
+
+    }
+
+
+
+    .filters{
+
+        width:100%;
+
+    }
+
+
+
+    .filter-btn{
+
+        flex:1;
+
+    }
+
+
+
+    .destination-container{
+
+        grid-template-columns:1fr;
+
+        padding:0 20px;
+
+        gap:24px;
+
+    }
+
+
+
+    .card-image{
+
+        height:250px;
+
+    }
+
+
+
+    .card-content{
+
+        padding:25px 23px 27px;
+
+    }
+
+
+
+    .card-content h3{
+
+        font-size:29px;
+
+    }
+
+}
+
+
+
+@media(max-width:430px){
+
+
+
+    .hero-content h1{
+
+        font-size:45px;
+
+    }
+
+
+
+    .filters{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+
+    .filter-btn{
+
+        width:100%;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- HERO -->
+
+
+
+<header class="asia-hero">
+
+
+
+    <div class="hero-content">
+
+
+
+        <span class="hero-eyebrow">
+
+            Explore the Continent
+
+        </span>
+
+
+
+        <h1>Asia</h1>
+
+
+
+        <p>
+
+            Discover ancient civilizations, spectacular wildlife,
+
+            golden deserts, tropical beaches, vibrant cities,
+
+            majestic mountains and unforgettable landscapes
+
+            across Asia.
+
+        </p>
+
+
+
+        <div class="country-count">
+
+            🌏 48 Countries to Explore
+
+        </div>
+
+
+
+    </div>
+
+
+
+</header>
+
+
+
+
+
+<!-- DESTINATIONS -->
+
+
+
+<section class="destinations">
+
+
+
+<div class="container">
+
+
+
+    <div class="section-heading">
+
+
+
+        <div>
+
+
+
+            <p class="eyebrow">
+
+                ASIA TRAVEL GUIDE
+
+            </p>
+
+
+
+            <h2>
+
+                Countries &amp;<br>
+
+                Tourist Places
+
+            </h2>
+
+
+
+        </div>
+
+
+
+        <p class="section-description">
+
+            Explore famous destinations across Asia, from the
+
+            pyramids of Egypt and Serengeti National Park to
+
+            Victoria Falls, Cape Town, Sahara landscapes,
+
+            tropical islands and historic cities.
+
+        </p>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- SEARCH + FILTER -->
+
+
+
+    <div class="controls">
+
+
+
+        <div class="search-box">
+
+
+
+            <span class="search-icon">⌕</span>
+
+
+
+            <input
+
+                type="search"
+
+                id="countrySearch"
+
+                placeholder="Search country or tourist place..."
+
+                aria-label="Search Asian countries and tourist places">
+
+
+
+        </div>
+
+
+
+
+
+        <div class="filters">
+
+
+
+            <button class="filter-btn active" data-region="all">
+
+                All
+
+            </button>
+
+
+
+            <button class="filter-btn" data-region="South Asia">
+
+                South Asia
+
+            </button>
+
+
+
+            <button class="filter-btn" data-region="East Asia">
+
+                East Asia
+
+            </button>
+
+
+
+            <button class="filter-btn" data-region="Southeast Asia">
+
+                Southeast Asia
+
+            </button>
+
+
+
+            <button class="filter-btn" data-region="Central Asia">
+
+                Central Asia
+
+            </button>
+
+
+
+            <button class="filter-btn" data-region="West Asia">
+
+                West Asia
+
+            </button>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- COUNTRY CARDS -->
+
+
+
+    <div
+
+        class="destination-container"
+
+        id="destinationContainer">
+
+    </div>
+
+
+
+
+
+    <div class="no-results" id="noResults">
+
+
+
+        <h3>No destinations found</h3>
+
+
+
+        <p>
+
+            Try searching for another country, city or attraction.
+
+        </p>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+
+
+
+<footer class="asia-footer">
+
+
+
+    <h2>Explore Asia</h2>
+
+
+
+    <p>
+
+        48 countries • Hundreds of unforgettable destinations
+
+    </p>
+
+
+
+</footer>
+
+
+
+
+
+<script>
+
+
+
+/* =========================================================
+
+   ASIAN COUNTRIES
+
+   ========================================================= */
+
+
+
+const countries = [
+
+
+
+    /* =========================================
+
+       1 - INDIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 1,
+
+        name: "India",
+
+        emoji: "🇮🇳",
+
+        region: "South Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover India's incredible mix of ancient monuments, colorful cities, spiritual traditions, beaches and mountain landscapes.",
+
+        places: [
+            "Andhra Pradesh | Tirupati – Sri Venkateswara Temple",
+            "Andhra Pradesh | Vijayawada – Kanaka Durga Temple",
+            "Andhra Pradesh | Srisailam – Mallikarjuna Temple",
+            "Andhra Pradesh | Amaravati – Amareswara Temple",
+            "Andhra Pradesh | Lepakshi – Veerabhadra Temple",
+            "Andhra Pradesh | Visakhapatnam – Kailasagiri",
+            "Arunachal Pradesh | Tawang – Tawang Monastery",
+            "Arunachal Pradesh | Bomdila – Bomdila Monastery",
+            "Arunachal Pradesh | Itanagar – Ita Fort",
+            "Arunachal Pradesh | Ziro – Ziro Valley",
+            "Arunachal Pradesh | Dirang – Dirang Valley",
+            "Arunachal Pradesh | Sela Pass – Sela Lake",
+            "Assam | Guwahati – Kamakhya Temple",
+            "Assam | Sivasagar – Sivadol Temple",
+            "Assam | Majuli – Majuli Island",
+            "Assam | Kaziranga – Kaziranga National Park",
+            "Assam | Tezpur – Agnigarh",
+            "Assam | Haflong – Haflong Lake",
+            "Bihar | Bodh Gaya – Mahabodhi Temple",
+            "Bihar | Patna – Golghar",
+            "Bihar | Nalanda – Nalanda Mahavihara",
+            "Bihar | Rajgir – Gridhakuta Hill",
+            "Bihar | Vaishali – Ashokan Pillar",
+            "Bihar | Patna – Patna Sahib Gurudwara",
+            "Chhattisgarh | Bastar – Chitrakote Falls",
+            "Chhattisgarh | Dantewada – Danteshwari Temple",
+            "Chhattisgarh | Raipur – Mahant Ghasidas Museum",
+            "Chhattisgarh | Sirpur – Laxman Temple",
+            "Chhattisgarh | Bhoramdeo – Bhoramdeo Temple",
+            "Chhattisgarh | Mainpat – Mainpat Hills",
+            "Goa | Panaji – Basilica of Bom Jesus",
+            "Goa | Old Goa – Se Cathedral",
+            "Goa | Ponda – Shantadurga Temple",
+            "Goa | Ponda – Shri Mangueshi Temple",
+            "Goa | Calangute – Calangute Beach",
+            "Goa | Palolem – Palolem Beach",
+            "Gujarat | Ahmedabad – Sabarmati Ashram",
+            "Gujarat | Somnath – Somnath Temple",
+            "Gujarat | Dwarka – Dwarkadhish Temple",
+            "Gujarat | Modhera – Sun Temple",
+            "Gujarat | Statue of Unity – Ekta Nagar",
+            "Gujarat | Gir – Gir National Park",
+            "Haryana | Kurukshetra – Brahma Sarovar",
+            "Haryana | Pinjore – Pinjore Gardens",
+            "Haryana | Gurugram – Kingdom of Dreams",
+            "Haryana | Faridabad – Surajkund",
+            "Haryana | Panipat – Panipat Museum",
+            "Haryana | Thanesar – Sthaneshwar Mahadev Temple",
+            "Himachal Pradesh | Shimla – The Ridge",
+            "Himachal Pradesh | Manali – Hadimba Temple",
+            "Himachal Pradesh | Dharamshala – Tsuglagkhang Complex",
+            "Himachal Pradesh | Kullu – Raghunath Temple",
+            "Himachal Pradesh | Mandi – Bhutnath Temple",
+            "Himachal Pradesh | Spiti – Key Monastery",
+            "Jharkhand | Deoghar – Baidyanath Temple",
+            "Jharkhand | Ranchi – Dassam Falls",
+            "Jharkhand | Ranchi – Jagannath Temple",
+            "Jharkhand | Netarhat – Magnolia Point",
+            "Jharkhand | Hazaribagh – Hazaribagh National Park",
+            "Jharkhand | Parasnath – Shikharji",
+            "Karnataka | Mysuru – Mysore Palace",
+            "Karnataka | Hampi – Virupaksha Temple",
+            "Karnataka | Belur – Chennakeshava Temple",
+            "Karnataka | Halebidu – Hoysaleswara Temple",
+            "Karnataka | Badami – Badami Cave Temples",
+            "Karnataka | Udupi – Sri Krishna Temple",
+            "Kerala | Thiruvananthapuram – Sree Padmanabhaswamy Temple",
+            "Kerala | Kochi – Fort Kochi",
+            "Kerala | Alappuzha – Alleppey Backwaters",
+            "Kerala | Munnar – Tea Gardens",
+            "Kerala | Kozhikode – Kappad Beach",
+            "Kerala | Thrissur – Vadakkunnathan Temple",
+            "Madhya Pradesh | Khajuraho – Kandariya Mahadeva Temple",
+            "Madhya Pradesh | Ujjain – Mahakaleshwar Temple",
+            "Madhya Pradesh | Bhopal – Sanchi Stupa",
+            "Madhya Pradesh | Gwalior – Gwalior Fort",
+            "Madhya Pradesh | Orchha – Ram Raja Temple",
+            "Madhya Pradesh | Jabalpur – Bhedaghat Marble Rocks",
+            "Maharashtra | Mumbai – Gateway of India",
+            "Maharashtra | Mumbai – Siddhivinayak Temple",
+            "Maharashtra | Pune – Shaniwar Wada",
+            "Maharashtra | Nashik – Trimbakeshwar Temple",
+            "Maharashtra | Aurangabad – Ajanta Caves",
+            "Maharashtra | Aurangabad – Ellora Caves",
+            "Manipur | Imphal – Kangla Fort",
+            "Manipur | Imphal – Shri Govindajee Temple",
+            "Manipur | Loktak Lake – Loktak Lake",
+            "Manipur | Moirang – INA Memorial",
+            "Manipur | Ukhrul – Shirui Hills",
+            "Manipur | Keibul Lamjao – National Park",
+            "Meghalaya | Shillong – Shillong Peak",
+            "Meghalaya | Cherrapunji – Nohkalikai Falls",
+            "Meghalaya | Cherrapunji – Mawsmai Cave",
+            "Meghalaya | Mawlynnong – Living Root Bridge",
+            "Meghalaya | Dawki – Umngot River",
+            "Meghalaya | Nartiang – Durga Temple",
+            "Mizoram | Aizawl – Durtlang Hills",
+            "Mizoram | Aizawl – Solomon's Temple",
+            "Mizoram | Champhai – Rih Dil",
+            "Mizoram | Lunglei – Khawnglung Wildlife Sanctuary",
+            "Mizoram | Reiek – Reiek Tlang",
+            "Mizoram | Vantawng – Vantawng Falls",
+            "Nagaland | Kohima – Kohima War Cemetery",
+            "Nagaland | Kohima – Naga Heritage Village",
+            "Nagaland | Dimapur – Kachari Ruins",
+            "Nagaland | Dzukou Valley – Dzukou Valley",
+            "Nagaland | Mon – Longwa Village",
+            "Nagaland | Mokokchung – Ungma Village",
+            "Odisha | Puri – Jagannath Temple",
+            "Odisha | Bhubaneswar – Lingaraj Temple",
+            "Odisha | Konark – Sun Temple",
+            "Odisha | Bhubaneswar – Udayagiri Caves",
+            "Odisha | Chilika – Chilika Lake",
+            "Odisha | Cuttack – Barabati Fort",
+            "Punjab | Amritsar – Golden Temple",
+            "Punjab | Amritsar – Jallianwala Bagh",
+            "Punjab | Amritsar – Wagah Border",
+            "Punjab | Patiala – Qila Mubarak",
+            "Punjab | Anandpur Sahib – Takht Sri Kesgarh Sahib",
+            "Punjab | Ludhiana – Maharaja Ranjit Singh War Museum",
+            "Rajasthan | Jaipur – Amber Fort",
+            "Rajasthan | Jaipur – Hawa Mahal",
+            "Rajasthan | Udaipur – City Palace",
+            "Rajasthan | Jodhpur – Mehrangarh Fort",
+            "Rajasthan | Pushkar – Brahma Temple",
+            "Rajasthan | Jaisalmer – Jaisalmer Fort",
+            "Sikkim | Gangtok – Rumtek Monastery",
+            "Sikkim | Gangtok – Tsomgo Lake",
+            "Sikkim | Pelling – Pemayangtse Monastery",
+            "Sikkim | Yuksom – Dubdi Monastery",
+            "Sikkim | Namchi – Char Dham",
+            "Sikkim | Lachung – Yumthang Valley",
+            "Tamil Nadu | Chennai – Kapaleeshwarar Temple",
+            "Tamil Nadu | Madurai – Meenakshi Amman Temple",
+            "Tamil Nadu | Thanjavur – Brihadeeswarar Temple",
+            "Tamil Nadu | Rameswaram – Ramanathaswamy Temple",
+            "Tamil Nadu | Mahabalipuram – Shore Temple",
+            "Tamil Nadu | Kanyakumari – Vivekananda Rock Memorial",
+            "Telangana | Hyderabad – Charminar",
+            "Telangana | Hyderabad – Golconda Fort",
+            "Telangana | Hyderabad – Birla Mandir",
+            "Telangana | Warangal – Thousand Pillar Temple",
+            "Telangana | Yadadri – Lakshmi Narasimha Temple",
+            "Telangana | Nizamabad – Dichpally Ramalayam",
+            "Tripura | Agartala – Ujjayanta Palace",
+            "Tripura | Agartala – Tripura Sundari Temple",
+            "Tripura | Neermahal – Neermahal Palace",
+            "Tripura | Unakoti – Unakoti Rock Carvings",
+            "Tripura | Jampui Hills – Jampui Hills",
+            "Tripura | Sepahijala – Wildlife Sanctuary",
+            "Uttar Pradesh | Agra – Taj Mahal",
+            "Uttar Pradesh | Agra – Agra Fort",
+            "Uttar Pradesh | Varanasi – Kashi Vishwanath Temple",
+            "Uttar Pradesh | Ayodhya – Ram Mandir",
+            "Uttar Pradesh | Mathura – Krishna Janmabhoomi Temple",
+            "Uttar Pradesh | Lucknow – Bara Imambara",
+            "Uttarakhand | Kedarnath – Kedarnath Temple",
+            "Uttarakhand | Badrinath – Badrinath Temple",
+            "Uttarakhand | Rishikesh – Laxman Jhula",
+            "Uttarakhand | Haridwar – Har Ki Pauri",
+            "Uttarakhand | Nainital – Naini Lake",
+            "Uttarakhand | Mussoorie – Mall Road",
+            "West Bengal | Kolkata – Victoria Memorial",
+            "West Bengal | Kolkata – Dakshineswar Kali Temple",
+            "West Bengal | Kolkata – Kalighat Temple",
+            "West Bengal | Darjeeling – Tiger Hill",
+            "West Bengal | Sundarbans – Sundarbans National Park",
+            "West Bengal | Bishnupur – Rasmancha Temple",
+            "Andaman and Nicobar Islands | Port Blair – Cellular Jail",
+            "Andaman and Nicobar Islands | Havelock Island – Radhanagar Beach",
+            "Andaman and Nicobar Islands | Havelock Island – Elephant Beach",
+            "Andaman and Nicobar Islands | Ross Island – Netaji Subhas Chandra Bose Island",
+            "Andaman and Nicobar Islands | Baratang – Limestone Caves",
+            "Andaman and Nicobar Islands | Neil Island – Bharatpur Beach",
+            "Chandigarh | Chandigarh – Rock Garden",
+            "Chandigarh | Chandigarh – Sukhna Lake",
+            "Chandigarh | Chandigarh – Rose Garden",
+            "Chandigarh | Chandigarh – Capitol Complex",
+            "Chandigarh | Chandigarh – ISKCON Temple",
+            "Chandigarh | Chandigarh – Government Museum and Art Gallery",
+            "Dadra and Nagar Haveli and Daman and Diu | Daman – Devka Beach",
+            "Dadra and Nagar Haveli and Daman and Diu | Daman – Fort Jerome",
+            "Dadra and Nagar Haveli and Daman and Diu | Diu – Diu Fort",
+            "Dadra and Nagar Haveli and Daman and Diu | Diu – St. Paul's Church",
+            "Dadra and Nagar Haveli and Daman and Diu | Silvassa – Tribal Cultural Museum",
+            "Dadra and Nagar Haveli and Daman and Diu | Silvassa – Vanganga Lake Garden",
+            "Delhi | Delhi – Red Fort",
+            "Delhi | Delhi – India Gate",
+            "Delhi | Delhi – Qutub Minar",
+            "Delhi | Delhi – Lotus Temple",
+            "Delhi | Delhi – Akshardham Temple",
+            "Delhi | Delhi – Humayun's Tomb",
+            "Jammu and Kashmir | Srinagar – Dal Lake",
+            "Jammu and Kashmir | Srinagar – Hazratbal Shrine",
+            "Jammu and Kashmir | Gulmarg – Gulmarg Gondola",
+            "Jammu and Kashmir | Pahalgam – Betaab Valley",
+            "Jammu and Kashmir | Jammu – Vaishno Devi Temple",
+            "Jammu and Kashmir | Sonamarg – Thajiwas Glacier",
+            "Ladakh | Leh – Shanti Stupa",
+            "Ladakh | Leh – Leh Palace",
+            "Ladakh | Thiksey – Thiksey Monastery",
+            "Ladakh | Hemis – Hemis Monastery",
+            "Ladakh | Nubra Valley – Diskit Monastery",
+            "Ladakh | Pangong Lake – Pangong Lake",
+            "Lakshadweep | Kavaratti – Ujra Mosque",
+            "Lakshadweep | Agatti – Agatti Island",
+            "Lakshadweep | Bangaram – Bangaram Island",
+            "Lakshadweep | Kalpeni – Kalpeni Island",
+            "Lakshadweep | Minicoy – Minicoy Lighthouse",
+            "Lakshadweep | Kadmat – Kadmat Island",
+            "Puducherry | Puducherry – Sri Aurobindo Ashram",
+            "Puducherry | Puducherry – Manakula Vinayagar Temple",
+            "Puducherry | Puducherry – Basilica of the Sacred Heart of Jesus",
+            "Puducherry | Auroville – Matrimandir",
+            "Puducherry | Puducherry – Promenade Beach",
+            "Puducherry | Puducherry – French Quarter",
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       2 - CHINA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 2,
+
+        name: "China",
+
+        emoji: "🇨🇳",
+
+        region: "East Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience China's imperial history, futuristic skylines, dramatic landscapes, ancient cities and world-famous cultural landmarks.",
+
+        places: [
+
+            "Beijing – Great Wall",
+
+            "Forbidden City",
+
+            "Temple of Heaven",
+
+            "Summer Palace",
+
+            "National Museum of China",
+
+            "Shanghai – The Bund",
+
+            "Shanghai Tower",
+
+            "Yu Garden",
+
+            "Shanghai Museum",
+
+            "Nanjing Road",
+
+            "Xi'an – Terracotta Army",
+
+            "Ancient City Wall",
+
+            "Giant Wild Goose Pagoda",
+
+            "Muslim Quarter",
+
+            "Guilin/Yangshuo – Li River",
+
+            "Reed Flute Cave",
+
+            "Elephant Trunk Hill",
+
+            "Longji Rice Terraces",
+
+            "Zhangjiajie National Forest Park",
+
+            "Tianzi Mountain",
+
+            "Tianmen Mountain",
+
+            "Glass Bridge",
+
+            "Tibet – Potala Palace",
+
+            "Jokhang Temple",
+
+            "Yamdrok Lake",
+
+            "Mount Everest Region"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       3 - JAPAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 3,
+
+        name: "Japan",
+
+        emoji: "🇯🇵",
+
+        region: "East Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore Japan's ancient temples, neon cities, traditional gardens, historic castles and spectacular natural scenery.",
+
+        places: [
+
+            "Tokyo – Tokyo National Museum",
+
+            "Senso-ji",
+
+            "Meiji Jingu",
+
+            "Imperial Palace",
+
+            "Tokyo Skytree",
+
+            "Shibuya Crossing",
+
+            "Kyoto – Kinkaku-ji",
+
+            "Kiyomizu-dera",
+
+            "Fushimi Inari Taisha",
+
+            "Arashiyama Bamboo Grove",
+
+            "Nijo Castle",
+
+            "Gion",
+
+            "Osaka – Osaka Castle",
+
+            "Dotonbori",
+
+            "Umeda Sky Building",
+
+            "Osaka Museum of History",
+
+            "Universal Studios Japan",
+
+            "Hiroshima – Peace Memorial Museum",
+
+            "Atomic Bomb Dome",
+
+            "Peace Memorial Park",
+
+            "Itsukushima Shrine",
+
+            "Mount Misen",
+
+            "Hokkaido – Sapporo Clock Tower",
+
+            "Otaru Canal",
+
+            "Shiretoko National Park",
+
+            "Blue Pond",
+
+            "Mount Hakodate",
+
+            "Okinawa – Shurijo Castle",
+
+            "Churaumi Aquarium",
+
+            "Emerald Beach",
+
+            "Ishigaki Island"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       4 - SOUTH KOREA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 4,
+
+        name: "South Korea",
+
+        emoji: "🇰🇷",
+
+        region: "East Asia",
+
+        image:
+
+            "https://plus.unsplash.com/premium_photo-1661886333708-877148b43ae1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+        description:
+
+            "Discover South Korea's royal palaces, modern skylines, traditional villages, beaches and unique cultural experiences.",
+
+        places: [
+
+            "Seoul – Gyeongbokgung Palace",
+
+            "National Museum of Korea",
+
+            "N Seoul Tower",
+
+            "Bukchon Hanok Village",
+
+            "Myeongdong",
+
+            "Busan – Haeundae Beach",
+
+            "Gwangalli Beach",
+
+            "Gamcheon Culture Village",
+
+            "Haedong Yonggungsa Temple",
+
+            "Jeju – Hallasan",
+
+            "Seongsan Ilchulbong",
+
+            "Jeongbang Waterfall",
+
+            "Manjanggul Cave",
+
+            "Jungmun Beach"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       5 - NORTH KOREA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 5,
+
+        name: "North Korea",
+
+        emoji: "🇰🇵",
+
+        region: "East Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore Pyongyang's monumental architecture and selected mountain and cultural attractions.",
+
+        places: [
+
+            "Pyongyang – Juche Tower",
+
+            "Kumsusan Palace",
+
+            "Kim Il Sung Square",
+
+            "Arch of Triumph",
+
+            "Mangyongdae",
+
+            "Mount Myohyang",
+
+            "International Friendship Exhibition",
+
+            "Mount scenery",
+
+            "Pohyon Temple"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       6 - MONGOLIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 6,
+
+        name: "Mongolia",
+
+        emoji: "🇲🇳",
+
+        region: "East Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience vast grasslands, desert landscapes, nomadic culture and the dramatic wilderness of Mongolia.",
+
+        places: [
+
+            "Ulaanbaatar – Gandan Monastery",
+
+            "National Museum of Mongolia",
+
+            "Chinggis Khaan Statue",
+
+            "Winter Palace",
+
+            "Gobi – Khongoryn Els",
+
+            "Flaming Cliffs",
+
+            "Gobi Desert",
+
+            "Camel Trekking",
+
+            "Central Mongolia – Terelj National Park",
+
+            "Turtle Rock",
+
+            "Aryabal Meditation Temple",
+
+            "Chinggis Khaan Statue Complex"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       7 - NEPAL
+
+       ========================================= */
+
+
+
+    {
+
+        number: 7,
+
+        name: "Nepal",
+
+        emoji: "🇳🇵",
+
+        region: "South Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Journey through Himalayan landscapes, sacred temples, peaceful lakes and spectacular mountain viewpoints.",
+
+        places: [
+
+            "Kathmandu – Pashupatinath",
+
+            "Boudhanath",
+
+            "Swayambhunath",
+
+            "Kathmandu Durbar Square",
+
+            "Patan Museum",
+
+            "Pokhara – Phewa Lake",
+
+            "Sarangkot",
+
+            "World Peace Pagoda",
+
+            "Devi's Fall",
+
+            "Annapurna Viewpoints",
+
+            "Chitwan National Park",
+
+            "Jungle Safari",
+
+            "Tharu Village",
+
+            "Canoeing"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       8 - BHUTAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 8,
+
+        name: "Bhutan",
+
+        emoji: "🇧🇹",
+
+        region: "South Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1553856622-d1b352e9a211?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover Bhutan's mountain monasteries, peaceful valleys, traditional architecture and Himalayan culture.",
+
+        places: [
+
+            "Thimphu – Buddha Dordenma",
+
+            "Tashichho Dzong",
+
+            "National Memorial Chorten",
+
+            "Motithang Takin Preserve",
+
+            "Paro – Tiger's Nest Monastery",
+
+            "Paro Dzong",
+
+            "National Museum",
+
+            "Paro Valley",
+
+            "Punakha – Punakha Dzong",
+
+            "Suspension Bridge",
+
+            "Khamsum Yulley Namgyal Chorten"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       9 - BANGLADESH
+
+       ========================================= */
+
+
+
+    {
+
+        number: 9,
+
+        name: "Bangladesh",
+
+        emoji: "🇧🇩",
+
+        region: "South Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore historic mosques, bustling cities, tea gardens, beaches and the remarkable Sundarbans.",
+
+        places: [
+
+            "Dhaka – National Museum",
+
+            "Lalbagh Fort",
+
+            "Ahsan Manzil",
+
+            "National Parliament House",
+
+            "Sadarghat",
+
+            "Cox's Bazar – Cox's Bazar Beach",
+
+            "Himchari National Park",
+
+            "Inani Beach",
+
+            "Sylhet – Ratargul Swamp Forest",
+
+            "Jaflong",
+
+            "Bisnakandi",
+
+            "Tea Gardens",
+
+            "Sundarbans – Sundarbans National Park",
+
+            "Wildlife",
+
+            "Mangrove Waterways"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       10 - PAKISTAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 10,
+
+        name: "Pakistan",
+
+        emoji: "🇵🇰",
+
+        region: "South Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover historic forts and mosques, dramatic mountain valleys, lakes and ancient cultural sites.",
+
+        places: [
+
+            "Islamabad – Faisal Mosque",
+
+            "Pakistan Monument",
+
+            "Lok Virsa Museum",
+
+            "Daman-e-Koh",
+
+            "Lahore Fort",
+
+            "Badshahi Mosque",
+
+            "Minar-e-Pakistan",
+
+            "Lahore Museum",
+
+            "Wazir Khan Mosque",
+
+            "Karachi – Mohatta Palace",
+
+            "National Museum",
+
+            "Clifton Beach",
+
+            "Mazar-e-Quaid",
+
+            "Hunza – Attabad Lake",
+
+            "Baltit Fort",
+
+            "Altit Fort",
+
+            "Passu Cones",
+
+            "Mountain Viewpoints"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       11 - SRI LANKA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 11,
+
+        name: "Sri Lanka",
+
+        emoji: "🇱🇰",
+
+        region: "South Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1588598198321-9735fd5246b0?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience tropical beaches, ancient cities, tea country, wildlife and remarkable Buddhist heritage.",
+
+        places: [
+
+            "Colombo – National Museum",
+
+            "Galle Face Green",
+
+            "Gangaramaya Temple",
+
+            "Independence Memorial",
+
+            "Kandy – Temple of the Tooth",
+
+            "Kandy Lake",
+
+            "Royal Botanical Gardens",
+
+            "Galle – Galle Fort",
+
+            "Maritime Museum",
+
+            "Unawatuna Beach",
+
+            "Galle Fort Sunset",
+
+            "Sigiriya – Sigiriya Rock Fortress",
+
+            "Dambulla Cave Temple",
+
+            "Ella – Ella Rock",
+
+            "Little Adam's Peak",
+
+            "Nine Arches Bridge",
+
+            "Ravana Falls"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       12 - MALDIVES
+
+       ========================================= */
+
+
+
+    {
+
+        number: 12,
+
+        name: "Maldives",
+
+        emoji: "🇲🇻",
+
+        region: "South Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Relax among turquoise lagoons, coral reefs, white-sand beaches and world-class diving destinations.",
+
+        places: [
+
+            "Male – National Museum",
+
+            "Hukuru Miskiy",
+
+            "Republic Square",
+
+            "Artificial Beach",
+
+            "Baa Atoll – Hanifaru Bay",
+
+            "Coral Reefs",
+
+            "Diving",
+
+            "Snorkelling Sites",
+
+            "Ari Atoll – Resort Islands",
+
+            "Whale-shark Areas",
+
+            "Diving Sites",
+
+            "Sunset Cruises"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       13 - AFGHANISTAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 13,
+
+        name: "Afghanistan",
+
+        emoji: "🇦🇫",
+
+        region: "South Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1599629954294-14df9e2d5b4d?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore Afghanistan's historic heritage and dramatic mountain landscapes through its ancient cities and cultural sites.",
+
+        places: [
+
+            "Kabul – National Museum",
+
+            "Darul Aman Palace",
+
+            "Babur Gardens",
+
+            "Kabul Old City",
+
+            "Bamiyan – Bamiyan Valley",
+
+            "Buddhas of Bamiyan archaeological site",
+
+            "Band-e Amir National Park",
+
+            "Herat – Herat Citadel",
+
+            "Friday Mosque",
+
+            "Mazar-i-Sharif – Blue Mosque",
+
+            "Panjshir Valley",
+
+            "Kandahar historic sites"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       14 - INDONESIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 14,
+
+        name: "Indonesia",
+
+        emoji: "🇮🇩",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover tropical islands, ancient temples, rice terraces, volcanoes and vibrant cultural traditions.",
+
+        places: [
+
+            "Bali – Tanah Lot",
+
+            "Uluwatu Temple",
+
+            "Besakih Temple",
+
+            "Kuta Beach",
+
+            "Mount Batur",
+
+            "Tegallalang Rice Terraces",
+
+            "Tegenungan Waterfall",
+
+            "Jakarta – National Museum",
+
+            "National Monument",
+
+            "Kota Tua",
+
+            "Istiqlal Mosque",
+
+            "Ancol",
+
+            "Yogyakarta – Borobudur",
+
+            "Prambanan",
+
+            "Yogyakarta Palace",
+
+            "Malioboro Street",
+
+            "Mount Merapi",
+
+            "Lombok – Mount Rinjani",
+
+            "Kuta Lombok",
+
+            "Tanjung Aan Beach",
+
+            "Gili Islands"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       15 - MALAYSIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 15,
+
+        name: "Malaysia",
+
+        emoji: "🇲🇾",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore futuristic city skylines, colonial heritage, tropical islands, rainforests and mountain scenery.",
+
+        places: [
+
+            "Kuala Lumpur – Petronas Twin Towers",
+
+            "KL Tower",
+
+            "Batu Caves",
+
+            "Islamic Arts Museum",
+
+            "Merdeka Square",
+
+            "KLCC Park",
+
+            "Penang – George Town",
+
+            "Penang Hill",
+
+            "Kek Lok Si Temple",
+
+            "Fort Cornwallis",
+
+            "Batu Ferringhi Beach",
+
+            "Sabah – Mount Kinabalu",
+
+            "Kinabalu Park",
+
+            "Poring Hot Springs",
+
+            "Tanjung Aru Beach",
+
+            "Manukan Island",
+
+            "Sarawak – Gunung Mulu National Park",
+
+            "Deer Cave",
+
+            "Bako National Park",
+
+            "Sarawak Museum"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       16 - SINGAPORE
+
+       ========================================= */
+
+
+
+    {
+
+        number: 16,
+
+        name: "Singapore",
+
+        emoji: "🇸🇬",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience a modern island city known for futuristic architecture, gardens, museums, food and entertainment.",
+
+        places: [
+
+            "Gardens by the Bay",
+
+            "Marina Bay Sands",
+
+            "Merlion Park",
+
+            "National Museum",
+
+            "Singapore Botanic Gardens",
+
+            "Sentosa",
+
+            "Universal Studios",
+
+            "S.E.A. Aquarium",
+
+            "Orchard Road",
+
+            "Chinatown",
+
+            "Little India",
+
+            "Clarke Quay"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       17 - THAILAND
+
+       ========================================= */
+
+
+
+    {
+
+        number: 17,
+
+        name: "Thailand",
+
+        emoji: "🇹🇭",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover ornate temples, lively markets, tropical beaches, islands and northern mountain landscapes.",
+
+        places: [
+
+            "Bangkok – Grand Palace",
+
+            "Wat Arun",
+
+            "Wat Pho",
+
+            "Bangkok National Museum",
+
+            "Chatuchak Market",
+
+            "Chao Phraya River",
+
+            "Chiang Mai – Wat Phra That Doi Suthep",
+
+            "Doi Inthanon",
+
+            "Wat Chedi Luang",
+
+            "Bua Tong Waterfalls",
+
+            "Phuket – Patong Beach",
+
+            "Kata Beach",
+
+            "Karon Beach",
+
+            "Promthep Cape",
+
+            "Phi Phi Islands",
+
+            "Krabi – Railay Beach",
+
+            "Ao Nang",
+
+            "Emerald Pool",
+
+            "Rock Climbing Areas"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       18 - VIETNAM
+
+       ========================================= */
+
+
+
+    {
+
+        number: 18,
+
+        name: "Vietnam",
+
+        emoji: "🇻🇳",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore historic cities, limestone landscapes, lantern-filled old towns, beaches and spectacular bays.",
+
+        places: [
+
+            "Hanoi – Ho Chi Minh Mausoleum",
+
+            "Temple of Literature",
+
+            "Hoan Kiem Lake",
+
+            "Old Quarter",
+
+            "Vietnam National Museum of History",
+
+            "Ho Chi Minh City – War Remnants Museum",
+
+            "Independence Palace",
+
+            "Ben Thanh Market",
+
+            "Cu Chi Tunnels",
+
+            "Da Nang – My Khe Beach",
+
+            "Marble Mountains",
+
+            "Dragon Bridge",
+
+            "Ba Na Hills",
+
+            "Golden Bridge",
+
+            "Ha Long – Ha Long Bay",
+
+            "Sung Sot Cave",
+
+            "Ti Top Island",
+
+            "Kayaking Routes",
+
+            "Hoi An – Ancient Town",
+
+            "Japanese Covered Bridge",
+
+            "An Bang Beach",
+
+            "Thu Bon River"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       19 - PHILIPPINES
+
+       ========================================= */
+
+
+
+    {
+
+        number: 19,
+
+        name: "Philippines",
+
+        emoji: "🇵🇭",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Enjoy tropical islands, crystal-clear waters, historic cities, dramatic waterfalls and world-class diving.",
+
+        places: [
+
+            "Manila – Intramuros",
+
+            "Fort Santiago",
+
+            "National Museum Complex",
+
+            "Rizal Park",
+
+            "Manila Bay Sunset",
+
+            "Cebu – Magellan's Cross",
+
+            "Basilica Minore del Santo Niño",
+
+            "Kawasan Falls",
+
+            "Mactan Beaches",
+
+            "Palawan – El Nido",
+
+            "Coron",
+
+            "Puerto Princesa Underground River",
+
+            "Island Beaches",
+
+            "Diving Sites",
+
+            "Boracay – White Beach",
+
+            "Puka Shell Beach",
+
+            "Island Hopping",
+
+            "Water Sports"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       20 - CAMBODIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 20,
+
+        name: "Cambodia",
+
+        emoji: "🇰🇭",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore extraordinary Khmer temples, historic cities, riverside landscapes and the cultural heart of Cambodia.",
+
+        places: [
+
+            "Siem Reap – Angkor Wat",
+
+            "Angkor Thom",
+
+            "Bayon Temple",
+
+            "Ta Prohm",
+
+            "Tonle Sap Lake",
+
+            "Phnom Penh – Royal Palace",
+
+            "National Museum",
+
+            "Wat Phnom",
+
+            "Tuol Sleng Genocide Museum",
+
+            "Sihanoukville – Beaches",
+
+            "Islands",
+
+            "Ream National Park"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       21 - LAOS
+
+       ========================================= */
+
+
+
+    {
+
+        number: 21,
+
+        name: "Laos",
+
+        emoji: "🇱🇦",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience peaceful Buddhist temples, waterfalls, riverside towns and spectacular natural landscapes.",
+
+        places: [
+
+            "Luang Prabang – Wat Xieng Thong",
+
+            "Mount Phousi",
+
+            "Royal Palace Museum",
+
+            "Kuang Si Falls",
+
+            "Mekong River",
+
+            "Vientiane – Pha That Luang",
+
+            "Patuxai",
+
+            "Wat Si Saket",
+
+            "Buddha Park",
+
+            "Vang Vieng",
+
+            "Blue Lagoon",
+
+            "Nam Song River"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       22 - MYANMAR
+
+       ========================================= */
+
+
+
+    {
+
+        number: 22,
+
+        name: "Myanmar",
+
+        emoji: "🇲🇲",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover ancient pagodas, historic cities, Buddhist heritage and scenic lakes and waterways.",
+
+        places: [
+
+            "Yangon – Shwedagon Pagoda",
+
+            "Bogyoke Market",
+
+            "National Museum",
+
+            "Sule Pagoda",
+
+            "Kandawgyi Lake",
+
+            "Bagan – Ananda Temple",
+
+            "Shwezigon Pagoda",
+
+            "Dhammayangyi Temple",
+
+            "Bagan Archaeological Zone",
+
+            "Mandalay – Mandalay Palace",
+
+            "Kuthodaw Pagoda",
+
+            "U Bein Bridge",
+
+            "Mandalay Hill",
+
+            "Inle Lake – Floating Villages",
+
+            "Phaung Daw Oo Pagoda",
+
+            "Lake Cruises"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       23 - BRUNEI
+
+       ========================================= */
+
+
+
+    {
+
+        number: 23,
+
+        name: "Brunei",
+
+        emoji: "🇧🇳",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore grand mosques, royal heritage, rainforest landscapes and traditional water villages.",
+
+        places: [
+
+            "Bandar Seri Begawan – Sultan Omar Ali Saifuddien Mosque",
+
+            "Jame' Asr Hassanil Bolkiah Mosque",
+
+            "Royal Regalia Museum",
+
+            "Kampong Ayer",
+
+            "Ulu Temburong National Park",
+
+            "Rainforest Canopy",
+
+            "River Adventure"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       24 - TIMOR-LESTE
+
+       ========================================= */
+
+
+
+    {
+
+        number: 24,
+
+        name: "Timor-Leste",
+
+        emoji: "🇹🇱",
+
+        region: "Southeast Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover rugged mountains, tropical beaches, coral reefs and the cultural heritage of Timor-Leste.",
+
+        places: [
+
+            "Dili – Cristo Rei",
+
+            "Timor-Leste Resistance Archive",
+
+            "Dili Cathedral",
+
+            "Dili Waterfront",
+
+            "Atauro Island",
+
+            "Beaches",
+
+            "Coral Reefs",
+
+            "Diving",
+
+            "Snorkelling",
+
+            "Mount Ramelau",
+
+            "Mountain Viewpoints",
+
+            "Trekking"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       25 - KAZAKHSTAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 25,
+
+        name: "Kazakhstan",
+
+        emoji: "🇰🇿",
+
+        region: "Central Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1580837119756-563d608dd119?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience modern Central Asian cities, vast steppe landscapes, dramatic canyons and alpine lakes.",
+
+        places: [
+
+            "Almaty – Kok Tobe",
+
+            "Panfilov Park",
+
+            "Zenkov Cathedral",
+
+            "Big Almaty Lake",
+
+            "Medeu",
+
+            "Astana – Bayterek Tower",
+
+            "Palace of Peace and Reconciliation",
+
+            "National Museum",
+
+            "Khan Shatyr",
+
+            "Charyn – Charyn Canyon",
+
+            "Kolsai Lakes",
+
+            "Kaindy Lake"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       26 - UZBEKISTAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 26,
+
+        name: "Uzbekistan",
+
+        emoji: "🇺🇿",
+
+        region: "Central Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Follow the ancient Silk Road through magnificent mosques, madrasas, blue-tiled monuments and historic cities.",
+
+        places: [
+
+            "Samarkand – Registan",
+
+            "Gur-e-Amir",
+
+            "Bibi-Khanym Mosque",
+
+            "Shah-i-Zinda",
+
+            "Ulugh Beg Observatory",
+
+            "Bukhara – Ark Fortress",
+
+            "Poi Kalyan",
+
+            "Lyabi Hauz",
+
+            "Chor Minor",
+
+            "Khiva – Itchan Kala",
+
+            "Kalta Minor",
+
+            "Islam Khodja Minaret",
+
+            "Juma Mosque"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       27 - TURKMENISTAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 27,
+
+        name: "Turkmenistan",
+
+        emoji: "🇹🇲",
+
+        region: "Central Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore monumental Ashgabat, ancient Silk Road ruins and the extraordinary Karakum Desert.",
+
+        places: [
+
+            "Ashgabat – Independence Monument",
+
+            "National Museum",
+
+            "Arch of Neutrality",
+
+            "Monument of Neutrality",
+
+            "Darvaza – Darvaza Gas Crater",
+
+            "Karakum Desert",
+
+            "Merv – Ancient Merv Archaeological Site",
+
+            "Sultan Sanjar Mausoleum"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       28 - KYRGYZSTAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 28,
+
+        name: "Kyrgyzstan",
+
+        emoji: "🇰🇬",
+
+        region: "Central Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover pristine mountain valleys, alpine lakes, traditional nomadic culture and outdoor adventures.",
+
+        places: [
+
+            "Bishkek – Ala-Too Square",
+
+            "State History Museum",
+
+            "Osh Bazaar",
+
+            "Lake Issyk-Kul",
+
+            "Issyk-Kul",
+
+            "Cholpon-Ata Petroglyphs",
+
+            "Beach Resorts",
+
+            "Ala Archa National Park",
+
+            "Mountain Valleys",
+
+            "Hot Springs",
+
+            "Trekking"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       29 - TAJIKISTAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 29,
+
+        name: "Tajikistan",
+
+        emoji: "🇹🇯",
+
+        region: "Central Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Journey through dramatic Pamir landscapes, high-altitude lakes, historic fortresses and mountain valleys.",
+
+        places: [
+
+            "Dushanbe – National Museum",
+
+            "Rudaki Park",
+
+            "Ismail Somoni Monument",
+
+            "Hissar Fortress",
+
+            "Pamir Highway",
+
+            "Karakul Lake",
+
+            "Wakhan Valley",
+
+            "Mountain Viewpoints"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       30 - SAUDI ARABIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 30,
+
+        name: "Saudi Arabia",
+
+        emoji: "🇸🇦",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover ancient archaeological sites, desert landscapes, modern cities, historic districts and Red Sea coastlines.",
+
+        places: [
+
+            "Riyadh – National Museum",
+
+            "Masmak Fortress",
+
+            "Kingdom Centre",
+
+            "Edge of the World",
+
+            "Jeddah – Al-Balad",
+
+            "Jeddah Corniche",
+
+            "King Fahd Fountain",
+
+            "Red Sea Diving",
+
+            "AlUla – Hegra",
+
+            "Elephant Rock",
+
+            "AlUla Old Town",
+
+            "Desert Viewpoints"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       31 - IRAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 31,
+
+        name: "Iran",
+
+        emoji: "🇮🇷",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore Persian gardens, magnificent mosques, ancient ruins, bazaars and historic cities.",
+
+        places: [
+
+            "Tehran – Golestan Palace",
+
+            "Grand Bazaar",
+
+            "National Museum of Iran",
+
+            "Azadi Tower",
+
+            "Isfahan – Naqsh-e Jahan Square",
+
+            "Imam Mosque",
+
+            "Si-o-se-pol Bridge",
+
+            "Chehel Sotoun",
+
+            "Shiraz – Persepolis",
+
+            "Nasir al-Mulk Mosque",
+
+            "Eram Garden",
+
+            "Vakil Bazaar",
+
+            "Yazd – Amir Chakhmakh",
+
+            "Zoroastrian Fire Temple",
+
+            "Historic Old Town"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       32 - IRAQ
+
+       ========================================= */
+
+
+
+    {
+
+        number: 32,
+
+        name: "Iraq",
+
+        emoji: "🇮🇶",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover some of Mesopotamia's most important archaeological and religious heritage sites.",
+
+        places: [
+
+            "Baghdad – National Museum",
+
+            "Al-Shaheed Monument",
+
+            "Abbasid Palace",
+
+            "Mutanabbi Street",
+
+            "Babylon – Ancient City of Babylon",
+
+            "Ishtar Gate reconstruction",
+
+            "Samarra – Great Mosque",
+
+            "Malwiya Minaret",
+
+            "Erbil Citadel",
+
+            "Najaf – Imam Ali Shrine",
+
+            "Karbala – Imam Hussein Shrine",
+
+            "Marshes of Southern Iraq"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       33 - SYRIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 33,
+
+        name: "Syria",
+
+        emoji: "🇸🇾",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1590402494587-44b71d7772f6?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore Syria's ancient cities, archaeological heritage and historic castles, with travel conditions requiring careful planning.",
+
+        places: [
+
+            "Damascus – Umayyad Mosque",
+
+            "Damascus Old City",
+
+            "Azm Palace",
+
+            "Aleppo Citadel",
+
+            "Ancient Aleppo Souks",
+
+            "Palmyra Archaeological Site",
+
+            "Krak des Chevaliers",
+
+            "Bosra Roman Theatre",
+
+            "Apamea",
+
+            "Maaloula"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       34 - LEBANON
+
+       ========================================= */
+
+
+
+    {
+
+        number: 34,
+
+        name: "Lebanon",
+
+        emoji: "🇱🇧",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1603294583985-2a6f3b7d2b6f?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover Mediterranean coastline, ancient ruins, mountain villages and lively cultural districts.",
+
+        places: [
+
+            "Beirut – National Museum",
+
+            "Raouche Rocks",
+
+            "Beirut Corniche",
+
+            "Downtown Beirut",
+
+            "Byblos – Ancient Port",
+
+            "Byblos Castle",
+
+            "Jeita Grotto",
+
+            "Baalbek – Roman Temples",
+
+            "Cedars of God",
+
+            "Harissa – Our Lady of Lebanon",
+
+            "Sidon Sea Castle",
+
+            "Tripoli Old City"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       35 - PALESTINE
+
+       ========================================= */
+
+
+
+    {
+
+        number: 35,
+
+        name: "Palestine",
+
+        emoji: "🇵🇸",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore historic cities and significant cultural and religious heritage sites across Palestine.",
+
+        places: [
+
+            "Jericho – Ancient City",
+
+            "Mount of Temptation",
+
+            "Bethlehem – Church of the Nativity",
+
+            "Manger Square",
+
+            "Hebron – Old City",
+
+            "Al-Ibrahimi Mosque",
+
+            "Ramallah – Yasser Arafat Museum",
+
+            "Old City Streets",
+
+            "Dead Sea Area",
+
+            "Wadi Qelt"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       36 - ISRAEL
+
+       ========================================= */
+
+
+
+    {
+
+        number: 36,
+
+        name: "Israel",
+
+        emoji: "🇮🇱",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1552423314-cf29ab68ad73?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover historic cities, archaeological sites, Mediterranean beaches and desert landscapes.",
+
+        places: [
+
+            "Jerusalem – Western Wall",
+
+            "Old City",
+
+            "Church of the Holy Sepulchre",
+
+            "Mount of Olives",
+
+            "Tel Aviv – Jaffa",
+
+            "Tel Aviv Beaches",
+
+            "Carmel Market",
+
+            "Dead Sea",
+
+            "Masada",
+
+            "Ein Gedi",
+
+            "Haifa – Baháʼí Gardens",
+
+            "Caesarea National Park",
+
+            "Nazareth – Basilica of the Annunciation"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       37 - JORDAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 37,
+
+        name: "Jordan",
+
+        emoji: "🇯🇴",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience ancient Nabataean cities, desert landscapes, Roman ruins and the unique waters of the Dead Sea.",
+
+        places: [
+
+            "Amman – Citadel",
+
+            "Roman Theatre",
+
+            "Rainbow Street",
+
+            "Petra – Treasury",
+
+            "Monastery",
+
+            "Siq",
+
+            "Wadi Rum",
+
+            "Desert Camps",
+
+            "Dead Sea",
+
+            "Jerash – Roman Ruins",
+
+            "Aqaba – Red Sea",
+
+            "Dana Biosphere Reserve"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       38 - UNITED ARAB EMIRATES
+
+       ========================================= */
+
+
+
+    {
+
+        number: 38,
+
+        name: "United Arab Emirates",
+
+        emoji: "🇦🇪",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience futuristic skylines, luxury resorts, desert adventures, cultural districts and spectacular architecture.",
+
+        places: [
+
+            "Dubai – Burj Khalifa",
+
+            "Dubai Mall",
+
+            "Palm Jumeirah",
+
+            "Burj Al Arab",
+
+            "Dubai Marina",
+
+            "Museum of the Future",
+
+            "Abu Dhabi – Sheikh Zayed Grand Mosque",
+
+            "Louvre Abu Dhabi",
+
+            "Qasr Al Watan",
+
+            "Corniche",
+
+            "Ferrari World",
+
+            "Sharjah – Al Noor Island",
+
+            "Al Ain Oasis"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       39 - OMAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 39,
+
+        name: "Oman",
+
+        emoji: "🇴🇲",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover rugged mountains, desert dunes, ancient forts, traditional souks and beautiful Arabian coastlines.",
+
+        places: [
+
+            "Muscat – Sultan Qaboos Grand Mosque",
+
+            "Mutrah Souq",
+
+            "Mutrah Corniche",
+
+            "Al Alam Palace",
+
+            "Nizwa Fort",
+
+            "Nizwa Souq",
+
+            "Wahiba Sands",
+
+            "Wadi Shab",
+
+            "Bimmah Sinkhole",
+
+            "Jebel Akhdar",
+
+            "Salalah – Al Mughsail Beach",
+
+            "Dhofar Mountains"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       40 - YEMEN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 40,
+
+        name: "Yemen",
+
+        emoji: "🇾🇪",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Yemen is renowned for distinctive traditional architecture, ancient towns and dramatic landscapes; current travel requires careful attention to official advisories.",
+
+        places: [
+
+            "Sana'a – Old City",
+
+            "Dar al-Hajar",
+
+            "Bab al-Yemen",
+
+            "Shibam – Ancient Skyscrapers",
+
+            "Socotra – Dragon Blood Trees",
+
+            "Dihamri Marine Protected Area",
+
+            "Detwah Lagoon",
+
+            "Wadi Dirhur",
+
+            "Al Mahwit Mountain Landscapes",
+
+            "Historic Zabid"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       41 - TURKEY
+
+       ========================================= */
+
+
+
+    {
+
+        number: 41,
+
+        name: "Turkey",
+
+        emoji: "🇹🇷",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore a crossroads of civilizations through grand mosques, ancient ruins, colorful bazaars and extraordinary landscapes.",
+
+        places: [
+
+            "Istanbul – Hagia Sophia",
+
+            "Blue Mosque",
+
+            "Topkapi Palace",
+
+            "Grand Bazaar",
+
+            "Bosphorus",
+
+            "Cappadocia – Hot Air Balloons",
+
+            "Göreme Open-Air Museum",
+
+            "Pamukkale – Travertines",
+
+            "Ephesus – Ancient City",
+
+            "Antalya – Old Town",
+
+            "Duden Waterfalls",
+
+            "Mount Nemrut"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       42 - CYPRUS
+
+       ========================================= */
+
+
+
+    {
+
+        number: 42,
+
+        name: "Cyprus",
+
+        emoji: "🇨🇾",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover Mediterranean beaches, ancient ruins, mountain villages and historic coastal towns.",
+
+        places: [
+
+            "Nicosia – Old City",
+
+            "Cyprus Museum",
+
+            "Paphos – Archaeological Park",
+
+            "Tombs of the Kings",
+
+            "Paphos Harbour",
+
+            "Limassol – Old Town",
+
+            "Kyrenia Harbour",
+
+            "Troodos Mountains",
+
+            "Mount Olympus",
+
+            "Ayia Napa – Nissi Beach",
+
+            "Cape Greco",
+
+            "Larnaca Salt Lake"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       43 - ARMENIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 43,
+
+        name: "Armenia",
+
+        emoji: "🇦🇲",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore ancient monasteries, mountain scenery, historic cities and the beautiful landscapes around Lake Sevan.",
+
+        places: [
+
+            "Yerevan – Republic Square",
+
+            "Cascade Complex",
+
+            "Matenadaran",
+
+            "Garni Temple",
+
+            "Geghard Monastery",
+
+            "Lake Sevan",
+
+            "Sevanavank",
+
+            "Khor Virap",
+
+            "Dilijan National Park",
+
+            "Noravank Monastery",
+
+            "Tatev Monastery",
+
+            "Wings of Tatev"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       44 - AZERBAIJAN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 44,
+
+        name: "Azerbaijan",
+
+        emoji: "🇦🇿",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1564769625392-651b8b9f6f7d?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover futuristic Baku, ancient fortresses, mountain villages, Caspian coastline and unique mud volcanoes.",
+
+        places: [
+
+            "Baku – Flame Towers",
+
+            "Old City",
+
+            "Maiden Tower",
+
+            "Heydar Aliyev Center",
+
+            "Baku Boulevard",
+
+            "Gobustan National Park",
+
+            "Mud Volcanoes",
+
+            "Sheki – Palace of the Sheki Khans",
+
+            "Caravanserai",
+
+            "Quba – Mountain Villages",
+
+            "Gabala – Tufandag",
+
+            "Yanar Dag"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       45 - GEORGIA
+
+       ========================================= */
+
+
+
+    {
+
+        number: 45,
+
+        name: "Georgia",
+
+        emoji: "🇬🇪",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore charming old towns, ancient churches, Caucasus mountains, wine regions and dramatic valleys.",
+
+        places: [
+
+            "Tbilisi – Old Town",
+
+            "Narikala Fortress",
+
+            "Peace Bridge",
+
+            "Holy Trinity Cathedral",
+
+            "Batumi – Batumi Boulevard",
+
+            "Ali & Nino Statue",
+
+            "Svaneti – Mestia",
+
+            "Gergeti Trinity Church",
+
+            "Kazbegi",
+
+            "Kakheti – Wine Region",
+
+            "Vardzia Cave Monastery",
+
+            "Martvili Canyon"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       46 - QATAR
+
+       ========================================= */
+
+
+
+    {
+
+        number: 46,
+
+        name: "Qatar",
+
+        emoji: "🇶🇦",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Experience modern Doha, desert landscapes, museums, traditional souks and the scenic Arabian coastline.",
+
+        places: [
+
+            "Doha – Museum of Islamic Art",
+
+            "Souq Waqif",
+
+            "National Museum of Qatar",
+
+            "The Pearl-Qatar",
+
+            "Katara Cultural Village",
+
+            "Doha Corniche",
+
+            "Msheireb Downtown",
+
+            "Education City Mosque",
+
+            "Khor Al Adaid",
+
+            "Inland Sea",
+
+            "Al Zubarah Fort",
+
+            "Purple Island"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       47 - BAHRAIN
+
+       ========================================= */
+
+
+
+    {
+
+        number: 47,
+
+        name: "Bahrain",
+
+        emoji: "🇧🇭",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Discover island heritage, ancient archaeological sites, museums, traditional markets and modern Manama.",
+
+        places: [
+
+            "Manama – Bahrain National Museum",
+
+            "Bab Al Bahrain",
+
+            "Manama Souq",
+
+            "Al Fateh Grand Mosque",
+
+            "Bahrain Fort",
+
+            "Qal'at al-Bahrain",
+
+            "Tree of Life",
+
+            "Muharraq – Pearling Path",
+
+            "Arad Fort",
+
+            "Al Khamis Mosque",
+
+            "Amwaj Islands",
+
+            "Bahrain International Circuit"
+
+        ]
+
+    },
+
+
+
+
+
+    /* =========================================
+
+       48 - KUWAIT
+
+       ========================================= */
+
+
+
+    {
+
+        number: 48,
+
+        name: "Kuwait",
+
+        emoji: "🇰🇼",
+
+        region: "West Asia",
+
+        image:
+
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85",
+
+        description:
+
+            "Explore Kuwait City's modern skyline, waterfront promenades, museums, cultural centers and desert landscapes.",
+
+        places: [
+
+            "Kuwait City – Kuwait Towers",
+
+            "Grand Mosque",
+
+            "Souq Al-Mubarakiya",
+
+            "Al Shaheed Park",
+
+            "The Avenues",
+
+            "Kuwait National Museum",
+
+            "Sheikh Jaber Al-Ahmad Cultural Centre",
+
+            "Marina Beach",
+
+            "Green Island",
+
+            "Failaka Island",
+
+            "Al Kout Mall",
+
+            "Scientific Center"
+
+        ]
+
+    }
+
+
+
+];;
+
+
+
+
+
+/* =========================================================
+
+   ELEMENTS
+
+   ========================================================= */
+
+
+
+const container =
+
+    document.getElementById("destinationContainer");
+
+
+
+const searchInput =
+
+    document.getElementById("countrySearch");
+
+
+
+const noResults =
+
+    document.getElementById("noResults");
+
+
+
+const filterButtons =
+
+    document.querySelectorAll(".filter-btn");
+
+
+
+let activeRegion = "all";
+
+
+
+
+
+/* =========================================================
+
+   ESCAPE HTML
+
+   ========================================================= */
+
+
+
+function escapeHTML(value){
+
+
+
+    return String(value)
+
+        .replace(/&/g,"&amp;")
+
+        .replace(/</g,"&lt;")
+
+        .replace(/>/g,"&gt;")
+
+        .replace(/"/g,"&quot;")
+
+        .replace(/'/g,"&#039;");
+
+
+
+}
+
+
+
+
+
+/* =========================================================
+
+   OPEN COUNTRY DIRECTORY
+
+   ========================================================= */
+
+
+
+function openCountryDirectory(countryName) {
+
+    const selectedCountry = countries.find(
+
+        country => country.name === countryName
+
+    );
+
+
+
+    if (!selectedCountry) return;
+
+
+
+    // Keep the original page and directory alive. Opening a place only shows details; it never removes the list.
+
+    let overlay = document.getElementById("countryDirectoryOverlay");
+
+
+
+    if (!overlay) {
+
+        overlay = document.createElement("div");
+
+        overlay.id = "countryDirectoryOverlay";
+
+        overlay.innerHTML = `
+
+            <div class="country-directory-window" role="dialog"
+
+                 aria-modal="true" aria-labelledby="directoryTitle">
+
+
+
+                <div class="directory-top">
+
+                    <div>
+
+                        <div class="directory-small">TravelX • Tourist Directory</div>
+
+                        <h2 id="directoryTitle"></h2>
+
+                        <p id="directorySubtitle"></p>
+
+                    </div>
+
+
+
+                    <button type="button" class="directory-close"
+
+                            id="directoryClose" aria-label="Close directory">×</button>
+
+                </div>
+
+
+
+                <div class="directory-toolbar">
+
+                    <input type="search" id="directoryPlaceSearch"
+
+                           placeholder="Search tourist places in this country..."
+
+                           autocomplete="off">
+
+                </div>
+
+
+
+                <div class="directory-content">
+
+                    <div class="directory-country-info">
+
+                        <span id="directoryRegion"></span>
+
+                        <span id="directoryCount"></span>
+
+                    </div>
+
+                    <p id="directoryDescription"></p>
+
+                    <div id="directoryPlaces" class="directory-places"></div>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+
+        document.body.appendChild(overlay);
+
+
+
+        const style = document.createElement("style");
+
+        style.id = "countryDirectoryStyles";
+
+        style.textContent = `
+
+            #countryDirectoryOverlay{
+
+                position:fixed;
+
+                inset:0;
+
+                z-index:10000;
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:center;
+
+                padding:20px;
+
+                background:rgba(0,0,0,.62);
+
+                backdrop-filter:blur(4px);
+
+                opacity:0;
+
+                visibility:hidden;
+
+                pointer-events:none;
+
+                transition:opacity .2s ease,visibility .2s ease;
+
+            }
+
+
+
+            #countryDirectoryOverlay.show{
+
+                opacity:1;
+
+                visibility:visible;
+
+                pointer-events:auto;
+
+            }
+
+
+
+            .country-directory-window{
+
+                width:min(1180px,94vw);
+
+                height:min(820px,92vh);
+
+                background:#fff;
+
+                border-radius:22px;
+
+                overflow:hidden;
+
+                box-shadow:0 30px 90px rgba(0,0,0,.35);
+
+                display:flex;
+
+                flex-direction:column;
+
+                transform:translateY(12px) scale(.985);
+
+                transition:transform .2s ease;
+
+            }
+
+
+
+            #countryDirectoryOverlay.show .country-directory-window{
+
+                transform:translateY(0) scale(1);
+
+            }
+
+
+
+            .directory-top{
+
+                flex:0 0 auto;
+
+                padding:24px 28px;
+
+                background:#0b918c;
+
+                color:#fff;
+
+                display:flex;
+
+                align-items:flex-start;
+
+                justify-content:space-between;
+
+                gap:20px;
+
+            }
+
+
+
+            .directory-small{
+
+                color:#b9eee9;
+
+                font-size:11px;
+
+                font-weight:800;
+
+                letter-spacing:2px;
+
+                text-transform:uppercase;
+
+                margin-bottom:7px;
+
+            }
+
+
+
+            .directory-top h2{
+
+                margin:0 0 5px;
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:clamp(28px,4vw,44px);
+
+                line-height:1.1;
+
+            }
+
+
+
+            .directory-top p{
+
+                margin:0;
+
+                opacity:.9;
+
+                font-size:14px;
+
+            }
+
+
+
+            .directory-close{
+
+                width:46px;
+
+                height:46px;
+
+                flex:0 0 46px;
+
+                border:0;
+
+                border-radius:50%;
+
+                background:rgba(255,255,255,.18);
+
+                color:#fff;
+
+                font-size:30px;
+
+                line-height:1;
+
+                cursor:pointer;
+
+            }
+
+
+
+            .directory-close:hover{
+
+                background:rgba(255,255,255,.30);
+
+            }
+
+
+
+            .directory-toolbar{
+
+                flex:0 0 auto;
+
+                padding:15px 24px;
+
+                border-bottom:1px solid #e4ebed;
+
+                background:#fff;
+
+            }
+
+
+
+            #directoryPlaceSearch{
+
+                width:100%;
+
+                height:46px;
+
+                padding:0 18px;
+
+                border:1px solid #d8e2e4;
+
+                border-radius:24px;
+
+                outline:none;
+
+                font-size:14px;
+
+            }
+
+
+
+            #directoryPlaceSearch:focus{
+
+                border-color:#0b918c;
+
+                box-shadow:0 0 0 3px rgba(11,145,140,.10);
+
+            }
+
+
+
+            .directory-content{
+
+                overflow-y:auto;
+
+                padding:28px;
+
+                color:#58718a;
+
+            }
+
+
+
+            .directory-country-info{
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:space-between;
+
+                gap:15px;
+
+                margin-bottom:10px;
+
+            }
+
+
+
+            #directoryRegion{
+
+                color:#087b73;
+
+                font-size:12px;
+
+                font-weight:800;
+
+                letter-spacing:1.5px;
+
+                text-transform:uppercase;
+
+            }
+
+
+
+            #directoryCount{
+
+                padding:8px 13px;
+
+                border-radius:20px;
+
+                background:#eaf7f5;
+
+                color:#075e59;
+
+                font-size:12px;
+
+                font-weight:800;
+
+                white-space:nowrap;
+
+            }
+
+
+
+            #directoryDescription{
+
+                margin:0 0 24px;
+
+                line-height:1.7;
+
+            }
+
+
+
+            .directory-places{
+
+                display:grid;
+
+                grid-template-columns:repeat(3,minmax(0,1fr));
+
+                gap:10px;
+
+            }
+
+
+
+            .directory-place{
+
+                width:100%;
+
+                min-height:54px;
+
+                padding:11px 13px;
+
+                border:0;
+
+                border-radius:11px;
+
+                background:#f2f6f7;
+
+                color:#425b70;
+
+                display:flex;
+
+                align-items:center;
+
+                gap:10px;
+
+                text-align:left;
+
+                cursor:pointer;
+
+                font:inherit;
+
+                transition:transform .15s ease,background .15s ease,box-shadow .15s ease;
+
+            }
+
+
+
+            .directory-place:hover{
+
+                background:#e3f3f1;
+
+                transform:translateY(-2px);
+
+                box-shadow:0 5px 15px rgba(8,123,115,.12);
+
+            }
+
+
+
+            .directory-place:focus{
+
+                outline:3px solid rgba(8,123,115,.22);
+
+                outline-offset:2px;
+
+            }
+
+
+
+            .directory-place-number{
+
+                width:27px;
+
+                height:27px;
+
+                flex:0 0 27px;
+
+                display:grid;
+
+                place-items:center;
+
+                border-radius:50%;
+
+                background:#fff;
+
+                color:#087b73;
+
+                font-size:11px;
+
+                font-weight:800;
+
+            }
+
+
+
+            .directory-place-name{
+
+                flex:1;
+
+                min-width:0;
+
+                overflow-wrap:anywhere;
+
+                line-height:1.35;
+
+            }
+
+            .directory-place-arrow{
+                color:#087b73;
+                font-size:18px;
+                font-weight:900;
+                transition:transform .18s ease;
+            }
+
+            .directory-place:hover .directory-place-arrow{
+                transform:translateX(4px);
+            }
+
+
+
+            .directory-no-results{
+
+                grid-column:1/-1;
+
+                padding:35px 15px;
+
+                text-align:center;
+
+                color:#718496;
+
+            }
+
+
+
+            @media(max-width:900px){
+
+                .directory-places{
+
+                    grid-template-columns:repeat(2,minmax(0,1fr));
+
+                }
+
+            }
+
+
+
+            @media(max-width:600px){
+
+                #countryDirectoryOverlay{
+
+                    padding:8px;
+
+                }
+
+
+
+                .country-directory-window{
+
+                    width:96vw;
+
+                    height:94vh;
+
+                    border-radius:17px;
+
+                }
+
+
+
+                .directory-top{
+
+                    padding:18px;
+
+                }
+
+
+
+                .directory-toolbar{
+
+                    padding:12px 15px;
+
+                }
+
+
+
+                .directory-content{
+
+                    padding:20px 15px 28px;
+
+                }
+
+
+
+                .directory-country-info{
+
+                    align-items:flex-start;
+
+                    flex-direction:column;
+
+                }
+
+
+
+                .directory-places{
+
+                    grid-template-columns:1fr;
+
+                }
+
+            }
+
+        `;
+
+        document.head.appendChild(style);
+
+
+
+        document.getElementById("directoryClose").addEventListener(
+
+            "click",
+
+            closeCountryDirectory
+
+        );
+
+
+
+        document.getElementById("directoryPlaceSearch").addEventListener(
+
+            "input",
+
+            filterDirectoryPlaces
+
+        );
+
+
+
+        // Event delegation: place names are stored as DOM data, not inside
+
+        // onclick strings. Therefore apostrophes, quotes and special characters
+
+        // can never break the click handler.
+
+        document.getElementById("directoryPlaces").addEventListener(
+
+            "click",
+
+            function(event){
+
+                const button = event.target.closest(".directory-place");
+
+                if (!button) return;
+
+
+
+                const placeIndex = Number(button.dataset.placeIndex);
+
+                const countryIndex = Number(button.dataset.countryIndex);
+
+
+
+                if (
+
+                    !Number.isInteger(placeIndex) ||
+
+                    !Number.isInteger(countryIndex)
+
+                ) return;
+
+
+
+                const country = countries[countryIndex];
+
+                if (!country || !country.places[placeIndex]) return;
+
+
+
+                showPlaceInfo(
+
+                    country.places[placeIndex],
+
+                    country.name
+
+                );
+
+            }
+
+        );
+
+    }
+
+
+
+    const countryIndex = countries.indexOf(selectedCountry);
+
+
+
+    document.getElementById("directoryTitle").textContent =
+
+        selectedCountry.name + " Tourist Places";
+
+
+
+    document.getElementById("directorySubtitle").textContent =
+
+        "Explore the tourist places of " + selectedCountry.name + ".";
+
+
+
+    document.getElementById("directoryRegion").textContent =
+
+        selectedCountry.emoji + " " + selectedCountry.region;
+
+
+
+    document.getElementById("directoryCount").textContent =
+
+        selectedCountry.places.length + " Tourist Places";
+
+
+
+    document.getElementById("directoryDescription").textContent =
+
+        selectedCountry.description;
+
+
+
+    const placesBox = document.getElementById("directoryPlaces");
+
+    placesBox.innerHTML = "";
+
+
+
+    let currentState = "";
+    selectedCountry.places.forEach(function(place, index){
+
+        const parsedPlace = splitStatePlace(place);
+        if (parsedPlace.state && parsedPlace.state !== currentState) {
+            currentState = parsedPlace.state;
+            const stateHeading = document.createElement("div");
+            stateHeading.className = "state-section-heading";
+            stateHeading.innerHTML = "<span>STATE / UT</span><strong>" + parsedPlace.state + "</strong>";
+            placesBox.appendChild(stateHeading);
+        }
+
+        const button = document.createElement("button");
+
+
+
+        button.type = "button";
+
+        button.className = "directory-place";
+
+        button.dataset.placeIndex = String(index);
+
+        button.dataset.countryIndex = String(countryIndex);
+
+        button.title = "Open information about " + parsedPlace.place;
+        button.setAttribute("aria-label", "Open details for " + parsedPlace.place);
+
+
+
+        const number = document.createElement("span");
+
+        number.className = "directory-place-number";
+
+        number.textContent = String(index + 1);
+
+
+
+        const name = document.createElement("span");
+
+        name.className = "directory-place-name";
+
+        name.textContent = parsedPlace.place;
+
+
+
+        button.appendChild(number);
+
+        button.appendChild(name);
+
+        placesBox.appendChild(button);
+
+    });
+
+
+
+    const input = document.getElementById("directoryPlaceSearch");
+
+    input.value = "";
+
+
+
+    overlay.classList.add("show");
+
+    overlay.setAttribute("aria-hidden", "false");
+
+    document.body.style.overflow = "hidden";
+
+
+
+    setTimeout(function(){
+
+        input.focus();
+
+    }, 50);
+
+}
+
+
+
+
+
+function filterDirectoryPlaces(){
+
+    const term = document
+
+        .getElementById("directoryPlaceSearch")
+
+        .value
+
+        .trim()
+
+        .toLocaleLowerCase();
+
+
+
+    document
+
+        .querySelectorAll("#directoryPlaces .directory-place")
+
+        .forEach(function(button){
+
+            const name = button
+
+                .querySelector(".directory-place-name")
+
+                .textContent
+
+                .toLocaleLowerCase();
+
+
+
+            button.style.display =
+
+                !term || name.includes(term)
+
+                    ? "flex"
+
+                    : "none";
+
+        });
+
+}
+
+
+
+
+
+function closeCountryDirectory(){
+
+    const overlay =
+
+        document.getElementById("countryDirectoryOverlay");
+
+
+
+    if (!overlay) return;
+
+
+
+    overlay.classList.remove("show");
+
+    overlay.setAttribute("aria-hidden", "true");
+
+    document.body.style.overflow = "";
+
+}
+
+
+
+
+
+function splitStatePlace(placeName){
+    const raw = String(placeName || "").replace(/\s+/g, " ").trim();
+    if (raw.includes(" | ")) {
+        const parts = raw.split(" | ");
+        return { state: parts.shift().trim(), place: parts.join(" | ").trim() };
+    }
+    return { state: "", place: raw };
+}
+function getDisplayPlace(placeName){ return splitStatePlace(placeName).place; }
+
+function getPlaceDetails(placeName, countryName){
+    const raw = String(placeName).replace(/\s+/g, " ").trim();
+    const cleanCountry = String(countryName).replace(/\s+/g, " ").trim();
+    const parsed = splitStatePlace(raw);
+    const cleanPlace = parsed.place;
+    const country = countries.find(c => c.name === cleanCountry);
+    const allPlaces = country ? country.places : [];
+    const cityPart = cleanPlace.includes(" – ") ? cleanPlace.split(" – ")[0].trim() : "";
+    let nearbyRaw = [];
+    if (cityPart) allPlaces.forEach(place => {
+        const q = splitStatePlace(place);
+        if (place !== raw && q.place.toLowerCase().startsWith(cityPart.toLowerCase()+" – ") && (!parsed.state || q.state === parsed.state)) nearbyRaw.push(place);
+    });
+    if (nearbyRaw.length < 4) allPlaces.forEach(place => {
+        const q = splitStatePlace(place);
+        if (place !== raw && !nearbyRaw.includes(place) && (!parsed.state || q.state === parsed.state)) nearbyRaw.push(place);
+    });
+    if (nearbyRaw.length < 4) allPlaces.forEach(place => { if(place !== raw && !nearbyRaw.includes(place)) nearbyRaw.push(place); });
+    return {place:cleanPlace,country:cleanCountry,state:parsed.state,countryData:country,nearby:nearbyRaw.slice(0,6).map(getDisplayPlace)};
+}
+
+/* =========================================================
+
+   PLACE DIRECTORY / DETAIL VIEW
+
+   Designed to visually follow the uploaded travel-package
+
+   layout while keeping the TravelX colour system.
+
+   ========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   PLACE-SPECIFIC IMAGE LOADER
+
+   ========================================================= */
+
+
+
+const placeImageCache = new Map();
+
+
+
+function getPlaceSearchTitle(placeName){
+
+    let value = getDisplayPlace(placeName);
+
+
+
+    /*
+
+       For entries such as:
+
+       "Agra – Taj Mahal"
+
+       "Delhi – Red Fort"
+
+       "Tokyo – Tokyo National Museum"
+
+       search the actual attraction first.
+
+    */
+
+    if (value.includes(" – ")) {
+
+        value = value.split(" – ").slice(1).join(" – ").trim();
+
+    }
+
+
+
+    return value;
+
+}
+
+
+
+
+
+async function fetchWikipediaImage(searchTitle){
+
+
+
+    const title = String(searchTitle || "").trim();
+
+    if (!title) return null;
+
+
+
+    if (placeImageCache.has(title)) {
+
+        return placeImageCache.get(title);
+
+    }
+
+
+
+    const makeEndpoint = function(searchMode){
+
+        if (searchMode === "exact") {
+
+            return "https://en.wikipedia.org/w/api.php" +
+
+                "?action=query&format=json&origin=*" +
+
+                "&prop=pageimages&piprop=thumbnail&pithumbsize=1400" +
+
+                "&redirects=1&titles=" + encodeURIComponent(title);
+
+        }
+
+
+
+        return "https://en.wikipedia.org/w/api.php" +
+
+            "?action=query&format=json&origin=*" +
+
+            "&generator=search&gsrlimit=1" +
+
+            "&gsrsearch=" + encodeURIComponent(title) +
+
+            "&prop=pageimages&piprop=thumbnail&pithumbsize=1400";
+
+    };
+
+
+
+    try {
+
+        for (const mode of ["exact", "search"]) {
+
+            const response = await fetch(makeEndpoint(mode));
+
+            if (!response.ok) continue;
+
+
+
+            const data = await response.json();
+
+            const pages = data && data.query && data.query.pages
+
+                ? Object.values(data.query.pages)
+
+                : [];
+
+
+
+            const page = pages.find(item =>
+
+                item && item.thumbnail && item.thumbnail.source
+
+            );
+
+
+
+            if (page && page.thumbnail && page.thumbnail.source) {
+
+                placeImageCache.set(title, page.thumbnail.source);
+
+                return page.thumbnail.source;
+
+            }
+
+        }
+
+    } catch (error) {
+
+        console.warn("Could not load destination image for:", title, error);
+
+    }
+
+
+
+    placeImageCache.set(title, null);
+
+    return null;
+
+}
+
+
+
+
+
+async function loadPlaceImage(
+
+    placeName,
+
+    countryName,
+
+    imageElement,
+
+    fallbackImage
+
+){
+
+
+
+    const attractionTitle =
+
+        getPlaceSearchTitle(placeName);
+
+
+
+    const countryTitle =
+
+        String(countryName || "").trim();
+
+
+
+    /*
+
+       Try the exact attraction first.
+
+    */
+
+    let imageUrl =
+
+        await fetchWikipediaImage(attractionTitle);
+
+
+
+    /*
+
+       If an attraction page is not found, try the complete
+
+       place name as a second search.
+
+    */
+
+    if (!imageUrl && attractionTitle !== placeName) {
+
+        imageUrl =
+
+            await fetchWikipediaImage(placeName);
+
+    }
+
+
+
+    /* Wikimedia Commons search fallback for attractions that do not have
+
+       a directly matching Wikipedia article image. */
+
+    if (!imageUrl) {
+
+        const commonsEndpoint =
+
+            "https://commons.wikimedia.org/w/api.php" +
+
+            "?action=query&format=json&origin=*" +
+
+            "&generator=search&gsrnamespace=6&gsrlimit=5" +
+
+            "&prop=imageinfo&iiprop=url&iiurlwidth=1400" +
+
+            "&gsrsearch=" + encodeURIComponent(attractionTitle + " tourist attraction");
+
+        try {
+
+            const commonsResponse = await fetch(commonsEndpoint);
+
+            if (commonsResponse.ok) {
+
+                const commonsData = await commonsResponse.json();
+
+                const pages = commonsData && commonsData.query && commonsData.query.pages
+
+                    ? Object.values(commonsData.query.pages) : [];
+
+                const imagePage = pages.find(function(item){
+
+                    return item && item.imageinfo && item.imageinfo[0] &&
+
+                        (item.imageinfo[0].thumburl || item.imageinfo[0].url);
+
+                });
+
+                if (imagePage) {
+
+                    imageUrl = imagePage.imageinfo[0].thumburl || imagePage.imageinfo[0].url;
+
+                }
+
+            }
+
+        } catch(error) {
+
+            console.warn("Commons image search failed:", attractionTitle, error);
+
+        }
+
+    }
+
+
+
+    /* Last fallback: use the country's existing image. */
+
+    if (!imageUrl && countryTitle) {
+
+        imageUrl =
+
+            await fetchWikipediaImage(countryTitle);
+
+    }
+
+
+
+    imageElement.src = imageUrl || fallbackImage;
+
+    imageElement.onerror = function(){
+
+        this.onerror = null;
+
+        this.src = "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=85";
+
+    };
+
+
+
+    imageElement.alt =
+
+        placeName + " tourist attraction in " + countryName;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TRAVEL STYLE + DURATION BUDGET ENGINE
+
+   ---------------------------------------------------------
+
+   Fixed budget values are stored in this page and do not use live hotel prices.
+
+   They scale with the selected tourist-spot duration and travel style.
+
+   ========================================================= */
+
+
+
+const travelStyles = {
+
+    solo: {
+
+        label: "Solo",
+
+        icon: "🧍",
+
+        multiplier: 1,
+
+        note: "One traveller • economical room + food + local transport"
+
+    },
+
+    couple: {
+
+        label: "Couple",
+
+        icon: "👥",
+
+        multiplier: 1.75,
+
+        note: "Two travellers • shared room + food + local transport"
+
+    },
+
+    family: {
+
+        label: "Family",
+
+        icon: "👨‍👩‍👧",
+
+        multiplier: 2.75,
+
+        note: "Family of about 4 • family room/rooms + food + local transport"
+
+    }
+
+};
+
+
+
+/* =========================================================
+   FIXED COUNTRY CURRENCY + FIXED BUDGET ENGINE
+   ---------------------------------------------------------
+   The selected place starts in its own country's currency.
+   All conversion rates below are fixed values stored in this
+   page, so the displayed budget does not change with live FX.
+   ========================================================= */
+
+const countryCurrency = {
+    "India":["INR","Indian Rupee","₹"],
+    "China":["CNY","Chinese Yuan","¥"],
+    "Japan":["JPY","Japanese Yen","¥"],
+    "South Korea":["KRW","South Korean Won","₩"],
+    "North Korea":["KPW","North Korean Won","₩"],
+    "Mongolia":["MNT","Mongolian Tögrög","₮"],
+    "Nepal":["NPR","Nepalese Rupee","Rs"],
+    "Bhutan":["BTN","Bhutanese Ngultrum","Nu."],
+    "Bangladesh":["BDT","Bangladeshi Taka","৳"],
+    "Pakistan":["PKR","Pakistani Rupee","₨"],
+    "Sri Lanka":["LKR","Sri Lankan Rupee","Rs"],
+    "Maldives":["MVR","Maldivian Rufiyaa","Rf"],
+    "Afghanistan":["AFN","Afghan Afghani","؋"],
+    "Indonesia":["IDR","Indonesian Rupiah","Rp"],
+    "Malaysia":["MYR","Malaysian Ringgit","RM"],
+    "Singapore":["SGD","Singapore Dollar","S$"],
+    "Thailand":["THB","Thai Baht","฿"],
+    "Vietnam":["VND","Vietnamese Dong","₫"],
+    "Philippines":["PHP","Philippine Peso","₱"],
+    "Cambodia":["KHR","Cambodian Riel","៛"],
+    "Laos":["LAK","Lao Kip","₭"],
+    "Myanmar":["MMK","Myanmar Kyat","K"],
+    "Brunei":["BND","Brunei Dollar","B$"],
+    "Timor-Leste":["USD","US Dollar","$"],
+    "Kazakhstan":["KZT","Kazakhstani Tenge","₸"],
+    "Uzbekistan":["UZS","Uzbekistani Som","so'm"],
+    "Turkmenistan":["TMT","Turkmenistani Manat","m"],
+    "Kyrgyzstan":["KGS","Kyrgyzstani Som","с"],
+    "Tajikistan":["TJS","Tajikistani Somoni","SM"],
+    "Saudi Arabia":["SAR","Saudi Riyal","﷼"],
+    "Iran":["IRR","Iranian Rial","﷼"],
+    "Iraq":["IQD","Iraqi Dinar","ع.د"],
+    "Syria":["SYP","Syrian Pound","£"],
+    "Lebanon":["LBP","Lebanese Pound","ل.ل"],
+    "Palestine":["ILS","Israeli New Shekel","₪"],
+    "Israel":["ILS","Israeli New Shekel","₪"],
+    "Jordan":["JOD","Jordanian Dinar","د.ا"],
+    "United Arab Emirates":["AED","UAE Dirham","د.إ"],
+    "Oman":["OMR","Omani Rial","﷼"],
+    "Yemen":["YER","Yemeni Rial","﷼"],
+    "Turkey":["TRY","Turkish Lira","₺"],
+    "Cyprus":["EUR","Euro","€"],
+    "Armenia":["AMD","Armenian Dram","֏"],
+    "Azerbaijan":["AZN","Azerbaijani Manat","₼"],
+    "Georgia":["GEL","Georgian Lari","₾"],
+    "Qatar":["QAR","Qatari Riyal","﷼"],
+    "Bahrain":["BHD","Bahraini Dinar",".د.ب"],
+    "Kuwait":["KWD","Kuwaiti Dinar","د.ك"]
+};
+
+/* Fixed USD conversion table.
+   Value = 1 USD in the selected currency.
+   These values are intentionally fixed for stable display. */
+const fixedCurrencyRates = {
+    USD:1,
+    EUR:0.92, GBP:0.79, INR:83.50, CNY:7.20, JPY:150,
+    KRW:1350, KPW:900, MNT:3450, NPR:133, BTN:83.50,
+    BDT:117, PKR:279, LKR:300, MVR:15.40, AFN:70,
+    IDR:15800, MYR:4.70, SGD:1.34, THB:35.50, VND:25000,
+    PHP:56.50, KHR:4100, LAK:22000, MMK:2100, BND:1.34,
+    KZT:480, UZS:12600, TMT:3.50, KGS:87, TJS:10.90,
+    SAR:3.75, IRR:42000, IQD:1310, SYP:13000, LBP:89500,
+    ILS:3.55, JOD:0.709, AED:3.6725, OMR:0.3845, YER:250,
+    TRY:41.00, AMD:385, AZN:1.70, GEL:2.70, QAR:3.64,
+    BHD:0.377, KWD:0.307
+};
+
+const supportedCurrencies = Object.keys(fixedCurrencyRates).map(function(code){
+    for (const country of Object.values(countryCurrency)) {
+        if (country[0] === code) return country;
+    }
+    const names = {
+        USD:["USD","US Dollar","$"], EUR:["EUR","Euro","€"],
+        GBP:["GBP","British Pound","£"], AUD:["AUD","Australian Dollar","A$"],
+        CAD:["CAD","Canadian Dollar","C$"], CHF:["CHF","Swiss Franc","CHF"],
+        NZD:["NZD","New Zealand Dollar","NZ$"], HKD:["HKD","Hong Kong Dollar","HK$"],
+        TWD:["TWD","Taiwan Dollar","NT$"], RUB:["RUB","Russian Ruble","₽"],
+        ZAR:["ZAR","South African Rand","R"], BRL:["BRL","Brazilian Real","R$"],
+        MXN:["MXN","Mexican Peso","MX$"]
+    };
+    return names[code] || [code,code,code];
+});
+
+let selectedTravelStyle = "solo";
+let currentBudgetForCurrency = null;
+
+function toggleBudgetDetails(){
+    const toggle = document.getElementById("budgetToggle");
+    const details = document.getElementById("budgetDetails");
+
+    if(!toggle || !details) return;
+
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+    details.hidden = isOpen;
+}
+
+/* The budget panel is created dynamically inside the place-info modal,
+   so use delegated click handling for the Total Budget button. */
+document.addEventListener("click", function(event){
+    const toggle = event.target.closest("#budgetToggle");
+    if(toggle){
+        toggleBudgetDetails();
+    }
+
+    const currencyToggle = event.target.closest("#otherCurrencyToggle");
+    if(currencyToggle){
+        const panel = document.getElementById("otherCurrencyPanel");
+        if(panel){
+            const isOpen = currencyToggle.getAttribute("aria-expanded") === "true";
+            currencyToggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+            panel.hidden = isOpen;
+        }
+    }
+});
+
+
+function getCountryCurrency(countryName){
+    return countryCurrency[countryName] || ["USD","US Dollar","$"];
+}
+
+function formatBudgetCurrency(value, code, symbol){
+    try {
+        return new Intl.NumberFormat(undefined,{
+            style:"currency",
+            currency:code,
+            maximumFractionDigits:0
+        }).format(Math.round(value));
+    } catch(error){
+        return symbol + Math.round(value).toLocaleString();
+    }
+}
+
+function formatFixedBudget(value, code, symbol){
+    /* Every displayed amount is a finalized fixed value. No ranges or
+       approximate symbols are shown anywhere in the budget UI. */
+    return formatBudgetCurrency(value, code, symbol);
+}
+
+function renderWorldCurrencyBudget(budget, preferredCode){
+    const select = document.getElementById("budgetCurrencySelect");
+    const grid = document.getElementById("currencyBudgetGrid");
+    const otherResult = document.getElementById("otherCurrencyResult");
+    if (!select || !grid) return;
+
+    const localCode = preferredCode || budget.currencyCode || "USD";
+    const localCurrency = supportedCurrencies.find(c => c[0] === localCode) || [localCode, localCode, localCode];
+    const localRate = fixedCurrencyRates[localCode] || 1;
+
+    /* Destination country currency is always the primary display. */
+    const localCurrencyName = document.getElementById("localCurrencyName");
+    if(localCurrencyName){
+        localCurrencyName.textContent = `${localCurrency[2]} ${localCode} — ${localCurrency[1]}`;
+    }
+
+    document.getElementById("stayBudgetTotal").textContent =
+        formatFixedBudget(budget.lowUSD * localRate, localCode, localCurrency[2]);
+
+    document.getElementById("stayBudgetDaily").textContent =
+        formatFixedBudget(budget.dailyLowUSD * localRate, localCode, localCurrency[2]);
+
+    const breakdown = [
+        ["costAccommodation", budget.accommodationLowUSD],
+        ["costFood", budget.foodLowUSD],
+        ["costTransport", budget.transportLowUSD],
+        ["costActivities", budget.activitiesLowUSD]
+    ];
+
+    breakdown.forEach(function(row){
+        const el = document.getElementById(row[0]);
+        if(el) el.textContent = formatBudgetCurrency(row[1] * localRate, localCode, localCurrency[2]);
+    });
+
+    const orderedCurrencies = supportedCurrencies.slice().sort(function(a,b){
+        if(a[0] === localCode) return -1;
+        if(b[0] === localCode) return 1;
+        return a[1].localeCompare(b[1]);
+    });
+
+    select.innerHTML = orderedCurrencies.map(function(c){
+        const localLabel = c[0] === localCode ? " — Destination Currency" : "";
+        return `<option value="${c[0]}">${c[0]} — ${c[1]}${localLabel}</option>`;
+    }).join("");
+    select.value = localCode;
+
+    function renderOtherCurrency(){
+        const selectedCode = select.value;
+        const currency = supportedCurrencies.find(c => c[0] === selectedCode) || localCurrency;
+        const rate = fixedCurrencyRates[selectedCode] || 1;
+        const amount = formatFixedBudget(budget.lowUSD * rate, selectedCode, currency[2]);
+
+        if(otherResult){
+            otherResult.innerHTML =
+                `<span>${currency[2]} ${currency[0]} — ${currency[1]}</span>` +
+                `<strong>${amount}</strong>` +
+                `<small>Same finalized trip cost • converted from the destination budget</small>`;
+        }
+    }
+
+    if(!select.dataset.bound){
+        select.addEventListener("change", renderOtherCurrency);
+        select.dataset.bound = "true";
+    }
+
+    /* Compact comparison list: it is inside a collapsible panel. */
+    grid.innerHTML = "";
+    orderedCurrencies.forEach(function(c){
+        const rate = fixedCurrencyRates[c[0]] || 1;
+        const item = document.createElement("button");
+        item.type = "button";
+        item.className = "currency-budget-item" + (c[0] === localCode ? " is-local" : "");
+        item.dataset.currency = c[0];
+        item.innerHTML =
+            `<span>${c[2]} ${c[0]}${c[0] === localCode ? " • LOCAL" : ""}</span>` +
+            `<strong>${formatBudgetCurrency(budget.lowUSD * rate, c[0], c[2])}</strong>`;
+        item.addEventListener("click", function(){
+            select.value = c[0];
+            renderOtherCurrency();
+        });
+        grid.appendChild(item);
+    });
+
+    renderOtherCurrency();
+}
+
+/* Fixed budget per traveller per full day in USD.
+   One exact daily value is used for every country. The displayed
+   total is finalized for the selected place, duration and travel style. */
+const countryDailyFixedUSD = {
+    "India":40, "Nepal":40, "Bangladesh":35, "Pakistan":35,
+    "Sri Lanka":45, "Indonesia":42, "Vietnam":40, "Cambodia":40,
+    "Laos":35, "Myanmar":40, "Kyrgyzstan":40, "Uzbekistan":48,
+    "Kazakhstan":55, "Mongolia":58, "Malaysia":55, "Thailand":55,
+    "Philippines":50, "China":70, "Turkey":65, "Georgia":48,
+    "Armenia":48, "Azerbaijan":55, "Jordan":82, "Iran":48,
+    "Egypt":50, "Japan":110, "South Korea":95, "Singapore":125,
+    "Bhutan":110, "Brunei":85, "Maldives":160, "Israel":135,
+    "United Arab Emirates":145, "Qatar":125, "Bahrain":85,
+    "Kuwait":100, "Saudi Arabia":85, "Oman":85, "Lebanon":70,
+    "Palestine":70, "Cyprus":85, "Tajikistan":40, "Turkmenistan":65,
+    "Timor-Leste":50, "North Korea":110, "Afghanistan":42,
+    "Iraq":55, "Syria":55, "Yemen":55
+};
+
+function getDailyFixedUSD(countryName){
+    return countryDailyFixedUSD[countryName] || 55;
+}
+
+function parseDurationDays(duration){
+    if(duration === "0.5 Day") return 0.5;
+    if(duration === "2 Days") return 2;
+    return 1;
+}
+
+function formatUSD(value){
+    return "$" + Math.round(value).toLocaleString();
+}
+
+function getTripBudget(details,styleKey){
+    const style = travelStyles[styleKey] || travelStyles.solo;
+    const duration = getPlaceDuration(details.place);
+    const days = parseDurationDays(duration);
+    const dailyUSD = getDailyFixedUSD(details.country);
+
+    const exactDailyUSD = dailyUSD * style.multiplier;
+    const exactTotalUSD = exactDailyUSD * days;
+
+    /* Exact fixed split: 35% accommodation, 25% food,
+       15% local transport and 25% activities. These are finalized
+       values, not live/approximate prices. */
+    return {
+        duration,
+        days,
+        lowUSD:exactTotalUSD,
+        highUSD:exactTotalUSD,
+        dailyLowUSD:exactDailyUSD,
+        dailyHighUSD:exactDailyUSD,
+        accommodationLowUSD:exactTotalUSD*0.35,
+        accommodationHighUSD:exactTotalUSD*0.35,
+        foodLowUSD:exactTotalUSD*0.25,
+        foodHighUSD:exactTotalUSD*0.25,
+        transportLowUSD:exactTotalUSD*0.15,
+        transportHighUSD:exactTotalUSD*0.15,
+        activitiesLowUSD:exactTotalUSD*0.25,
+        activitiesHighUSD:exactTotalUSD*0.25,
+        style:style,
+        currencyCode:getCountryCurrency(details.country)[0]
+    };
+}
+
+function getPlaceDuration(placeName){
+
+    const p = String(placeName || "").toLowerCase().trim();
+
+
+
+    const majorTwoDay = [
+
+        "taj mahal", "angkor wat", "borobudur", "bagan", "petra",
+
+        "burj khalifa", "grand bazaar", "great wall", "terracotta warriors",
+
+        "universal studios", "disneyland", "mount fuji", "hanifaru bay"
+
+    ];
+
+
+
+    const fullDay = [
+
+        "red fort", "qutub minar", "amber fort", "city palace", "agra fort",
+
+        "elephanta caves", "sarnath", "vivekananda rock memorial", "doddabetta peak",
+
+        "nilgiri mountain railway", "kodaikanal lake", "sigiriya rock fortress",
+
+        "galle fort", "ella rock", "nine arches bridge", "faisal mosque", "lahore fort",
+
+        "badshahi mosque", "hunza", "attabad lake", "potala palace", "forbidden city",
+
+        "summer palace", "west lake", "nami island", "jeju", "tokyo disney", "kyoto",
+
+        "nara", "fushimi inari", "osaka castle", "himeji castle", "ha long bay",
+
+        "hoi an", "cu chi tunnels", "grand palace", "phi phi", "petronas", "batu caves",
+
+        "gardens by the bay", "marina bay", "ubud", "uluwatu", "komodo", "bromo",
+
+        "rambagh palace", "dubai mall", "sheikh zayed", "alhambra"
+
+    ];
+
+
+
+    const halfDay = [
+
+        "india gate", "lotus temple", "national museum", "hawa mahal", "jantar mantar",
+
+        "marine drive", "gateway of india", "marina beach", "fort st. george",
+
+        "kapaleeshwarar", "ooty lake", "botanical gardens", "coaker's walk",
+
+        "pillar rocks", "silver cascade", "ganga aarti", "kandy lake",
+
+        "dambulla cave temple", "little adam's peak", "ravana falls", "clifton beach",
+
+        "mazar-e-quaid", "pakistan monument", "daman-e-koh", "tree of life",
+
+        "amwaj islands", "kuwait towers", "grand mosque", "green island"
+
+    ];
+
+
+
+    if (majorTwoDay.some(x => p.includes(x))) return "2 Days";
+
+    if (fullDay.some(x => p.includes(x))) return "1 Day";
+
+    if (halfDay.some(x => p.includes(x))) return "0.5 Day";
+
+
+
+    if (/museum|mosque|temple|church|shrine|memorial|monument|palace|fort|castle|tower/.test(p)) return "0.5 Day";
+
+    if (/beach|market|souq|bazaar|park|garden|lake|waterfall|viewpoint|sunset|square|promenade/.test(p)) return "0.5 Day";
+
+    if (/cave|island|reef|diving|snorkelling|cruise|safari|wildlife|national park/.test(p)) return "1 Day";
+
+    if (/mountain|peak|rock|trek|hiking|railway|valley|bay/.test(p)) return "1 Day";
+
+
+
+    return "0.5 Day";
+
+}
+
+
+
+function getPlaceDurationTip(duration){
+
+    if (duration === "0.5 Day") return "Best planned as a half-day visit; combine it with a nearby attraction.";
+
+    if (duration === "1 Day") return "Keep one full day so you can explore comfortably without rushing.";
+
+    return "Keep two days for a relaxed visit and nearby attractions.";
+
+}
+
+
+
+function getHotelSuggestions(details, styleKey){
+
+    const query = encodeURIComponent(details.place + ", " + details.country);
+
+    const style = travelStyles[styleKey] || travelStyles.solo;
+
+    const styleText = encodeURIComponent(style.label + " hotels");
+
+
+
+    const baseHotelUSD = Math.max(15, Math.round(getDailyFixedUSD(details.country) * 0.35));
+
+    return [
+
+        {
+
+            badge:"TOP MATCH",
+
+            fixedNightUSD:baseHotelUSD,
+
+            name:style.label + " Stay",
+
+            description:"Search comfortable, well-rated stays matched to the selected travel style.",
+
+            url:"https://www.google.com/maps/search/" + styleText + "+near+" + query
+
+        },
+
+        {
+
+            badge:"BEST VALUE",
+
+            fixedNightUSD:Math.max(12, Math.round(baseHotelUSD * 0.80)),
+
+            name:"Value Hotels",
+
+            description:"Compare location, guest ratings and current prices for the destination.",
+
+            url:"https://www.booking.com/searchresults.html?ss=" + query
+
+        },
+
+        {
+
+            badge:"MORE OPTIONS",
+
+            fixedNightUSD:Math.max(15, Math.round(baseHotelUSD * 0.70)),
+
+            name:"Alternative Stays",
+
+            description:"Check additional hotels and accommodation options before choosing.",
+
+            url:"https://www.agoda.com/search?text=" + query
+
+        }
+
+    ];
+
+}
+
+
+
+
+
+function showPlaceInfo(placeName, countryName){
+
+
+
+    const details = getPlaceDetails(placeName, countryName);
+
+
+
+    let modal = document.getElementById("placeInfoModal");
+
+
+
+    if (!modal) {
+
+
+
+        modal = document.createElement("div");
+
+        modal.id = "placeInfoModal";
+
+
+
+        modal.innerHTML = `
+
+            <div class="place-package-window"
+
+                 role="dialog"
+
+                 aria-modal="true"
+
+                 aria-labelledby="placeInfoTitle">
+
+
+
+                <div class="place-package-main">
+
+
+
+                    <div class="place-package-header">
+
+
+
+                        <div>
+
+                            <div class="package-eyebrow">
+
+                                TRAVELX • DESTINATION GUIDE
+
+                            </div>
+
+
+
+                            <h2 id="placeInfoTitle"></h2>
+
+
+
+                            <p class="package-location">
+
+                                <span>⌖</span>
+
+                                <span id="placeInfoLocation"></span>
+
+                            </p>
+
+                        </div>
+
+
+
+                        <button type="button"
+
+                                id="placeInfoClose"
+
+                                class="place-info-close"
+
+                                aria-label="Close place information">×</button>
+
+
+
+                    </div>
+
+
+
+
+
+                    <div class="package-facts">
+
+
+
+                        <div class="package-fact">
+
+                            <span class="fact-icon">◷</span>
+
+                            <div>
+
+                                <small>Recommended Duration</small>
+
+                                <strong id="placeInfoDuration">1 Day</strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="package-fact">
+
+                            <span class="fact-icon">✦</span>
+
+                            <div>
+
+                                <small>Experience Type</small>
+
+                                <strong id="placeInfoType">Sightseeing</strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="package-fact travel-style-fact">
+
+                            <span class="fact-icon">♧</span>
+
+                            <div class="travel-style-wrap">
+
+                                <small>Travel Style</small>
+
+                                <div class="travel-style-buttons" role="group" aria-label="Choose travel style">
+
+                                    <button type="button" class="travel-style-button active" data-style="solo">🧍 Solo</button>
+
+                                    <button type="button" class="travel-style-button" data-style="couple">👥 Couple</button>
+
+                                    <button type="button" class="travel-style-button" data-style="family">👨‍👩‍👧 Family</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="package-fact">
+
+                            <span class="fact-icon">☷</span>
+
+                            <div>
+
+                                <small>Language</small>
+
+                                <strong>Local • English</strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                    <div class="package-place-image">
+
+                        <img id="placeInfoImage"
+
+                             src=""
+
+                             alt="Tourist destination">
+
+                        <div class="image-overlay-label">
+
+                            <span id="placeInfoImageCountry"></span>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <!-- STAY + TOTAL BUDGET: immediately after the destination picture -->
+
+                    <div class="place-info-card hotel-card-section stay-planner-after-image">
+
+
+
+                        <div class="card-heading-row">
+
+                            <div>
+
+                                <span class="mini-label">PLAN YOUR STAY</span>
+
+                                <h4>Hotels & Fixed Total Trip Cost</h4>
+
+                            </div>
+
+                            <span class="section-count" id="hotelBudgetLabel"></span>
+
+                        </div>
+
+
+
+                        <p class="hotel-intro" id="hotelIntroText">
+
+                            Choose Solo, Couple or Family to view the fixed final trip budget for this place and its recommended duration.
+
+                        </p>
+
+
+
+                        <button type="button"
+                                class="stay-budget-summary world-currency-budget budget-toggle"
+                                id="budgetToggle"
+                                aria-expanded="false"
+                                aria-controls="budgetDetails">
+
+                            <div class="world-budget-main">
+
+                                <small>FINAL FIXED TOTAL TRIP COST</small>
+
+                                <strong id="stayBudgetTotal">$0</strong>
+
+                                <span id="stayBudgetMeta">Solo • 0.5 Day</span>
+
+                                <div class="stay-budget-daily">
+
+                                    <small>FINAL FIXED PER DAY</small>
+
+                                    <strong id="stayBudgetDaily">$0</strong>
+
+                                </div>
+
+                            </div>
+
+                            <div class="budget-toggle-arrow" aria-hidden="true">⌄</div>
+
+                        </button>
+
+
+
+                        <div class="budget-details" id="budgetDetails" hidden>
+
+                            <div class="local-currency-heading">
+                                <span>📍 DESTINATION CURRENCY</span>
+                                <strong id="localCurrencyName">Local currency</strong>
+                            </div>
+
+                            <div class="trip-cost-breakdown" id="tripCostBreakdown">
+
+                                <div><span>🏨 Accommodation</span><strong id="costAccommodation">$0</strong></div>
+
+                                <div><span>🍽️ Food</span><strong id="costFood">$0</strong></div>
+
+                                <div><span>🚕 Local transport</span><strong id="costTransport">$0</strong></div>
+
+                                <div><span>🎟️ Sightseeing & activities</span><strong id="costActivities">$0</strong></div>
+
+                            </div>
+
+
+
+                            <button type="button" class="other-currency-toggle" id="otherCurrencyToggle" aria-expanded="false" aria-controls="otherCurrencyPanel">
+                                <span>🌍 Other country currencies</span>
+                                <b>⌄</b>
+                            </button>
+
+                            <div class="other-currency-panel" id="otherCurrencyPanel" hidden>
+                                <div class="currency-select-box">
+                                    <label for="budgetCurrencySelect">Choose another currency</label>
+                                    <select id="budgetCurrencySelect" aria-label="Choose another budget currency"></select>
+                                </div>
+                                <div class="other-currency-result" id="otherCurrencyResult"></div>
+                                <div class="currency-budget-grid" id="currencyBudgetGrid"></div>
+                            </div>
+
+                            <p class="currency-note">✓ Finalized fixed amount. The destination currency is shown first. Open “Other country currencies” only when you want to compare the same fixed total in another currency.</p>
+
+                        </div>
+
+
+
+                        <div class="hotel-section-title">
+
+                            <span class="mini-label">STAY NEARBY</span>
+
+                            <h4>Suggested Hotels</h4>
+
+                        </div>
+
+
+
+                        <div id="hotelSuggestionList" class="hotel-suggestion-grid"></div>
+
+
+
+                        <div class="hotel-access-note">
+
+                            <span>✓</span>
+
+                            <div>
+
+                                <strong>Easy hotel access</strong>
+
+                                <small>Hotel searches use the selected place and travel style. Open a result to compare current prices and availability.</small>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                    <div class="package-content">
+
+
+
+                        <div class="package-section-intro">
+
+                            <span class="package-label">DESTINATION OVERVIEW</span>
+
+                            <h3 id="placeInfoName"></h3>
+
+                            <p id="placeInfoDescription"></p>
+
+                        </div>
+
+
+
+
+
+                        <div class="place-info-card">
+
+                            <h4>About this place</h4>
+
+                            <p id="placeInfoAbout"></p>
+
+                        </div>
+
+
+
+
+
+                        <div class="place-info-card">
+
+                            <h4>Highlights</h4>
+
+                            <ul id="placeInfoHighlights"></ul>
+
+                        </div>
+
+
+
+
+
+                        <div class="place-info-card">
+
+                            <h4>Why visit?</h4>
+
+                            <p id="placeInfoWhy"></p>
+
+                        </div>
+
+
+
+
+
+                        <div class="place-info-card">
+
+                            <div class="card-heading-row">
+
+                                <div>
+
+                                    <span class="mini-label">EXPLORE AROUND</span>
+
+                                    <h4>Nearby Places</h4>
+
+                                </div>
+
+                                <span class="section-count" id="nearbyCount"></span>
+
+                            </div>
+
+
+
+                            <div id="nearbyPlaces"
+
+                                 class="nearby-place-grid"></div>
+
+                        </div>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+        `;
+
+
+
+        document.body.appendChild(modal);
+
+
+
+
+
+        const style = document.createElement("style");
+
+
+
+        style.id = "placeInfoStyles";
+
+
+
+        style.textContent = `
+
+
+
+            #placeInfoModal{
+
+                position:fixed;
+
+                inset:0;
+
+                z-index:11000;
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:center;
+
+                padding:18px;
+
+                background:rgba(5,30,32,.72);
+
+                backdrop-filter:blur(5px);
+
+                opacity:0;
+
+                visibility:hidden;
+
+                pointer-events:none;
+
+                transition:opacity .2s ease,visibility .2s ease;
+
+            }
+
+
+
+
+
+            #placeInfoModal.show{
+
+                opacity:1;
+
+                visibility:visible;
+
+                pointer-events:auto;
+
+            }
+
+
+
+
+
+            .place-package-window{
+
+                width:min(1380px,96vw);
+
+                height:min(900px,94vh);
+
+                background:#fff;
+
+                border-radius:22px;
+
+                overflow:hidden;
+
+                box-shadow:0 30px 100px rgba(0,0,0,.38);
+
+                display:grid;
+
+                grid-template-columns:1fr;
+
+                transform:translateY(15px) scale(.985);
+
+                transition:transform .2s ease;
+
+            }
+
+
+
+
+
+            #placeInfoModal.show .place-package-window{
+
+                transform:translateY(0) scale(1);
+
+            }
+
+
+
+
+
+            .place-package-main{
+
+                min-width:0;
+
+                overflow-y:auto;
+
+                background:#fff;
+
+            }
+
+
+
+
+
+            .place-package-header{
+
+                padding:28px 34px 20px;
+
+                display:flex;
+
+                align-items:flex-start;
+
+                justify-content:space-between;
+
+                gap:20px;
+
+                border-bottom:1px solid var(--border);
+
+            }
+
+
+
+
+
+            .package-eyebrow{
+
+                color:var(--primary);
+
+                font-size:11px;
+
+                font-weight:900;
+
+                letter-spacing:2.2px;
+
+                margin-bottom:8px;
+
+            }
+
+
+
+
+
+            .place-package-header h2{
+
+                margin:0 0 7px;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:clamp(30px,4vw,48px);
+
+                line-height:1.08;
+
+                font-weight:600;
+
+                overflow-wrap:anywhere;
+
+            }
+
+
+
+
+
+            .package-location{
+
+                margin:0;
+
+                color:var(--text);
+
+                font-size:15px;
+
+            }
+
+
+
+
+
+            .package-location span:first-child{
+
+                color:var(--primary);
+
+                font-size:20px;
+
+                margin-right:5px;
+
+            }
+
+
+
+
+
+            .place-info-close{
+
+                width:46px;
+
+                height:46px;
+
+                flex:0 0 46px;
+
+                border:0;
+
+                border-radius:50%;
+
+                background:#eef6f5;
+
+                color:var(--heading);
+
+                font-size:30px;
+
+                line-height:1;
+
+                cursor:pointer;
+
+                transition:.2s ease;
+
+            }
+
+
+
+
+
+            .place-info-close:hover{
+
+                background:var(--primary);
+
+                color:#fff;
+
+                transform:rotate(4deg);
+
+            }
+
+
+
+
+
+            .package-facts{
+
+                display:grid;
+
+                grid-template-columns:repeat(4,1fr);
+
+                gap:15px;
+
+                padding:20px 34px;
+
+                border-bottom:1px solid var(--border);
+
+            }
+
+
+
+
+
+            .package-fact{
+
+                display:flex;
+
+                align-items:center;
+
+                gap:11px;
+
+                min-width:0;
+
+            }
+
+
+
+
+
+            .fact-icon{
+
+                width:38px;
+
+                height:38px;
+
+                flex:0 0 38px;
+
+                display:grid;
+
+                place-items:center;
+
+                border:1px solid #b9d9d6;
+
+                border-radius:50%;
+
+                color:#268f89;
+
+                font-size:18px;
+
+                background:#f7fbfb;
+
+            }
+
+
+
+
+
+            .package-fact small{
+
+                display:block;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:14px;
+
+                margin-bottom:2px;
+
+            }
+
+
+
+
+
+            .package-fact strong{
+
+                display:block;
+
+                color:#e89a13;
+
+                font-size:12px;
+
+                font-weight:700;
+
+            }
+
+
+
+
+
+            .package-place-image{
+
+                position:relative;
+
+                width:100%;
+
+                height:420px;
+
+                overflow:hidden;
+
+                background:#eaf1f2;
+
+            }
+
+
+
+
+
+            .package-place-image img{
+
+                width:100%;
+
+                height:100%;
+
+                object-fit:cover;
+
+                display:block;
+
+                background:#eaf1f2;
+
+                transition:opacity .25s ease, transform .45s ease;
+
+            }
+
+
+
+
+
+            .image-overlay-label{
+
+                position:absolute;
+
+                left:20px;
+
+                bottom:18px;
+
+                padding:9px 14px;
+
+                border-radius:22px;
+
+                color:#fff;
+
+                background:rgba(0,0,0,.52);
+
+                backdrop-filter:blur(6px);
+
+                font-size:12px;
+
+                font-weight:800;
+
+            }
+
+
+
+
+
+            .package-content{
+
+                padding:30px 34px 45px;
+
+            }
+
+
+
+
+
+            .package-section-intro{
+
+                margin-bottom:22px;
+
+            }
+
+
+
+
+
+            .package-label,
+
+            .mini-label{
+
+                display:block;
+
+                margin-bottom:7px;
+
+                color:var(--primary);
+
+                font-size:10px;
+
+                font-weight:900;
+
+                letter-spacing:1.8px;
+
+            }
+
+
+
+
+
+            .package-section-intro h3{
+
+                margin:0 0 10px;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:31px;
+
+                line-height:1.15;
+
+            }
+
+
+
+
+
+            .package-section-intro > p{
+
+                margin:0;
+
+                color:var(--text);
+
+                line-height:1.8;
+
+                font-size:15px;
+
+            }
+
+
+
+
+
+            .place-info-card{
+
+                margin-top:18px;
+
+                padding:22px;
+
+                border:1px solid var(--border);
+
+                border-radius:16px;
+
+                background:#f8fafb;
+
+            }
+
+
+
+
+
+            .place-info-card h4{
+
+                margin:0 0 10px;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:20px;
+
+            }
+
+
+
+
+
+            .place-info-card p{
+
+                margin:0;
+
+                color:var(--text);
+
+                line-height:1.8;
+
+                font-size:14px;
+
+            }
+
+
+
+
+
+            .place-info-card ul{
+
+                margin:0;
+
+                padding-left:21px;
+
+                color:var(--text);
+
+                line-height:1.9;
+
+                font-size:14px;
+
+            }
+
+
+
+
+
+            .card-heading-row{
+
+                display:flex;
+
+                align-items:flex-end;
+
+                justify-content:space-between;
+
+                gap:15px;
+
+                margin-bottom:12px;
+
+            }
+
+
+
+
+
+            .card-heading-row h4{
+
+                margin-bottom:0;
+
+            }
+
+
+
+
+
+            .section-count{
+
+                padding:6px 10px;
+
+                border-radius:20px;
+
+                background:#e8f6f5;
+
+                color:var(--primary);
+
+                font-size:11px;
+
+                font-weight:800;
+
+                white-space:nowrap;
+
+            }
+
+
+
+
+
+            .nearby-place-grid{
+
+                display:grid;
+
+                grid-template-columns:repeat(2,minmax(0,1fr));
+
+                gap:9px;
+
+            }
+
+
+
+
+
+            .nearby-place-button{
+
+                width:100%;
+
+                min-height:50px;
+
+                border:1px solid #dce7e8;
+
+                border-radius:11px;
+
+                background:#fff;
+
+                color:#425b70;
+
+                padding:10px 12px;
+
+                text-align:left;
+
+                font:inherit;
+
+                font-size:13px;
+
+                cursor:pointer;
+
+                transition:.2s ease;
+
+            }
+
+
+
+
+
+            .nearby-place-button:hover{
+
+                border-color:var(--primary);
+
+                background:#eef8f7;
+
+                transform:translateY(-2px);
+
+            }
+
+
+
+
+
+            .travel-style-wrap{
+
+                width:100%;
+
+            }
+
+
+
+            .travel-style-buttons{
+
+                display:flex;
+
+                flex-wrap:wrap;
+
+                gap:7px;
+
+                margin-top:7px;
+
+            }
+
+
+
+            .travel-style-button{
+
+                border:1px solid #d7e4e5;
+
+                border-radius:999px;
+
+                background:#fff;
+
+                color:#40586b;
+
+                padding:8px 11px;
+
+                font:inherit;
+
+                font-size:11px;
+
+                font-weight:800;
+
+                cursor:pointer;
+
+                transition:.2s ease;
+
+            }
+
+
+
+            .travel-style-button:hover{
+
+                border-color:var(--primary);
+
+                transform:translateY(-1px);
+
+            }
+
+
+
+            .travel-style-button.active{
+
+                background:var(--primary);
+
+                border-color:var(--primary);
+
+                color:#fff;
+
+                box-shadow:0 5px 15px rgba(8,123,115,.16);
+
+            }
+
+
+
+            .budget-toggle{
+                width:100%;
+                border:0;
+                text-align:left;
+                font:inherit;
+                color:inherit;
+                cursor:pointer;
+                position:relative;
+                padding-right:48px;
+                transition:box-shadow .2s ease, transform .2s ease;
+            }
+
+            .budget-toggle:hover{
+                box-shadow:0 7px 20px rgba(8,123,115,.12);
+            }
+
+            .budget-toggle:focus-visible{
+                outline:3px solid rgba(8,123,115,.25);
+                outline-offset:2px;
+            }
+
+            .budget-toggle-arrow{
+                position:absolute;
+                right:18px;
+                top:50%;
+                width:30px;
+                height:30px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:50%;
+                background:#e8f5f3;
+                color:var(--primary);
+                font-size:20px;
+                font-weight:900;
+                transform:translateY(-50%);
+                transition:transform .25s ease, background .25s ease;
+            }
+
+            .budget-toggle[aria-expanded="true"] .budget-toggle-arrow{
+                transform:translateY(-50%) rotate(180deg);
+                background:#d8efec;
+            }
+
+            .budget-details{
+                margin-top:10px;
+                padding:13px;
+                border:1px solid #d8e8e7;
+                border-radius:15px;
+                background:#f9fcfc;
+                animation:budgetDetailsOpen .25s ease;
+            }
+
+            @keyframes budgetDetailsOpen{
+                from{opacity:0;transform:translateY(-5px);}
+                to{opacity:1;transform:translateY(0);}
+            }
+
+            .budget-details[hidden]{
+                display:none;
+            }
+
+            .world-currency-budget{display:flex;justify-content:space-between;align-items:center;gap:18px;}
+
+            .world-budget-main{min-width:0;}
+
+            .local-currency-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:4px 0 10px;padding:10px 12px;border-radius:11px;background:#eef8f7;border:1px solid #d5eae8;}
+
+            .local-currency-heading span{font-size:10px;font-weight:900;color:#5f7388;letter-spacing:.5px;}
+
+            .local-currency-heading strong{font-size:12px;color:#123d3d;text-align:right;}
+
+            .currency-select-box{display:flex;flex-direction:column;gap:5px;min-width:170px;}
+
+            .currency-select-box label{font-size:10px;font-weight:900;color:#123d3d;text-transform:uppercase;}
+
+            #budgetCurrencySelect{width:100%;border:1px solid #cfe0df;border-radius:9px;padding:9px 10px;background:#fff;color:#123d3d;font-weight:800;}
+
+            .other-currency-toggle{width:100%;margin-top:11px;padding:11px 13px;border:1px solid #d8e7e7;border-radius:11px;background:#fff;display:flex;align-items:center;justify-content:space-between;color:#123d3d;font:inherit;font-size:12px;font-weight:900;cursor:pointer;}
+
+            .other-currency-toggle b{width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#e8f5f3;font-size:17px;transition:transform .2s ease;}
+
+            .other-currency-toggle[aria-expanded="true"] b{transform:rotate(180deg);}
+
+            .other-currency-panel{margin-top:8px;padding:11px;border:1px solid #e0ebeb;border-radius:12px;background:#f7fbfb;}
+
+            .other-currency-result{margin-top:9px;padding:11px;border-radius:10px;background:#eef8f7;border:1px solid #d5eae8;}
+
+            .other-currency-result span{display:block;font-size:10px;font-weight:900;color:#60738c;}
+
+            .other-currency-result strong{display:block;margin-top:4px;font-size:18px;color:#123d3d;}
+
+            .other-currency-result small{display:block;margin-top:3px;color:#7c8994;font-size:9px;}
+
+            .currency-budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px;max-height:250px;overflow:auto;padding-right:2px;}
+
+            .currency-budget-item{padding:8px 9px;border:1px solid #e1e8eb;border-radius:9px;background:#fff;text-align:left;cursor:pointer;font:inherit;}
+
+            .currency-budget-item:hover{border-color:#b9d9d6;background:#f2fafa;}
+
+            .currency-budget-item.is-local{border-color:#9bcfc9;background:#eef8f7;}
+
+            .currency-budget-item span{display:block;font-size:9px;color:#60738c;font-weight:800;}
+
+            .currency-budget-item strong{display:block;margin-top:3px;font-size:11px;color:#123d3d;}
+
+            .currency-note{margin:9px 0 0;color:#7c8994;font-size:10px;line-height:1.5;}
+
+
+
+            .stay-planner-after-image{
+
+                margin:28px 34px 0;
+
+            }
+
+
+
+            .hotel-section-title{
+
+                margin-top:22px;
+
+                padding-top:18px;
+
+                border-top:1px solid #e3ebec;
+
+            }
+
+
+
+            .hotel-section-title h4{
+
+                margin:2px 0 0;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:22px;
+
+            }
+
+
+
+            .trip-cost-breakdown{
+
+                display:grid;
+
+                grid-template-columns:repeat(4,1fr);
+
+                gap:9px;
+
+                margin:10px 0 4px;
+
+            }
+
+
+
+            .trip-cost-breakdown > div{
+
+                padding:11px 12px;
+
+                border:1px solid #e0e9ea;
+
+                border-radius:12px;
+
+                background:#fff;
+
+            }
+
+
+
+            .trip-cost-breakdown span{
+
+                display:block;
+
+                color:#60738c;
+
+                font-size:10px;
+
+                font-weight:800;
+
+                line-height:1.35;
+
+            }
+
+
+
+            .trip-cost-breakdown strong{
+
+                display:block;
+
+                margin-top:5px;
+
+                color:#123d3d;
+
+                font-size:12px;
+
+            }
+
+
+
+            .stay-budget-summary{
+
+                display:flex;
+
+                justify-content:space-between;
+
+                align-items:center;
+
+                gap:14px;
+
+                margin:14px 0 12px;
+
+                padding:15px 16px;
+
+                border:1px solid #d8e8e7;
+
+                border-radius:15px;
+
+                background:linear-gradient(135deg,#f2fbfa,#fff);
+
+            }
+
+
+
+            .stay-budget-summary small{
+
+                display:block;
+
+                color:var(--primary);
+
+                font-size:9px;
+
+                font-weight:900;
+
+                letter-spacing:1px;
+
+            }
+
+
+
+            .stay-budget-summary strong{
+
+                display:block;
+
+                margin-top:3px;
+
+                color:#1d3041;
+
+                font-size:22px;
+
+                line-height:1.15;
+
+            }
+
+
+
+            #stayBudgetMeta{
+
+                display:block;
+
+                margin-top:3px;
+
+                color:#718294;
+
+                font-size:11px;
+
+            }
+
+
+
+            .stay-budget-daily{
+
+                min-width:125px;
+
+                padding-left:14px;
+
+                border-left:1px solid #d8e8e7;
+
+            }
+
+
+
+            .stay-budget-daily strong{
+
+                font-size:17px;
+
+            }
+
+
+
+            .hotel-intro{
+
+                margin-bottom:15px !important;
+
+            }
+
+
+
+
+
+            .hotel-website-grid{
+
+                display:grid;
+
+                grid-template-columns:repeat(2,minmax(0,1fr));
+
+                gap:10px;
+
+            }
+
+
+
+            .hotel-suggestion-grid{
+
+                display:grid;
+
+                grid-template-columns:repeat(3,minmax(0,1fr));
+
+                gap:12px;
+
+                margin-top:14px;
+
+            }
+
+
+
+            .hotel-suggestion{
+
+                display:flex;
+
+                flex-direction:column;
+
+                justify-content:space-between;
+
+                min-height:175px;
+
+                padding:16px;
+
+                border:1px solid #dce7e8;
+
+                border-radius:16px;
+
+                background:linear-gradient(180deg,#ffffff,#f8fbfb);
+
+                box-shadow:0 5px 16px rgba(28,55,70,.05);
+
+                transition:.2s ease;
+
+            }
+
+
+
+            .hotel-suggestion:hover{
+
+                transform:translateY(-3px);
+
+                border-color:var(--primary);
+
+                box-shadow:0 10px 24px rgba(8,123,115,.10);
+
+            }
+
+
+
+            .hotel-suggestion-badge{
+
+                display:inline-flex;
+
+                align-items:center;
+
+                width:max-content;
+
+                padding:6px 9px;
+
+                border-radius:20px;
+
+                background:#eef8f7;
+
+                color:var(--primary);
+
+                font-size:10px;
+
+                font-weight:900;
+
+                letter-spacing:.7px;
+
+                text-transform:uppercase;
+
+            }
+
+
+
+            .hotel-suggestion h5{
+
+                margin:12px 0 5px;
+
+                color:#1d3041;
+
+                font-size:16px;
+
+                line-height:1.25;
+
+            }
+
+
+
+            .hotel-fixed-price{
+                display:block;
+                margin:0 0 12px;
+                color:var(--primary);
+                font-size:15px;
+                font-weight:900;
+            }
+
+            .hotel-suggestion p{
+
+                margin:0 0 13px;
+
+                color:#718294;
+
+                font-size:12px;
+
+                line-height:1.55;
+
+            }
+
+
+
+            .hotel-search-button{
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:center;
+
+                gap:7px;
+
+                width:100%;
+
+                padding:10px 12px;
+
+                border-radius:10px;
+
+                background:var(--primary);
+
+                color:#fff;
+
+                text-decoration:none;
+
+                font-size:12px;
+
+                font-weight:800;
+
+                transition:.2s ease;
+
+            }
+
+
+
+            .hotel-search-button:hover,
+
+            .hotel-search-button:focus{
+
+                background:var(--primary-dark);
+
+                outline:none;
+
+            }
+
+
+
+            .hotel-access-note{
+
+                display:flex;
+
+                align-items:flex-start;
+
+                gap:10px;
+
+                margin-top:14px;
+
+                padding:12px 13px;
+
+                border:1px dashed #b9d9d6;
+
+                border-radius:12px;
+
+                background:#f7fbfb;
+
+            }
+
+
+
+            .hotel-access-note > span{
+
+                display:grid;
+
+                place-items:center;
+
+                width:24px;
+
+                height:24px;
+
+                flex:0 0 24px;
+
+                border-radius:50%;
+
+                background:#dff3f1;
+
+                color:var(--primary);
+
+                font-size:13px;
+
+                font-weight:900;
+
+            }
+
+
+
+            .hotel-access-note strong{
+
+                display:block;
+
+                color:#1d3041;
+
+                font-size:12px;
+
+            }
+
+
+
+            .hotel-access-note small{
+
+                display:block;
+
+                margin-top:2px;
+
+                color:#718294;
+
+                font-size:11px;
+
+                line-height:1.45;
+
+            }
+
+
+
+            .budget-badge{
+
+                display:inline-flex;
+
+                align-items:center;
+
+                gap:5px;
+
+            }
+
+
+
+
+
+            .hotel-website{
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:space-between;
+
+                gap:10px;
+
+                padding:13px 14px;
+
+                border:1px solid #dce7e8;
+
+                border-radius:12px;
+
+                background:#fff;
+
+                color:var(--heading);
+
+                text-decoration:none;
+
+                transition:.2s ease;
+
+            }
+
+
+
+
+
+            .hotel-website:hover{
+
+                border-color:var(--primary);
+
+                transform:translateY(-2px);
+
+                box-shadow:0 7px 18px rgba(8,123,115,.10);
+
+            }
+
+
+
+
+
+            .hotel-website strong{
+
+                font-size:13px;
+
+            }
+
+
+
+
+
+            .hotel-website span{
+
+                color:var(--primary);
+
+                font-size:17px;
+
+            }
+
+
+
+
+
+            .place-package-sidebar{
+
+                background:#f8f8f8;
+
+                border-left:1px solid var(--border);
+
+                overflow-y:auto;
+
+            }
+
+
+
+
+
+            .sidebar-sticky{
+
+                padding:40px 22px 30px;
+
+            }
+
+
+
+
+
+            .sidebar-heading span,
+
+            .enquiry-title span{
+
+                color:var(--primary);
+
+                font-size:10px;
+
+                font-weight:900;
+
+                letter-spacing:2px;
+
+            }
+
+
+
+
+
+            .sidebar-heading h3{
+
+                margin:7px 0 22px;
+
+                color:#111;
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:30px;
+
+                line-height:1.15;
+
+            }
+
+
+
+
+
+            .budget-planner-card{
+
+                display:flex;
+
+                align-items:flex-start;
+
+                gap:10px;
+
+                margin-bottom:16px;
+
+                padding:13px;
+
+                border:1px solid #dce7e8;
+
+                border-radius:14px;
+
+                background:#fff;
+
+                box-shadow:0 5px 15px rgba(28,55,70,.04);
+
+            }
+
+
+
+            .budget-planner-icon{
+
+                display:grid;
+
+                place-items:center;
+
+                width:34px;
+
+                height:34px;
+
+                flex:0 0 34px;
+
+                border-radius:10px;
+
+                background:#eef8f7;
+
+                color:var(--primary);
+
+                font-size:15px;
+
+                font-weight:900;
+
+            }
+
+
+
+            .budget-planner-card small{
+
+                display:block;
+
+                color:var(--primary);
+
+                font-size:9px;
+
+                font-weight:900;
+
+                letter-spacing:1px;
+
+            }
+
+
+
+            .budget-planner-card strong{
+
+                display:block;
+
+                margin-top:3px;
+
+                color:#1d3041;
+
+                font-size:11px;
+
+                line-height:1.35;
+
+            }
+
+
+
+            .budget-planner-card p{
+
+                margin-top:4px;
+
+                color:#7c8994;
+
+                font-size:10px;
+
+                line-height:1.4;
+
+            }
+
+
+
+            .contact-item{
+
+                display:flex;
+
+                align-items:center;
+
+                gap:11px;
+
+                padding:10px 0;
+
+                border-bottom:1px solid #e2e5e6;
+
+            }
+
+
+
+
+
+            .contact-icon{
+
+                width:40px;
+
+                height:40px;
+
+                flex:0 0 40px;
+
+                display:grid;
+
+                place-items:center;
+
+                border-radius:50%;
+
+                background:#fff;
+
+                color:var(--heading);
+
+                font-size:17px;
+
+                box-shadow:0 3px 12px rgba(0,0,0,.05);
+
+            }
+
+
+
+
+
+            .contact-item small{
+
+                display:block;
+
+                color:#7c8994;
+
+                font-size:10px;
+
+                margin-bottom:2px;
+
+            }
+
+
+
+
+
+            .contact-item strong{
+
+                display:block;
+
+                color:#1d3041;
+
+                font-size:12px;
+
+                overflow-wrap:anywhere;
+
+            }
+
+.enquiry-title h4{
+
+                margin:5px 0 15px;
+
+                color:#111;
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:22px;
+
+                font-weight:500;
+
+            }
+
+.state-section-heading{grid-column:1/-1;display:flex;align-items:baseline;gap:10px;margin:18px 0 4px;padding:10px 14px;border-left:4px solid var(--primary);background:#f1f8f7;border-radius:8px}.state-section-heading span{color:var(--primary);font-size:9px;font-weight:900;letter-spacing:1.5px}.state-section-heading strong{color:#1d3041;font-size:16px}
+
+.directory-back-button{
+
+                margin-bottom:12px;
+
+                border:1px solid #d9e5e6;
+
+                border-radius:20px;
+
+                background:#fff;
+
+                color:var(--primary);
+
+                padding:8px 13px;
+
+                font-size:12px;
+
+                font-weight:800;
+
+                cursor:pointer;
+
+            }
+
+
+
+
+
+            @media(max-width:1050px){
+
+
+
+                .place-package-window{
+
+                    grid-template-columns:1fr;
+
+                }
+
+
+
+                .package-facts{
+
+                    grid-template-columns:repeat(2,1fr);
+
+                }
+
+
+
+                .package-place-image{
+
+                    height:300px;
+
+                }
+
+            }
+
+
+
+
+
+            @media(max-width:800px){
+
+
+
+                #placeInfoModal{
+
+                    padding:8px;
+
+                    align-items:center;
+
+                }
+
+
+
+                .place-package-window{
+
+                    width:97vw;
+
+                    height:95vh;
+
+                    grid-template-columns:1fr;
+
+                }
+
+
+
+
+
+
+
+                .sidebar-sticky{
+
+                    padding:25px 20px 30px;
+
+                }
+
+
+
+                .package-facts{
+
+                    padding:18px 20px;
+
+                }
+
+
+
+                .place-package-header{
+
+                    padding:22px 20px 17px;
+
+                }
+
+
+
+                .package-content{
+
+                    padding:24px 20px 35px;
+
+                }
+
+
+
+                .stay-planner-after-image{
+
+                    margin:22px 20px 0;
+
+                }
+
+
+
+                .trip-cost-breakdown{
+
+                    grid-template-columns:repeat(2,1fr);
+
+                }
+
+            }
+
+
+
+
+
+            @media(max-width:700px){
+
+                .world-currency-budget{align-items:stretch;flex-direction:column;}
+
+                .currency-select-box{width:100%;}
+
+                #budgetCurrencySelect{width:100%;}
+
+                .currency-budget-grid{grid-template-columns:repeat(2,1fr);}
+
+            }
+
+
+
+            @media(max-width:560px){
+
+
+
+                .package-facts{
+
+                    grid-template-columns:1fr;
+
+                    gap:12px;
+
+                }
+
+
+
+                .package-place-image{
+
+                    height:230px;
+
+                }
+
+
+
+                .package-section-intro h3{
+
+                    font-size:27px;
+
+                }
+
+
+
+                .nearby-place-grid,
+
+                .hotel-website-grid,
+
+                .hotel-suggestion-grid{
+
+                    grid-template-columns:1fr;
+
+                }
+
+
+
+                .stay-budget-summary{
+
+                    align-items:flex-start;
+
+                    flex-direction:column;
+
+                }
+
+
+
+                .stay-budget-daily{
+
+                    width:100%;
+
+                    min-width:0;
+
+                    padding:10px 0 0;
+
+                    border-left:0;
+
+                    border-top:1px solid #d8e8e7;
+
+                }
+
+
+
+                .place-info-card{
+
+                    padding:17px;
+
+                }
+
+
+
+                .sidebar-heading h3{
+
+                    font-size:27px;
+
+                }
+
+            }
+
+
+
+        `;
+
+
+
+        document.head.appendChild(style);
+
+
+
+
+
+        document.getElementById("placeInfoClose")
+
+            .addEventListener("click", closePlaceInfo);
+
+
+
+
+
+        modal.addEventListener("click", function(event){
+
+
+
+            if (event.target === modal) {
+
+                closePlaceInfo();
+
+            }
+
+
+
+        });
+
+document.getElementById("nearbyPlaces")
+
+            .addEventListener("click", function(event){
+
+
+
+                const button =
+
+                    event.target.closest(".nearby-place-button");
+
+
+
+                if (!button) return;
+
+
+
+                showPlaceInfo(
+
+                    button.dataset.place,
+
+                    button.dataset.country
+
+                );
+
+
+
+            });
+
+
+
+    }
+
+
+
+
+
+    document.getElementById("placeInfoTitle").textContent =
+
+        details.place;
+
+
+
+    document.getElementById("placeInfoName").textContent =
+
+        details.place;
+
+
+
+    document.getElementById("placeInfoLocation").textContent =
+
+        details.country;
+
+
+
+    document.getElementById("placeInfoImageCountry").textContent =
+
+        details.country;
+
+
+
+
+
+    const image =
+
+        document.getElementById("placeInfoImage");
+
+
+
+    const fallbackImage =
+
+        details.countryData && details.countryData.image
+
+            ? details.countryData.image
+
+            : "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=85";
+
+
+
+    image.src = fallbackImage;
+
+    image.alt = details.place + " in " + details.country;
+
+
+
+    /*
+
+       Get a destination-specific photograph from Wikipedia.
+
+       This means "Taj Mahal" gets a Taj Mahal image,
+
+       "India Gate" gets an India Gate image, etc.
+
+       If a matching image is not available, the country image
+
+       is used as a safe fallback.
+
+    */
+
+    loadPlaceImage(
+
+        details.place,
+
+        details.country,
+
+        image,
+
+        fallbackImage
+
+    );
+
+
+
+
+
+    const duration = getPlaceDuration(details.place);
+
+
+
+    document.getElementById("placeInfoDuration").textContent = duration;
+
+
+
+
+
+    document.getElementById("placeInfoType").textContent =
+
+        details.place.toLowerCase().includes("beach")
+
+            ? "Beach & Leisure"
+
+            : details.place.toLowerCase().includes("temple")
+
+              ? "Culture & Heritage"
+
+              : details.place.toLowerCase().includes("museum")
+
+                ? "History & Culture"
+
+                : details.place.toLowerCase().includes("park")
+
+                  ? "Nature & Wildlife"
+
+                  : "Sightseeing";
+
+
+
+
+
+    document.getElementById("placeInfoDescription").textContent =
+
+        details.place +
+
+        " is a notable tourist attraction in " +
+
+        details.country +
+
+        ", offering visitors an opportunity to experience the destination's "
+
+        + "culture, scenery, history and local character.";
+
+
+
+
+
+    document.getElementById("placeInfoAbout").textContent =
+
+        details.place +
+
+        " is part of the TravelX destination directory for " +
+
+        details.country +
+
+        ". Visitors can plan sightseeing around this attraction, "
+
+        + "combine it with nearby places and choose accommodation that "
+
+        + "matches their travel style. Recommended duration: "
+
+        + duration + ". " + getPlaceDurationTip(duration);
+
+
+
+
+
+    document.getElementById("placeInfoWhy").textContent =
+
+        "Visit " +
+
+        details.place +
+
+        " to add a memorable local experience to your " +
+
+        details.country +
+
+        " itinerary. It can be combined with other nearby attractions "
+
+        + "for a convenient day of exploration.";
+
+
+
+
+
+    const highlights =
+
+        document.getElementById("placeInfoHighlights");
+
+
+
+    highlights.innerHTML = "";
+
+
+
+    const highlightItems = [
+
+        "Sightseeing and photography",
+
+        "Local culture and destination experience",
+
+        "Easy to combine with other attractions",
+
+        "Suitable for itinerary planning"
+
+    ];
+
+
+
+    highlightItems.forEach(function(item){
+
+
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        highlights.appendChild(li);
+
+
+
+    });
+
+
+
+
+
+    const nearbyBox =
+
+        document.getElementById("nearbyPlaces");
+
+
+
+    nearbyBox.innerHTML = "";
+
+
+
+    document.getElementById("nearbyCount").textContent =
+
+        details.nearby.length + " nearby";
+
+
+
+
+
+    if (!details.nearby.length) {
+
+
+
+        const empty = document.createElement("p");
+
+
+
+        empty.textContent =
+
+            "Nearby destination information is not available in the current directory.";
+
+
+
+        nearbyBox.appendChild(empty);
+
+
+
+    } else {
+
+
+
+        details.nearby.forEach(function(place){
+
+
+
+            const button =
+
+                document.createElement("button");
+
+
+
+            button.type = "button";
+
+            button.className = "nearby-place-button";
+
+            button.dataset.place = place;
+
+            button.dataset.country = details.country;
+
+            button.textContent = place;
+
+            button.title = "Open details for " + place;
+
+
+
+            nearbyBox.appendChild(button);
+
+
+
+        });
+
+
+
+    }
+
+
+
+
+
+    function updateStayRecommendations(styleKey){
+
+        selectedTravelStyle = styleKey;
+
+
+
+        document.querySelectorAll("#placeInfoModal .travel-style-button").forEach(function(button){
+
+            const active = button.dataset.style === styleKey;
+
+            button.classList.toggle("active", active);
+
+            button.setAttribute("aria-pressed", active ? "true" : "false");
+
+        });
+
+
+
+        const budget = getTripBudget(details, styleKey);
+
+        const style = budget.style;
+
+
+
+        document.getElementById("stayBudgetTotal").textContent =
+
+            formatFixedBudget(
+                budget.lowUSD * fixedCurrencyRates[getCountryCurrency(details.country)[0]],
+                getCountryCurrency(details.country)[0],
+                getCountryCurrency(details.country)[2]
+            );
+
+
+
+        document.getElementById("stayBudgetDaily").textContent =
+
+            formatFixedBudget(
+                budget.dailyLowUSD * fixedCurrencyRates[getCountryCurrency(details.country)[0]],
+                getCountryCurrency(details.country)[0],
+                getCountryCurrency(details.country)[2]
+            );
+
+
+
+        document.getElementById("stayBudgetMeta").textContent =
+
+            style.icon + " " + style.label + " • " + budget.duration;
+
+
+
+        currentBudgetForCurrency = budget;
+
+        renderWorldCurrencyBudget(budget, getCountryCurrency(details.country)[0]);
+
+
+
+        document.getElementById("hotelBudgetLabel").textContent =
+
+            style.icon + " " + style.label + " • " + budget.duration;
+
+
+
+        document.getElementById("hotelIntroText").textContent =
+
+            style.note + ". Final fixed cost includes accommodation, food, local transport and sightseeing for the recommended duration. No live or approximate price calculation is used.";
+
+
+
+        document.getElementById("tripCostBreakdown").dataset.low = budget.lowUSD;
+
+        document.getElementById("tripCostBreakdown").dataset.high = budget.highUSD;
+
+
+
+        const hotelBox = document.getElementById("hotelSuggestionList");
+
+        hotelBox.innerHTML = "";
+
+
+
+        getHotelSuggestions(details, styleKey).forEach(function(site){
+
+            const card = document.createElement("div");
+
+            card.className = "hotel-suggestion";
+
+
+
+            const badge = document.createElement("span");
+
+            badge.className = "hotel-suggestion-badge";
+
+            badge.textContent = site.badge;
+
+
+
+            const title = document.createElement("h5");
+
+            title.textContent = site.name;
+
+
+
+            const description = document.createElement("p");
+
+            description.textContent = site.description;
+
+            const hotelPrice = document.createElement("strong");
+            hotelPrice.className = "hotel-fixed-price";
+            const hotelCurrency = getCountryCurrency(details.country);
+            hotelPrice.textContent =
+                formatBudgetCurrency(
+                    site.fixedNightUSD * (fixedCurrencyRates[hotelCurrency[0]] || 1),
+                    hotelCurrency[0],
+                    hotelCurrency[2]
+                ) + " / night";
+
+            const link = document.createElement("a");
+
+            link.className = "hotel-search-button";
+
+            link.href = site.url;
+
+            link.target = "_self";
+
+            link.rel = "noopener noreferrer";
+
+            link.setAttribute("aria-label", "Search " + site.name + " for " + details.place + ", " + details.country);
+
+            link.innerHTML = "View stays <span>→</span>";
+
+
+
+            card.appendChild(badge);
+
+            card.appendChild(title);
+
+            card.appendChild(description);
+
+            card.appendChild(hotelPrice);
+
+            card.appendChild(link);
+
+            hotelBox.appendChild(card);
+
+        });
+
+    }
+
+
+
+    document.querySelectorAll("#placeInfoModal .travel-style-button").forEach(function(button){
+
+        button.onclick = function(){
+
+            updateStayRecommendations(button.dataset.style);
+
+        };
+
+    });
+
+
+
+    updateStayRecommendations(selectedTravelStyle);
+
+    /* Fixed currency table is used; no live exchange-rate request is made. */
+
+
+
+    modal.classList.add("show");
+
+    modal.setAttribute("aria-hidden", "false");
+
+
+
+    document.body.style.overflow = "hidden";
+
+
+
+}
+
+
+
+
+
+function closePlaceInfo(){
+
+    const modal = document.getElementById("placeInfoModal");
+
+
+
+    if (!modal) return;
+
+
+
+    modal.classList.remove("show");
+
+    modal.setAttribute("aria-hidden", "true");
+
+}
+
+
+
+
+
+document.addEventListener("keydown", function(event){
+
+    if (event.key !== "Escape") return;
+
+
+
+    const placeModal =
+
+        document.getElementById("placeInfoModal");
+
+
+
+    if (placeModal && placeModal.classList.contains("show")) {
+
+        closePlaceInfo();
+
+        return;
+
+    }
+
+
+
+    const countryOverlay =
+
+        document.getElementById("countryDirectoryOverlay");
+
+
+
+    if (countryOverlay && countryOverlay.classList.contains("show")) {
+
+        closeCountryDirectory();
+
+    }
+
+});
+
+
+
+
+
+function createCard(country){
+
+
+
+    const card =
+
+        document.createElement("article");
+
+
+
+    card.className =
+
+        "destination-card";
+
+
+
+    card.dataset.region =
+
+        country.region;
+
+
+
+    card.dataset.search =
+
+        (
+
+            country.name +
+
+            " " +
+
+            country.region +
+
+            " " +
+
+            country.places.join(" ")
+
+        ).toLowerCase();
+
+
+
+
+
+    card.setAttribute(
+
+        "role",
+
+        "button"
+
+    );
+
+
+
+    card.setAttribute(
+
+        "tabindex",
+
+        "0"
+
+    );
+
+
+
+    card.setAttribute(
+
+        "aria-label",
+
+        `Open tourist places in ${country.name}`
+
+    );
+
+
+
+
+
+    card.addEventListener(
+
+        "click",
+
+        function(){
+
+
+
+            openCountryDirectory(
+
+                country.name
+
+            );
+
+
+
+        }
+
+    );
+
+
+
+
+
+    card.addEventListener(
+
+        "keydown",
+
+        function(event){
+
+
+
+            if(
+
+                event.key === "Enter" ||
+
+                event.key === " "
+
+            ){
+
+
+
+                event.preventDefault();
+
+
+
+                openCountryDirectory(
+
+                    country.name
+
+                );
+
+
+
+            }
+
+
+
+        }
+
+    );
+
+
+
+
+
+    card.innerHTML = `
+
+
+
+        <div class="card-image">
+
+
+
+            <img
+
+                src="${country.image}"
+
+                alt="Tourist attractions in ${escapeHTML(country.name)}"
+
+                loading="lazy"
+
+            >
+
+
+
+            <span class="country-number">
+
+                ${country.number}
+
+            </span>
+
+
+
+            <span class="location-tag">
+
+                ${country.emoji}
+
+                ${escapeHTML(country.name)}
+
+            </span>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="card-content">
+
+
+
+            <p class="card-location">
+
+
+
+                ${country.emoji}
+
+                ${escapeHTML(country.region)}
+
+
+
+            </p>
+
+
+
+
+
+            <h3>
+
+                ${escapeHTML(country.name)}
+
+            </h3>
+
+
+
+
+
+            <p class="card-description">
+
+
+
+                ${escapeHTML(country.description)}
+
+
+
+            </p>
+
+
+
+
+
+            <div class="card-footer">
+
+
+
+                <span class="region">
+
+
+
+                    ${escapeHTML(country.region)}
+
+
+
+                </span>
+
+
+
+
+
+                <span
+
+                    class="explore-link"
+
+                    aria-hidden="true">
+
+
+
+                    View Tourist Places
+
+
+
+                    <span>→</span>
+
+
+
+                </span>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    `;
+
+
+
+
+
+    const cardImage = card.querySelector("img");
+
+    if (cardImage) {
+
+        cardImage.onerror = function(){
+
+            this.onerror = null;
+
+            this.src = "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80";
+
+        };
+
+    }
+
+
+
+    return card;
+
+
+
+}
+
+
+
+
+
+/* =========================================================
+
+   DISPLAY COUNTRIES
+
+   ========================================================= */
+
+
+
+function displayCountries(){
+
+
+
+    const searchTerm =
+
+        searchInput.value
+
+            .trim()
+
+            .toLowerCase();
+
+
+
+
+
+    container.innerHTML = "";
+
+
+
+
+
+    const filtered =
+
+        countries.filter(
+
+            country => {
+
+
+
+                const matchesRegion =
+
+                    activeRegion === "all" ||
+
+                    country.region === activeRegion;
+
+
+
+
+
+                const searchableText =
+
+                    (
+
+                        country.name +
+
+                        " " +
+
+                        country.region +
+
+                        " " +
+
+                        country.places.join(" ")
+
+                    ).toLowerCase();
+
+
+
+
+
+                const matchesSearch =
+
+                    searchableText.includes(
+
+                        searchTerm
+
+                    );
+
+
+
+
+
+                return (
+
+                    matchesRegion &&
+
+                    matchesSearch
+
+                );
+
+
+
+            }
+
+        );
+
+
+
+
+
+    filtered.forEach(
+
+        country => {
+
+
+
+            container.appendChild(
+
+                createCard(country)
+
+            );
+
+
+
+        }
+
+    );
+
+
+
+
+
+    noResults.style.display =
+
+        filtered.length === 0
+
+            ? "block"
+
+            : "none";
+
+
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SEARCH
+
+   ========================================================= */
+
+
+
+searchInput.addEventListener(
+
+    "input",
+
+    displayCountries
+
+);
+
+
+
+
+
+/* =========================================================
+
+   REGION FILTER
+
+   ========================================================= */
+
+
+
+filterButtons.forEach(
+
+    button => {
+
+
+
+        button.addEventListener(
+
+            "click",
+
+            function(){
+
+
+
+                filterButtons.forEach(
+
+                    btn => {
+
+
+
+                        btn.classList.remove(
+
+                            "active"
+
+                        );
+
+
+
+                    }
+
+                );
+
+
+
+
+
+                this.classList.add(
+
+                    "active"
+
+                );
+
+
+
+
+
+                activeRegion =
+
+                    this.dataset.region;
+
+
+
+
+
+                displayCountries();
+
+
+
+
+
+                window.scrollTo({
+
+
+
+                    top:
+
+                        document.querySelector(
+
+                            ".destinations"
+
+                        ).offsetTop - 20,
+
+
+
+                    behavior:"smooth"
+
+
+
+                });
+
+
+
+            }
+
+        );
+
+
+
+    }
+
+);
+
+
+
+
+
+/* =========================================================
+
+   INITIAL LOAD
+
+   ========================================================= */
+
+
+
+displayCountries();
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

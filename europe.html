@@ -1,0 +1,7400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europe Tourist Places | Explore Europe</title>
+<meta name="description"
+      content="Explore European countries and discover famous cities, landmarks, beaches, castles, museums, mountains and natural attractions.">
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --primary:#087b73;
+    --primary-dark:#064f4a;
+    --heading:#123d3d;
+    --text:#60738c;
+    --light-bg:#f7f9fa;
+    --white:#ffffff;
+    --border:#e1e8eb;
+    --shadow:0 8px 25px rgba(28,55,70,.07);
+    --shadow-hover:0 18px 40px rgba(28,55,70,.15);
+}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light-bg);
+    color:var(--heading);
+    line-height:1.6;
+}
+/* HERO */
+.asia-hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(
+
+            rgba(6,55,58,.68),
+
+            rgba(6,55,58,.68)
+
+        ),
+
+        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2000&q=85")
+
+        center/cover no-repeat;
+
+}
+
+
+
+.hero-content{
+
+    max-width:900px;
+
+    color:white;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero-eyebrow{
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+    color:#9ee7df;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.hero-content h1{
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:clamp(48px,7vw,82px);
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+
+
+.hero-content p{
+
+    max-width:720px;
+
+    margin:0 auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.9);
+
+}
+
+
+
+.country-count{
+
+    margin-top:30px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.14);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    backdrop-filter:blur(8px);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+
+/* MAIN */
+
+
+
+.destinations{
+
+    width:100%;
+
+    padding:85px 0;
+
+    background:var(--light-bg);
+
+}
+
+
+
+.container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+}
+
+
+
+/* HEADING */
+
+
+
+.section-heading{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:40px;
+
+    padding:0 5%;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.eyebrow{
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.section-heading h2{
+
+    color:var(--heading);
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:52px;
+
+    line-height:1.05;
+
+    font-weight:600;
+
+}
+
+
+
+.section-description{
+
+    max-width:520px;
+
+    color:var(--text);
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* CONTROLS */
+
+
+
+.controls{
+
+    padding:0 5%;
+
+    margin-bottom:45px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.search-box{
+
+    position:relative;
+
+    flex:1;
+
+    min-width:280px;
+
+    max-width:480px;
+
+}
+
+
+
+.search-box input{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 20px 0 48px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    background:white;
+
+    color:var(--heading);
+
+    font-size:15px;
+
+    outline:none;
+
+    box-shadow:0 5px 18px rgba(28,55,70,.05);
+
+}
+
+
+
+.search-box input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(8,123,115,.1);
+
+}
+
+
+
+.search-icon{
+
+    position:absolute;
+
+    left:19px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:19px;
+
+    color:var(--text);
+
+}
+
+
+
+.filters{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.filter-btn{
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    color:var(--heading);
+
+    padding:10px 16px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+}
+
+
+
+.filter-btn:hover,
+
+.filter-btn.active{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    color:white;
+
+}
+
+
+
+/* GRID */
+
+
+
+.destination-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+    padding:0 5%;
+
+}
+
+
+
+/* CARD */
+
+
+
+.destination-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+    animation:cardAppear .45s ease both;
+
+    cursor:pointer;
+
+}
+
+
+
+.destination-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+
+@keyframes cardAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* IMAGE */
+
+
+
+.card-image{
+
+    width:100%;
+
+    height:270px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:transform .45s ease;
+
+}
+
+
+
+.destination-card:hover .card-image img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.country-number{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    min-width:42px;
+
+    height:42px;
+
+    padding:0 12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    color:var(--heading);
+
+    font-size:14px;
+
+    font-weight:800;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+
+}
+
+
+
+.location-tag{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:white;
+
+    color:var(--heading);
+
+    padding:9px 15px;
+
+    border-radius:25px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+
+}
+
+
+
+/* CONTENT */
+
+
+
+.card-content{
+
+    padding:27px 27px 30px;
+
+}
+
+
+
+.card-location{
+
+    color:var(--primary);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.2px;
+
+    margin-bottom:9px;
+
+}
+
+
+
+.card-content h3{
+
+    color:var(--heading);
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:31px;
+
+    line-height:1.15;
+
+    font-weight:600;
+
+    margin-bottom:13px;
+
+}
+
+
+
+.card-description{
+
+    color:var(--text);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* FOOTER */
+
+
+
+.card-footer{
+
+    margin-top:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.region{
+
+    color:#8090a0;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+
+}
+
+
+
+.explore-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:800;
+
+}
+
+
+
+.explore-link span{
+
+    font-size:18px;
+
+    transition:transform .25s ease;
+
+}
+
+
+
+.destination-card:hover .explore-link span{
+
+    transform:translateX(5px);
+
+}
+
+
+
+/* NO RESULTS */
+
+
+
+.no-results{
+
+    display:none;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    color:var(--text);
+
+}
+
+
+
+.no-results h3{
+
+    color:var(--heading);
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+/* FOOTER */
+
+
+
+.asia-footer{
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:#123d3d;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+
+
+.asia-footer h2{
+
+    color:white;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.asia-footer p{
+
+    font-size:14px;
+
+}
+
+
+
+/* TABLET */
+
+
+
+@media(max-width:1100px){
+
+
+
+    .destination-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+
+    .section-heading{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+    }
+
+
+
+    .section-heading h2{
+
+        font-size:45px;
+
+    }
+
+}
+
+
+
+/* MOBILE */
+
+
+
+@media(max-width:700px){
+
+
+
+    .asia-hero{
+
+        min-height:440px;
+
+        padding:60px 20px;
+
+    }
+
+
+
+    .hero-content h1{
+
+        font-size:52px;
+
+    }
+
+
+
+    .hero-content p{
+
+        font-size:15px;
+
+    }
+
+
+
+    .destinations{
+
+        padding:60px 0;
+
+    }
+
+
+
+    .section-heading{
+
+        padding:0 20px;
+
+        margin-bottom:30px;
+
+        gap:18px;
+
+    }
+
+
+
+    .section-heading h2{
+
+        font-size:38px;
+
+    }
+
+
+
+    .section-description{
+
+        font-size:15px;
+
+    }
+
+
+
+    .controls{
+
+        padding:0 20px;
+
+        margin-bottom:35px;
+
+    }
+
+
+
+    .search-box{
+
+        min-width:100%;
+
+    }
+
+
+
+    .filters{
+
+        width:100%;
+
+    }
+
+
+
+    .filter-btn{
+
+        flex:1;
+
+    }
+
+
+
+    .destination-container{
+
+        grid-template-columns:1fr;
+
+        padding:0 20px;
+
+        gap:24px;
+
+    }
+
+
+
+    .card-image{
+
+        height:250px;
+
+    }
+
+
+
+    .card-content{
+
+        padding:25px 23px 27px;
+
+    }
+
+
+
+    .card-content h3{
+
+        font-size:29px;
+
+    }
+
+}
+
+
+
+@media(max-width:430px){
+
+
+
+    .hero-content h1{
+
+        font-size:45px;
+
+    }
+
+
+
+    .filters{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+
+    .filter-btn{
+
+        width:100%;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- HERO -->
+
+
+
+<header class="asia-hero">
+
+
+
+    <div class="hero-content">
+
+
+
+        <span class="hero-eyebrow">
+
+            Explore the Continent
+
+        </span>
+
+
+
+        <h1>Europe</h1>
+
+
+
+        <p>
+
+            Discover ancient civilizations, spectacular wildlife,
+
+            golden deserts, tropical beaches, vibrant cities,
+
+            majestic mountains and unforgettable landscapes
+
+            across Asia.
+
+        </p>
+
+
+
+        <div class="country-count">
+
+            🌏 48 Countries to Explore
+
+        </div>
+
+
+
+    </div>
+
+
+
+</header>
+
+
+
+
+
+<!-- DESTINATIONS -->
+
+
+
+<section class="destinations">
+
+
+
+<div class="container">
+
+
+
+    <div class="section-heading">
+
+
+
+        <div>
+
+
+
+            <p class="eyebrow">
+
+                ASIA TRAVEL GUIDE
+
+            </p>
+
+
+
+            <h2>
+
+                Countries &amp;<br>
+
+                Tourist Places
+
+            </h2>
+
+
+
+        </div>
+
+
+
+        <p class="section-description">
+
+            Explore famous destinations across Asia, from the
+
+            pyramids of Egypt and Serengeti National Park to
+
+            Victoria Falls, Cape Town, Sahara landscapes,
+
+            tropical islands and historic cities.
+
+        </p>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- SEARCH + FILTER -->
+
+
+
+    <div class="controls">
+
+
+
+        <div class="search-box">
+
+
+
+            <span class="search-icon">⌕</span>
+
+
+
+            <input
+
+                type="search"
+
+                id="countrySearch"
+
+                placeholder="Search country or tourist place..."
+
+                aria-label="Search Asian countries and tourist places">
+
+
+
+        </div>
+
+
+
+
+
+        <div class="filters">
+
+
+
+            <button class="filter-btn active" data-region="all">
+
+                All
+
+            </button>
+
+
+
+            <button class="filter-btn" data-region="Western Europe">
+                Western Europe
+            </button>
+
+            <button class="filter-btn" data-region="Southern Europe">
+                Southern Europe
+            </button>
+
+            <button class="filter-btn" data-region="Northern Europe">
+                Northern Europe
+            </button>
+
+            <button class="filter-btn" data-region="Eastern Europe">
+                Eastern Europe
+            </button>
+
+            <button class="filter-btn" data-region="Balkans">
+                Balkans
+            </button>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- COUNTRY CARDS -->
+
+
+
+    <div
+
+        class="destination-container"
+
+        id="destinationContainer">
+
+    </div>
+
+
+
+
+
+    <div class="no-results" id="noResults">
+
+
+
+        <h3>No destinations found</h3>
+
+
+
+        <p>
+
+            Try searching for another country, city or attraction.
+
+        </p>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+
+
+
+<footer class="asia-footer">
+
+
+
+    <h2>Explore Europe</h2>
+
+
+
+    <p>
+
+        45 countries • Hundreds of unforgettable destinations
+
+    </p>
+
+
+
+</footer>
+
+
+
+
+
+<script>
+
+
+
+/* =========================================================
+
+   ASIAN COUNTRIES
+
+   ========================================================= */
+
+
+
+const countries = [
+    {
+        number:1,
+        name:"Albania",
+        emoji:"🇦🇱",
+        region:"Balkans",
+        image:
+            "https://source.unsplash.com/1000x700/?Albania,europe,travel",
+        description:
+            "Discover Albania's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Tirana – Skanderbeg Square",
+            "Berat – Berat Castle",
+            "Gjirokastër – Old Town",
+            "Ksamil – Albanian Riviera",
+            "Butrint Archaeological Park",
+            "Theth National Park"
+        ]
+    },
+    {
+        number:2,
+        name:"Andorra",
+        emoji:"🇦🇩",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Andorra,europe,travel",
+        description:
+            "Discover Andorra's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Andorra la Vella – Old Town",
+            "Caldea Spa",
+            "Casa de la Vall",
+            "Grandvalira Ski Resort",
+            "Vallnord",
+            "Madriu-Perafita-Claror Valley"
+        ]
+    },
+    {
+        number:3,
+        name:"Austria",
+        emoji:"🇦🇹",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Austria,europe,travel",
+        description:
+            "Discover Austria's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Vienna – Schönbrunn Palace",
+            "Vienna – St. Stephen’s Cathedral",
+            "Salzburg – Mirabell Palace",
+            "Hallstatt",
+            "Innsbruck – Golden Roof",
+            "Grossglockner High Alpine Road"
+        ]
+    },
+    {
+        number:4,
+        name:"Belarus",
+        emoji:"🇧🇾",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Belarus,europe,travel",
+        description:
+            "Discover Belarus's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Minsk – Independence Square",
+            "Mir Castle",
+            "Nesvizh Castle",
+            "Brest Fortress",
+            "Grodno Old Town",
+            "Belovezhskaya Pushcha"
+        ]
+    },
+    {
+        number:5,
+        name:"Belgium",
+        emoji:"🇧🇪",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Belgium,europe,travel",
+        description:
+            "Discover Belgium's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Brussels – Grand Place",
+            "Brussels – Atomium",
+            "Bruges – Markt Square",
+            "Ghent – Gravensteen",
+            "Antwerp – Cathedral of Our Lady",
+            "Dinant – Citadel"
+        ]
+    },
+    {
+        number:6,
+        name:"Bosnia and Herzegovina",
+        emoji:"🇧🇦",
+        region:"Balkans",
+        image:
+            "https://source.unsplash.com/1000x700/?Bosnia%20and%20Herzegovina,europe,travel",
+        description:
+            "Discover Bosnia and Herzegovina's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Sarajevo – Baščaršija",
+            "Mostar – Stari Most",
+            "Blagaj Tekija",
+            "Kravica Waterfalls",
+            "Jajce Waterfall",
+            "Una National Park"
+        ]
+    },
+    {
+        number:7,
+        name:"Bulgaria",
+        emoji:"🇧🇬",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Bulgaria,europe,travel",
+        description:
+            "Discover Bulgaria's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Sofia – Alexander Nevsky Cathedral",
+            "Rila Monastery",
+            "Plovdiv Old Town",
+            "Nessebar",
+            "Seven Rila Lakes",
+            "Veliko Tarnovo – Tsarevets Fortress"
+        ]
+    },
+    {
+        number:8,
+        name:"Croatia",
+        emoji:"🇭🇷",
+        region:"Balkans",
+        image:
+            "https://source.unsplash.com/1000x700/?Croatia,europe,travel",
+        description:
+            "Discover Croatia's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Dubrovnik – Old City",
+            "Split – Diocletian’s Palace",
+            "Plitvice Lakes National Park",
+            "Hvar Island",
+            "Zadar – Sea Organ",
+            "Rovinj Old Town"
+        ]
+    },
+    {
+        number:9,
+        name:"Cyprus",
+        emoji:"🇨🇾",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Cyprus,europe,travel",
+        description:
+            "Discover Cyprus's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Paphos Archaeological Park",
+            "Nicosia Old City",
+            "Limassol Marina",
+            "Ayia Napa Beaches",
+            "Troodos Mountains",
+            "Larnaca Salt Lake"
+        ]
+    },
+    {
+        number:10,
+        name:"Czech Republic",
+        emoji:"🇨🇿",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Czech%20Republic,europe,travel",
+        description:
+            "Discover Czech Republic's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Prague – Charles Bridge",
+            "Prague Castle",
+            "Prague – Old Town Square",
+            "Český Krumlov",
+            "Kutná Hora",
+            "Karlovy Vary"
+        ]
+    },
+    {
+        number:11,
+        name:"Denmark",
+        emoji:"🇩🇰",
+        region:"Northern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Denmark,europe,travel",
+        description:
+            "Discover Denmark's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Copenhagen – Nyhavn",
+            "Tivoli Gardens",
+            "Rosenborg Castle",
+            "Amalienborg Palace",
+            "Aarhus Old Town",
+            "Kronborg Castle"
+        ]
+    },
+    {
+        number:12,
+        name:"Estonia",
+        emoji:"🇪🇪",
+        region:"Northern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Estonia,europe,travel",
+        description:
+            "Discover Estonia's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Tallinn Old Town",
+            "Toompea Castle",
+            "Kadriorg Palace",
+            "Lahemaa National Park",
+            "Pärnu Beach",
+            "Saaremaa Island"
+        ]
+    },
+    {
+        number:13,
+        name:"Finland",
+        emoji:"🇫🇮",
+        region:"Northern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Finland,europe,travel",
+        description:
+            "Discover Finland's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Helsinki – Suomenlinna",
+            "Helsinki Cathedral",
+            "Rovaniemi – Santa Claus Village",
+            "Lapland – Northern Lights",
+            "Turku Castle",
+            "Lake Saimaa"
+        ]
+    },
+    {
+        number:14,
+        name:"France",
+        emoji:"🇫🇷",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?France,europe,travel",
+        description:
+            "Discover France's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Paris – Eiffel Tower",
+            "Paris – Louvre Museum",
+            "Palace of Versailles",
+            "Nice – Promenade des Anglais",
+            "Mont Saint-Michel",
+            "Chamonix – French Alps"
+        ]
+    },
+    {
+        number:15,
+        name:"Germany",
+        emoji:"🇩🇪",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Germany,europe,travel",
+        description:
+            "Discover Germany's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Berlin – Brandenburg Gate",
+            "Neuschwanstein Castle",
+            "Munich – Marienplatz",
+            "Cologne Cathedral",
+            "Hamburg – Speicherstadt",
+            "Black Forest"
+        ]
+    },
+    {
+        number:16,
+        name:"Greece",
+        emoji:"🇬🇷",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Greece,europe,travel",
+        description:
+            "Discover Greece's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Athens – Acropolis",
+            "Santorini – Oia",
+            "Mykonos Old Town",
+            "Delphi Archaeological Site",
+            "Meteora Monasteries",
+            "Crete – Elafonissi Beach"
+        ]
+    },
+    {
+        number:17,
+        name:"Hungary",
+        emoji:"🇭🇺",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Hungary,europe,travel",
+        description:
+            "Discover Hungary's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Budapest – Parliament",
+            "Buda Castle",
+            "Fisherman’s Bastion",
+            "Széchenyi Thermal Bath",
+            "Lake Balaton",
+            "Eger Castle"
+        ]
+    },
+    {
+        number:18,
+        name:"Iceland",
+        emoji:"🇮🇸",
+        region:"Northern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Iceland,europe,travel",
+        description:
+            "Discover Iceland's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Reykjavík – Hallgrímskirkja",
+            "Blue Lagoon",
+            "Golden Circle",
+            "Gullfoss Waterfall",
+            "Jökulsárlón Glacier Lagoon",
+            "Reynisfjara Black Sand Beach"
+        ]
+    },
+    {
+        number:19,
+        name:"Ireland",
+        emoji:"🇮🇪",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Ireland,europe,travel",
+        description:
+            "Discover Ireland's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Dublin – Trinity College",
+            "Cliffs of Moher",
+            "Ring of Kerry",
+            "Blarney Castle",
+            "Galway Latin Quarter",
+            "Killarney National Park"
+        ]
+    },
+    {
+        number:20,
+        name:"Italy",
+        emoji:"🇮🇹",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Italy,europe,travel",
+        description:
+            "Discover Italy's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Rome – Colosseum",
+            "Vatican City – St. Peter’s Basilica",
+            "Venice – Grand Canal",
+            "Florence – Uffizi Gallery",
+            "Amalfi Coast",
+            "Lake Como"
+        ]
+    },
+    {
+        number:21,
+        name:"Latvia",
+        emoji:"🇱🇻",
+        region:"Northern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Latvia,europe,travel",
+        description:
+            "Discover Latvia's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Riga Old Town",
+            "House of the Black Heads",
+            "Riga Central Market",
+            "Jūrmala Beach",
+            "Gauja National Park",
+            "Cēsis Castle"
+        ]
+    },
+    {
+        number:22,
+        name:"Liechtenstein",
+        emoji:"🇱🇮",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Liechtenstein,europe,travel",
+        description:
+            "Discover Liechtenstein's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Vaduz Castle",
+            "Vaduz Cathedral",
+            "Liechtenstein National Museum",
+            "Malbun",
+            "Gutenberg Castle",
+            "Alpine Hiking Trails"
+        ]
+    },
+    {
+        number:23,
+        name:"Lithuania",
+        emoji:"🇱🇹",
+        region:"Northern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Lithuania,europe,travel",
+        description:
+            "Discover Lithuania's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Vilnius Old Town",
+            "Gediminas Castle Tower",
+            "Trakai Island Castle",
+            "Hill of Crosses",
+            "Curonian Spit",
+            "Kaunas Old Town"
+        ]
+    },
+    {
+        number:24,
+        name:"Luxembourg",
+        emoji:"🇱🇺",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Luxembourg,europe,travel",
+        description:
+            "Discover Luxembourg's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Luxembourg City Old Town",
+            "Grand Ducal Palace",
+            "Bock Casemates",
+            "Vianden Castle",
+            "Müllerthal Trail",
+            "Echternach Abbey"
+        ]
+    },
+    {
+        number:25,
+        name:"Malta",
+        emoji:"🇲🇹",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Malta,europe,travel",
+        description:
+            "Discover Malta's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Valletta – St. John’s Co-Cathedral",
+            "Mdina Old City",
+            "Blue Grotto",
+            "Ħaġar Qim Temples",
+            "Gozo – Ramla Bay",
+            "Three Cities"
+        ]
+    },
+    {
+        number:26,
+        name:"Moldova",
+        emoji:"🇲🇩",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Moldova,europe,travel",
+        description:
+            "Discover Moldova's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Chișinău – Cathedral Park",
+            "Orheiul Vechi",
+            "Cricova Winery",
+            "Purcari Winery",
+            "Soroca Fortress",
+            "Tipova Monastery"
+        ]
+    },
+    {
+        number:27,
+        name:"Monaco",
+        emoji:"🇲🇨",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Monaco,europe,travel",
+        description:
+            "Discover Monaco's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Monte Carlo Casino",
+            "Prince’s Palace",
+            "Oceanographic Museum",
+            "Larvotto Beach",
+            "Monaco-Ville",
+            "Japanese Garden"
+        ]
+    },
+    {
+        number:28,
+        name:"Montenegro",
+        emoji:"🇲🇪",
+        region:"Balkans",
+        image:
+            "https://source.unsplash.com/1000x700/?Montenegro,europe,travel",
+        description:
+            "Discover Montenegro's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Kotor Old Town",
+            "Bay of Kotor",
+            "Budva Old Town",
+            "Durmitor National Park",
+            "Sveti Stefan",
+            "Ostrog Monastery"
+        ]
+    },
+    {
+        number:29,
+        name:"Netherlands",
+        emoji:"🇳🇱",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Netherlands,europe,travel",
+        description:
+            "Discover Netherlands's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Amsterdam – Canal Ring",
+            "Rijksmuseum",
+            "Anne Frank House",
+            "Keukenhof",
+            "Kinderdijk Windmills",
+            "Giethoorn"
+        ]
+    },
+    {
+        number:30,
+        name:"North Macedonia",
+        emoji:"🇲🇰",
+        region:"Balkans",
+        image:
+            "https://source.unsplash.com/1000x700/?North%20Macedonia,europe,travel",
+        description:
+            "Discover North Macedonia's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Skopje – Old Bazaar",
+            "Lake Ohrid",
+            "Ohrid Old Town",
+            "Samuel’s Fortress",
+            "Matka Canyon",
+            "Mavrovo National Park"
+        ]
+    },
+    {
+        number:31,
+        name:"Norway",
+        emoji:"🇳🇴",
+        region:"Northern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Norway,europe,travel",
+        description:
+            "Discover Norway's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Oslo – Viking Ship Museum",
+            "Bergen – Bryggen",
+            "Geirangerfjord",
+            "Flåm Railway",
+            "Tromsø – Northern Lights",
+            "Lofoten Islands"
+        ]
+    },
+    {
+        number:32,
+        name:"Poland",
+        emoji:"🇵🇱",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Poland,europe,travel",
+        description:
+            "Discover Poland's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Kraków – Main Market Square",
+            "Wawel Castle",
+            "Warsaw Old Town",
+            "Wieliczka Salt Mine",
+            "Gdańsk Old Town",
+            "Tatra Mountains"
+        ]
+    },
+    {
+        number:33,
+        name:"Portugal",
+        emoji:"🇵🇹",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Portugal,europe,travel",
+        description:
+            "Discover Portugal's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Lisbon – Belém Tower",
+            "Jerónimos Monastery",
+            "Porto – Ribeira",
+            "Sintra – Pena Palace",
+            "Algarve Coast",
+            "Madeira Island"
+        ]
+    },
+    {
+        number:34,
+        name:"Romania",
+        emoji:"🇷🇴",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Romania,europe,travel",
+        description:
+            "Discover Romania's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Bucharest – Palace of Parliament",
+            "Bran Castle",
+            "Sighișoara Old Town",
+            "Peleș Castle",
+            "Transfăgărășan Road",
+            "Danube Delta"
+        ]
+    },
+    {
+        number:35,
+        name:"Russia",
+        emoji:"🇷🇺",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Russia,europe,travel",
+        description:
+            "Discover Russia's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Moscow – Red Square",
+            "Saint Basil’s Cathedral",
+            "Moscow Kremlin",
+            "Saint Petersburg – Hermitage Museum",
+            "Peterhof Palace",
+            "Lake Baikal"
+        ]
+    },
+    {
+        number:36,
+        name:"San Marino",
+        emoji:"🇸🇲",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?San%20Marino,europe,travel",
+        description:
+            "Discover San Marino's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Guaita Tower",
+            "Cesta Tower",
+            "Montale Tower",
+            "Piazza della Libertà",
+            "Basilica of San Marino",
+            "Monte Titano"
+        ]
+    },
+    {
+        number:37,
+        name:"Serbia",
+        emoji:"🇷🇸",
+        region:"Balkans",
+        image:
+            "https://source.unsplash.com/1000x700/?Serbia,europe,travel",
+        description:
+            "Discover Serbia's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Belgrade Fortress",
+            "Knez Mihailova Street",
+            "Novi Sad – Petrovaradin Fortress",
+            "Tara National Park",
+            "Studenica Monastery",
+            "Niš Fortress"
+        ]
+    },
+    {
+        number:38,
+        name:"Slovakia",
+        emoji:"🇸🇰",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Slovakia,europe,travel",
+        description:
+            "Discover Slovakia's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Bratislava Castle",
+            "Old Town Bratislava",
+            "Spiš Castle",
+            "High Tatras",
+            "Bojnice Castle",
+            "Slovak Paradise National Park"
+        ]
+    },
+    {
+        number:39,
+        name:"Slovenia",
+        emoji:"🇸🇮",
+        region:"Balkans",
+        image:
+            "https://source.unsplash.com/1000x700/?Slovenia,europe,travel",
+        description:
+            "Discover Slovenia's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Lake Bled",
+            "Bled Castle",
+            "Ljubljana Old Town",
+            "Postojna Cave",
+            "Predjama Castle",
+            "Triglav National Park"
+        ]
+    },
+    {
+        number:40,
+        name:"Spain",
+        emoji:"🇪🇸",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Spain,europe,travel",
+        description:
+            "Discover Spain's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Barcelona – Sagrada Família",
+            "Park Güell",
+            "Madrid – Prado Museum",
+            "Alhambra – Granada",
+            "Seville – Alcázar",
+            "Mallorca – Serra de Tramuntana"
+        ]
+    },
+    {
+        number:41,
+        name:"Sweden",
+        emoji:"🇸🇪",
+        region:"Northern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Sweden,europe,travel",
+        description:
+            "Discover Sweden's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Stockholm – Gamla Stan",
+            "Vasa Museum",
+            "Drottningholm Palace",
+            "Abisko National Park",
+            "Gothenburg Archipelago",
+            "Icehotel – Jukkasjärvi"
+        ]
+    },
+    {
+        number:42,
+        name:"Switzerland",
+        emoji:"🇨🇭",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Switzerland,europe,travel",
+        description:
+            "Discover Switzerland's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Zurich Old Town",
+            "Lucerne – Chapel Bridge",
+            "Interlaken",
+            "Jungfraujoch",
+            "Zermatt – Matterhorn",
+            "Lake Geneva"
+        ]
+    },
+    {
+        number:43,
+        name:"Ukraine",
+        emoji:"🇺🇦",
+        region:"Eastern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Ukraine,europe,travel",
+        description:
+            "Discover Ukraine's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "Kyiv – Saint Sophia’s Cathedral",
+            "Kyiv Pechersk Lavra",
+            "Lviv Old Town",
+            "Odesa – Potemkin Stairs",
+            "Carpathian Mountains",
+            "Kamianets-Podilskyi Castle"
+        ]
+    },
+    {
+        number:44,
+        name:"United Kingdom",
+        emoji:"🇬🇧",
+        region:"Western Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?United%20Kingdom,europe,travel",
+        description:
+            "Discover United Kingdom's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "London – Tower of London",
+            "Buckingham Palace",
+            "Edinburgh Castle",
+            "Stonehenge",
+            "Bath Roman Baths",
+            "Giant’s Causeway"
+        ]
+    },
+    {
+        number:45,
+        name:"Vatican City",
+        emoji:"🇻🇦",
+        region:"Southern Europe",
+        image:
+            "https://source.unsplash.com/1000x700/?Vatican%20City,europe,travel",
+        description:
+            "Discover Vatican City's iconic cities, historic landmarks, cultural treasures, scenic landscapes and unforgettable travel experiences.",
+        places:[
+            "St. Peter’s Basilica",
+            "Sistine Chapel",
+            "Vatican Museums",
+            "St. Peter’s Square",
+            "Vatican Gardens",
+            "Apostolic Palace"
+        ]
+    }
+];;
+
+
+
+
+
+/* =========================================================
+
+   ELEMENTS
+
+   ========================================================= */
+
+
+
+const container =
+
+    document.getElementById("destinationContainer");
+
+
+
+const searchInput =
+
+    document.getElementById("countrySearch");
+
+
+
+const noResults =
+
+    document.getElementById("noResults");
+
+
+
+const filterButtons =
+
+    document.querySelectorAll(".filter-btn");
+
+
+
+let activeRegion = "all";
+
+
+
+
+
+/* =========================================================
+
+   ESCAPE HTML
+
+   ========================================================= */
+
+
+
+function escapeHTML(value){
+
+
+
+    return String(value)
+
+        .replace(/&/g,"&amp;")
+
+        .replace(/</g,"&lt;")
+
+        .replace(/>/g,"&gt;")
+
+        .replace(/"/g,"&quot;")
+
+        .replace(/'/g,"&#039;");
+
+
+
+}
+
+
+
+
+
+/* =========================================================
+
+   OPEN COUNTRY DIRECTORY
+
+   ========================================================= */
+
+
+
+function openCountryDirectory(countryName) {
+
+    const selectedCountry = countries.find(
+
+        country => country.name === countryName
+
+    );
+
+
+
+    if (!selectedCountry) return;
+
+
+
+    // Keep the original page and directory alive. Opening a place only shows details; it never removes the list.
+
+    let overlay = document.getElementById("countryDirectoryOverlay");
+
+
+
+    if (!overlay) {
+
+        overlay = document.createElement("div");
+
+        overlay.id = "countryDirectoryOverlay";
+
+        overlay.innerHTML = `
+
+            <div class="country-directory-window" role="dialog"
+
+                 aria-modal="true" aria-labelledby="directoryTitle">
+
+
+
+                <div class="directory-top">
+
+                    <div>
+
+                        <div class="directory-small">TravelX • Tourist Directory</div>
+
+                        <h2 id="directoryTitle"></h2>
+
+                        <p id="directorySubtitle"></p>
+
+                    </div>
+
+
+
+                    <button type="button" class="directory-close"
+
+                            id="directoryClose" aria-label="Close directory">×</button>
+
+                </div>
+
+
+
+                <div class="directory-toolbar">
+
+                    <input type="search" id="directoryPlaceSearch"
+
+                           placeholder="Search tourist places in this country..."
+
+                           autocomplete="off">
+
+                </div>
+
+
+
+                <div class="directory-content">
+
+                    <div class="directory-country-info">
+
+                        <span id="directoryRegion"></span>
+
+                        <span id="directoryCount"></span>
+
+                    </div>
+
+                    <p id="directoryDescription"></p>
+
+                    <div id="directoryPlaces" class="directory-places"></div>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+
+        document.body.appendChild(overlay);
+
+
+
+        const style = document.createElement("style");
+
+        style.id = "countryDirectoryStyles";
+
+        style.textContent = `
+
+            #countryDirectoryOverlay{
+
+                position:fixed;
+
+                inset:0;
+
+                z-index:10000;
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:center;
+
+                padding:20px;
+
+                background:rgba(0,0,0,.62);
+
+                backdrop-filter:blur(4px);
+
+                opacity:0;
+
+                visibility:hidden;
+
+                pointer-events:none;
+
+                transition:opacity .2s ease,visibility .2s ease;
+
+            }
+
+
+
+            #countryDirectoryOverlay.show{
+
+                opacity:1;
+
+                visibility:visible;
+
+                pointer-events:auto;
+
+            }
+
+
+
+            .country-directory-window{
+
+                width:min(1180px,94vw);
+
+                height:min(820px,92vh);
+
+                background:#fff;
+
+                border-radius:22px;
+
+                overflow:hidden;
+
+                box-shadow:0 30px 90px rgba(0,0,0,.35);
+
+                display:flex;
+
+                flex-direction:column;
+
+                transform:translateY(12px) scale(.985);
+
+                transition:transform .2s ease;
+
+            }
+
+
+
+            #countryDirectoryOverlay.show .country-directory-window{
+
+                transform:translateY(0) scale(1);
+
+            }
+
+
+
+            .directory-top{
+
+                flex:0 0 auto;
+
+                padding:24px 28px;
+
+                background:#0b918c;
+
+                color:#fff;
+
+                display:flex;
+
+                align-items:flex-start;
+
+                justify-content:space-between;
+
+                gap:20px;
+
+            }
+
+
+
+            .directory-small{
+
+                color:#b9eee9;
+
+                font-size:11px;
+
+                font-weight:800;
+
+                letter-spacing:2px;
+
+                text-transform:uppercase;
+
+                margin-bottom:7px;
+
+            }
+
+
+
+            .directory-top h2{
+
+                margin:0 0 5px;
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:clamp(28px,4vw,44px);
+
+                line-height:1.1;
+
+            }
+
+
+
+            .directory-top p{
+
+                margin:0;
+
+                opacity:.9;
+
+                font-size:14px;
+
+            }
+
+
+
+            .directory-close{
+
+                width:46px;
+
+                height:46px;
+
+                flex:0 0 46px;
+
+                border:0;
+
+                border-radius:50%;
+
+                background:rgba(255,255,255,.18);
+
+                color:#fff;
+
+                font-size:30px;
+
+                line-height:1;
+
+                cursor:pointer;
+
+            }
+
+
+
+            .directory-close:hover{
+
+                background:rgba(255,255,255,.30);
+
+            }
+
+
+
+            .directory-toolbar{
+
+                flex:0 0 auto;
+
+                padding:15px 24px;
+
+                border-bottom:1px solid #e4ebed;
+
+                background:#fff;
+
+            }
+
+
+
+            #directoryPlaceSearch{
+
+                width:100%;
+
+                height:46px;
+
+                padding:0 18px;
+
+                border:1px solid #d8e2e4;
+
+                border-radius:24px;
+
+                outline:none;
+
+                font-size:14px;
+
+            }
+
+
+
+            #directoryPlaceSearch:focus{
+
+                border-color:#0b918c;
+
+                box-shadow:0 0 0 3px rgba(11,145,140,.10);
+
+            }
+
+
+
+            .directory-content{
+
+                overflow-y:auto;
+
+                padding:28px;
+
+                color:#58718a;
+
+            }
+
+
+
+            .directory-country-info{
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:space-between;
+
+                gap:15px;
+
+                margin-bottom:10px;
+
+            }
+
+
+
+            #directoryRegion{
+
+                color:#087b73;
+
+                font-size:12px;
+
+                font-weight:800;
+
+                letter-spacing:1.5px;
+
+                text-transform:uppercase;
+
+            }
+
+
+
+            #directoryCount{
+
+                padding:8px 13px;
+
+                border-radius:20px;
+
+                background:#eaf7f5;
+
+                color:#075e59;
+
+                font-size:12px;
+
+                font-weight:800;
+
+                white-space:nowrap;
+
+            }
+
+
+
+            #directoryDescription{
+
+                margin:0 0 24px;
+
+                line-height:1.7;
+
+            }
+
+
+
+            .directory-places{
+
+                display:grid;
+
+                grid-template-columns:repeat(3,minmax(0,1fr));
+
+                gap:10px;
+
+            }
+
+
+
+            .directory-place{
+
+                width:100%;
+
+                min-height:54px;
+
+                padding:11px 13px;
+
+                border:0;
+
+                border-radius:11px;
+
+                background:#f2f6f7;
+
+                color:#425b70;
+
+                display:flex;
+
+                align-items:center;
+
+                gap:10px;
+
+                text-align:left;
+
+                cursor:pointer;
+
+                font:inherit;
+
+                transition:transform .15s ease,background .15s ease,box-shadow .15s ease;
+
+            }
+
+
+
+            .directory-place:hover{
+
+                background:#e3f3f1;
+
+                transform:translateY(-2px);
+
+                box-shadow:0 5px 15px rgba(8,123,115,.12);
+
+            }
+
+
+
+            .directory-place:focus{
+
+                outline:3px solid rgba(8,123,115,.22);
+
+                outline-offset:2px;
+
+            }
+
+
+
+            .directory-place-number{
+
+                width:27px;
+
+                height:27px;
+
+                flex:0 0 27px;
+
+                display:grid;
+
+                place-items:center;
+
+                border-radius:50%;
+
+                background:#fff;
+
+                color:#087b73;
+
+                font-size:11px;
+
+                font-weight:800;
+
+            }
+
+
+
+            .directory-place-name{
+
+                flex:1;
+
+                min-width:0;
+
+                overflow-wrap:anywhere;
+
+                line-height:1.35;
+
+            }
+
+            .directory-place-arrow{
+                color:#087b73;
+                font-size:18px;
+                font-weight:900;
+                transition:transform .18s ease;
+            }
+
+            .directory-place:hover .directory-place-arrow{
+                transform:translateX(4px);
+            }
+
+
+
+            .directory-no-results{
+
+                grid-column:1/-1;
+
+                padding:35px 15px;
+
+                text-align:center;
+
+                color:#718496;
+
+            }
+
+
+
+            @media(max-width:900px){
+
+                .directory-places{
+
+                    grid-template-columns:repeat(2,minmax(0,1fr));
+
+                }
+
+            }
+
+
+
+            @media(max-width:600px){
+
+                #countryDirectoryOverlay{
+
+                    padding:8px;
+
+                }
+
+
+
+                .country-directory-window{
+
+                    width:96vw;
+
+                    height:94vh;
+
+                    border-radius:17px;
+
+                }
+
+
+
+                .directory-top{
+
+                    padding:18px;
+
+                }
+
+
+
+                .directory-toolbar{
+
+                    padding:12px 15px;
+
+                }
+
+
+
+                .directory-content{
+
+                    padding:20px 15px 28px;
+
+                }
+
+
+
+                .directory-country-info{
+
+                    align-items:flex-start;
+
+                    flex-direction:column;
+
+                }
+
+
+
+                .directory-places{
+
+                    grid-template-columns:1fr;
+
+                }
+
+            }
+
+        `;
+
+        document.head.appendChild(style);
+
+
+
+        document.getElementById("directoryClose").addEventListener(
+
+            "click",
+
+            closeCountryDirectory
+
+        );
+
+
+
+        document.getElementById("directoryPlaceSearch").addEventListener(
+
+            "input",
+
+            filterDirectoryPlaces
+
+        );
+
+
+
+        // Event delegation: place names are stored as DOM data, not inside
+
+        // onclick strings. Therefore apostrophes, quotes and special characters
+
+        // can never break the click handler.
+
+        document.getElementById("directoryPlaces").addEventListener(
+
+            "click",
+
+            function(event){
+
+                const button = event.target.closest(".directory-place");
+
+                if (!button) return;
+
+
+
+                const placeIndex = Number(button.dataset.placeIndex);
+
+                const countryIndex = Number(button.dataset.countryIndex);
+
+
+
+                if (
+
+                    !Number.isInteger(placeIndex) ||
+
+                    !Number.isInteger(countryIndex)
+
+                ) return;
+
+
+
+                const country = countries[countryIndex];
+
+                if (!country || !country.places[placeIndex]) return;
+
+
+
+                showPlaceInfo(
+
+                    country.places[placeIndex],
+
+                    country.name
+
+                );
+
+            }
+
+        );
+
+    }
+
+
+
+    const countryIndex = countries.indexOf(selectedCountry);
+
+
+
+    document.getElementById("directoryTitle").textContent =
+
+        selectedCountry.name + " Tourist Places";
+
+
+
+    document.getElementById("directorySubtitle").textContent =
+
+        "Explore the tourist places of " + selectedCountry.name + ".";
+
+
+
+    document.getElementById("directoryRegion").textContent =
+
+        selectedCountry.emoji + " " + selectedCountry.region;
+
+
+
+    document.getElementById("directoryCount").textContent =
+
+        selectedCountry.places.length + " Tourist Places";
+
+
+
+    document.getElementById("directoryDescription").textContent =
+
+        selectedCountry.description;
+
+
+
+    const placesBox = document.getElementById("directoryPlaces");
+
+    placesBox.innerHTML = "";
+
+
+
+    let currentState = "";
+    selectedCountry.places.forEach(function(place, index){
+
+        const parsedPlace = splitStatePlace(place);
+        if (parsedPlace.state && parsedPlace.state !== currentState) {
+            currentState = parsedPlace.state;
+            const stateHeading = document.createElement("div");
+            stateHeading.className = "state-section-heading";
+            stateHeading.innerHTML = "<span>STATE / UT</span><strong>" + parsedPlace.state + "</strong>";
+            placesBox.appendChild(stateHeading);
+        }
+
+        const button = document.createElement("button");
+
+
+
+        button.type = "button";
+
+        button.className = "directory-place";
+
+        button.dataset.placeIndex = String(index);
+
+        button.dataset.countryIndex = String(countryIndex);
+
+        button.title = "Open information about " + parsedPlace.place;
+        button.setAttribute("aria-label", "Open details for " + parsedPlace.place);
+
+
+
+        const number = document.createElement("span");
+
+        number.className = "directory-place-number";
+
+        number.textContent = String(index + 1);
+
+
+
+        const name = document.createElement("span");
+
+        name.className = "directory-place-name";
+
+        name.textContent = parsedPlace.place;
+
+
+
+        button.appendChild(number);
+
+        button.appendChild(name);
+
+        placesBox.appendChild(button);
+
+    });
+
+
+
+    const input = document.getElementById("directoryPlaceSearch");
+
+    input.value = "";
+
+
+
+    overlay.classList.add("show");
+
+    overlay.setAttribute("aria-hidden", "false");
+
+    document.body.style.overflow = "hidden";
+
+
+
+    setTimeout(function(){
+
+        input.focus();
+
+    }, 50);
+
+}
+
+
+
+
+
+function filterDirectoryPlaces(){
+
+    const term = document
+
+        .getElementById("directoryPlaceSearch")
+
+        .value
+
+        .trim()
+
+        .toLocaleLowerCase();
+
+
+
+    document
+
+        .querySelectorAll("#directoryPlaces .directory-place")
+
+        .forEach(function(button){
+
+            const name = button
+
+                .querySelector(".directory-place-name")
+
+                .textContent
+
+                .toLocaleLowerCase();
+
+
+
+            button.style.display =
+
+                !term || name.includes(term)
+
+                    ? "flex"
+
+                    : "none";
+
+        });
+
+}
+
+
+
+
+
+function closeCountryDirectory(){
+
+    const overlay =
+
+        document.getElementById("countryDirectoryOverlay");
+
+
+
+    if (!overlay) return;
+
+
+
+    overlay.classList.remove("show");
+
+    overlay.setAttribute("aria-hidden", "true");
+
+    document.body.style.overflow = "";
+
+}
+
+
+
+
+
+function splitStatePlace(placeName){
+    const raw = String(placeName || "").replace(/\s+/g, " ").trim();
+    if (raw.includes(" | ")) {
+        const parts = raw.split(" | ");
+        return { state: parts.shift().trim(), place: parts.join(" | ").trim() };
+    }
+    return { state: "", place: raw };
+}
+function getDisplayPlace(placeName){ return splitStatePlace(placeName).place; }
+
+function getPlaceDetails(placeName, countryName){
+    const raw = String(placeName).replace(/\s+/g, " ").trim();
+    const cleanCountry = String(countryName).replace(/\s+/g, " ").trim();
+    const parsed = splitStatePlace(raw);
+    const cleanPlace = parsed.place;
+    const country = countries.find(c => c.name === cleanCountry);
+    const allPlaces = country ? country.places : [];
+    const cityPart = cleanPlace.includes(" – ") ? cleanPlace.split(" – ")[0].trim() : "";
+    let nearbyRaw = [];
+    if (cityPart) allPlaces.forEach(place => {
+        const q = splitStatePlace(place);
+        if (place !== raw && q.place.toLowerCase().startsWith(cityPart.toLowerCase()+" – ") && (!parsed.state || q.state === parsed.state)) nearbyRaw.push(place);
+    });
+    if (nearbyRaw.length < 4) allPlaces.forEach(place => {
+        const q = splitStatePlace(place);
+        if (place !== raw && !nearbyRaw.includes(place) && (!parsed.state || q.state === parsed.state)) nearbyRaw.push(place);
+    });
+    if (nearbyRaw.length < 4) allPlaces.forEach(place => { if(place !== raw && !nearbyRaw.includes(place)) nearbyRaw.push(place); });
+    return {place:cleanPlace,country:cleanCountry,state:parsed.state,countryData:country,nearby:nearbyRaw.slice(0,6).map(getDisplayPlace)};
+}
+
+/* =========================================================
+
+   PLACE DIRECTORY / DETAIL VIEW
+
+   Designed to visually follow the uploaded travel-package
+
+   layout while keeping the TravelX colour system.
+
+   ========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   PLACE-SPECIFIC IMAGE LOADER
+
+   ========================================================= */
+
+
+
+const placeImageCache = new Map();
+
+
+
+function getPlaceSearchTitle(placeName){
+
+    let value = getDisplayPlace(placeName);
+
+
+
+    /*
+
+       For entries such as:
+
+       "Agra – Taj Mahal"
+
+       "Delhi – Red Fort"
+
+       "Tokyo – Tokyo National Museum"
+
+       search the actual attraction first.
+
+    */
+
+    if (value.includes(" – ")) {
+
+        value = value.split(" – ").slice(1).join(" – ").trim();
+
+    }
+
+
+
+    return value;
+
+}
+
+
+
+
+
+async function fetchWikipediaImage(searchTitle){
+
+
+
+    const title = String(searchTitle || "").trim();
+
+    if (!title) return null;
+
+
+
+    if (placeImageCache.has(title)) {
+
+        return placeImageCache.get(title);
+
+    }
+
+
+
+    const makeEndpoint = function(searchMode){
+
+        if (searchMode === "exact") {
+
+            return "https://en.wikipedia.org/w/api.php" +
+
+                "?action=query&format=json&origin=*" +
+
+                "&prop=pageimages&piprop=thumbnail&pithumbsize=1400" +
+
+                "&redirects=1&titles=" + encodeURIComponent(title);
+
+        }
+
+
+
+        return "https://en.wikipedia.org/w/api.php" +
+
+            "?action=query&format=json&origin=*" +
+
+            "&generator=search&gsrlimit=1" +
+
+            "&gsrsearch=" + encodeURIComponent(title) +
+
+            "&prop=pageimages&piprop=thumbnail&pithumbsize=1400";
+
+    };
+
+
+
+    try {
+
+        for (const mode of ["exact", "search"]) {
+
+            const response = await fetch(makeEndpoint(mode));
+
+            if (!response.ok) continue;
+
+
+
+            const data = await response.json();
+
+            const pages = data && data.query && data.query.pages
+
+                ? Object.values(data.query.pages)
+
+                : [];
+
+
+
+            const page = pages.find(item =>
+
+                item && item.thumbnail && item.thumbnail.source
+
+            );
+
+
+
+            if (page && page.thumbnail && page.thumbnail.source) {
+
+                placeImageCache.set(title, page.thumbnail.source);
+
+                return page.thumbnail.source;
+
+            }
+
+        }
+
+    } catch (error) {
+
+        console.warn("Could not load destination image for:", title, error);
+
+    }
+
+
+
+    placeImageCache.set(title, null);
+
+    return null;
+
+}
+
+
+
+
+
+async function loadPlaceImage(
+
+    placeName,
+
+    countryName,
+
+    imageElement,
+
+    fallbackImage
+
+){
+
+
+
+    const attractionTitle =
+
+        getPlaceSearchTitle(placeName);
+
+
+
+    const countryTitle =
+
+        String(countryName || "").trim();
+
+
+
+    /*
+
+       Try the exact attraction first.
+
+    */
+
+    let imageUrl =
+
+        await fetchWikipediaImage(attractionTitle);
+
+
+
+    /*
+
+       If an attraction page is not found, try the complete
+
+       place name as a second search.
+
+    */
+
+    if (!imageUrl && attractionTitle !== placeName) {
+
+        imageUrl =
+
+            await fetchWikipediaImage(placeName);
+
+    }
+
+
+
+    /* Wikimedia Commons search fallback for attractions that do not have
+
+       a directly matching Wikipedia article image. */
+
+    if (!imageUrl) {
+
+        const commonsEndpoint =
+
+            "https://commons.wikimedia.org/w/api.php" +
+
+            "?action=query&format=json&origin=*" +
+
+            "&generator=search&gsrnamespace=6&gsrlimit=5" +
+
+            "&prop=imageinfo&iiprop=url&iiurlwidth=1400" +
+
+            "&gsrsearch=" + encodeURIComponent(attractionTitle + " tourist attraction");
+
+        try {
+
+            const commonsResponse = await fetch(commonsEndpoint);
+
+            if (commonsResponse.ok) {
+
+                const commonsData = await commonsResponse.json();
+
+                const pages = commonsData && commonsData.query && commonsData.query.pages
+
+                    ? Object.values(commonsData.query.pages) : [];
+
+                const imagePage = pages.find(function(item){
+
+                    return item && item.imageinfo && item.imageinfo[0] &&
+
+                        (item.imageinfo[0].thumburl || item.imageinfo[0].url);
+
+                });
+
+                if (imagePage) {
+
+                    imageUrl = imagePage.imageinfo[0].thumburl || imagePage.imageinfo[0].url;
+
+                }
+
+            }
+
+        } catch(error) {
+
+            console.warn("Commons image search failed:", attractionTitle, error);
+
+        }
+
+    }
+
+
+
+    /* Last fallback: use the country's existing image. */
+
+    if (!imageUrl && countryTitle) {
+
+        imageUrl =
+
+            await fetchWikipediaImage(countryTitle);
+
+    }
+
+
+
+    imageElement.src = imageUrl || fallbackImage;
+
+    imageElement.onerror = function(){
+
+        this.onerror = null;
+
+        this.src = "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=85";
+
+    };
+
+
+
+    imageElement.alt =
+
+        placeName + " tourist attraction in " + countryName;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TRAVEL STYLE + DURATION BUDGET ENGINE
+
+   ---------------------------------------------------------
+
+   Fixed budget values are stored in this page and do not use live hotel prices.
+
+   They scale with the selected tourist-spot duration and travel style.
+
+   ========================================================= */
+
+
+
+const travelStyles = {
+
+    solo: {
+
+        label: "Solo",
+
+        icon: "🧍",
+
+        multiplier: 1,
+
+        note: "One traveller • economical room + food + local transport"
+
+    },
+
+    couple: {
+
+        label: "Couple",
+
+        icon: "👥",
+
+        multiplier: 1.75,
+
+        note: "Two travellers • shared room + food + local transport"
+
+    },
+
+    family: {
+
+        label: "Family",
+
+        icon: "👨‍👩‍👧",
+
+        multiplier: 2.75,
+
+        note: "Family of about 4 • family room/rooms + food + local transport"
+
+    }
+
+};
+
+
+
+/* =========================================================
+   FIXED COUNTRY CURRENCY + FIXED BUDGET ENGINE
+   ---------------------------------------------------------
+   The selected place starts in its own country's currency.
+   All conversion rates below are fixed values stored in this
+   page, so the displayed budget does not change with live FX.
+   ========================================================= */
+
+const countryCurrency = {
+    "Albania":["ALL", "Albanian Lek", "L"],
+    "Andorra":["EUR", "Euro", "€"],
+    "Austria":["EUR", "Euro", "€"],
+    "Belarus":["BYN", "Belarusian Ruble", "Br"],
+    "Belgium":["EUR", "Euro", "€"],
+    "Bosnia and Herzegovina":["BAM", "Bosnia and Herzegovina Convertible Mark", "KM"],
+    "Bulgaria":["BGN", "Bulgarian Lev", "лв"],
+    "Croatia":["EUR", "Euro", "€"],
+    "Cyprus":["EUR", "Euro", "€"],
+    "Czech Republic":["CZK", "Czech Koruna", "Kč"],
+    "Denmark":["DKK", "Danish Krone", "kr"],
+    "Estonia":["EUR", "Euro", "€"],
+    "Finland":["EUR", "Euro", "€"],
+    "France":["EUR", "Euro", "€"],
+    "Germany":["EUR", "Euro", "€"],
+    "Greece":["EUR", "Euro", "€"],
+    "Hungary":["HUF", "Hungarian Forint", "Ft"],
+    "Iceland":["ISK", "Icelandic Króna", "kr"],
+    "Ireland":["EUR", "Euro", "€"],
+    "Italy":["EUR", "Euro", "€"],
+    "Latvia":["EUR", "Euro", "€"],
+    "Liechtenstein":["CHF", "Swiss Franc", "CHF"],
+    "Lithuania":["EUR", "Euro", "€"],
+    "Luxembourg":["EUR", "Euro", "€"],
+    "Malta":["EUR", "Euro", "€"],
+    "Moldova":["MDL", "Moldovan Leu", "L"],
+    "Monaco":["EUR", "Euro", "€"],
+    "Montenegro":["EUR", "Euro", "€"],
+    "Netherlands":["EUR", "Euro", "€"],
+    "North Macedonia":["MKD", "Macedonian Denar", "ден"],
+    "Norway":["NOK", "Norwegian Krone", "kr"],
+    "Poland":["PLN", "Polish Złoty", "zł"],
+    "Portugal":["EUR", "Euro", "€"],
+    "Romania":["RON", "Romanian Leu", "lei"],
+    "Russia":["RUB", "Russian Ruble", "₽"],
+    "San Marino":["EUR", "Euro", "€"],
+    "Serbia":["RSD", "Serbian Dinar", "дин"],
+    "Slovakia":["EUR", "Euro", "€"],
+    "Slovenia":["EUR", "Euro", "€"],
+    "Spain":["EUR", "Euro", "€"],
+    "Sweden":["SEK", "Swedish Krona", "kr"],
+    "Switzerland":["CHF", "Swiss Franc", "CHF"],
+    "Ukraine":["UAH", "Ukrainian Hryvnia", "₴"],
+    "United Kingdom":["GBP", "British Pound", "£"],
+    "Vatican City":["EUR", "Euro", "€"]
+};
+
+/* Fixed USD conversion table.
+   Value = 1 USD in the selected currency.
+   These values are intentionally fixed for stable display. */
+const fixedCurrencyRates = {
+    USD:1, EUR:0.92, GBP:0.79, CHF:0.88, DKK:6.85, SEK:9.2, NOK:9.35, PLN:3.7, CZK:22.8, HUF:355, RON:4.58, BGN:1.8, ISK:124, RSD:108, BAM:1.8, ALL:92, MKD:56, UAH:41, BYN:3.25, MDL:17.4, RUB:90
+};
+
+const supportedCurrencies = Object.keys(fixedCurrencyRates).map(function(code){
+    for (const country of Object.values(countryCurrency)) {
+        if (country[0] === code) return country;
+    }
+    const names = {
+        USD:["USD","US Dollar","$"], EUR:["EUR","Euro","€"],
+        GBP:["GBP","British Pound","£"], AUD:["AUD","Australian Dollar","A$"],
+        CAD:["CAD","Canadian Dollar","C$"], CHF:["CHF","Swiss Franc","CHF"],
+        NZD:["NZD","New Zealand Dollar","NZ$"], HKD:["HKD","Hong Kong Dollar","HK$"],
+        TWD:["TWD","Taiwan Dollar","NT$"], RUB:["RUB","Russian Ruble","₽"],
+        ZAR:["ZAR","South African Rand","R"], BRL:["BRL","Brazilian Real","R$"],
+        MXN:["MXN","Mexican Peso","MX$"]
+    };
+    return names[code] || [code,code,code];
+});
+
+let selectedTravelStyle = "solo";
+let currentBudgetForCurrency = null;
+
+function toggleBudgetDetails(){
+    const toggle = document.getElementById("budgetToggle");
+    const details = document.getElementById("budgetDetails");
+
+    if(!toggle || !details) return;
+
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+    details.hidden = isOpen;
+}
+
+/* The budget panel is created dynamically inside the place-info modal,
+   so use delegated click handling for the Total Budget button. */
+document.addEventListener("click", function(event){
+    const toggle = event.target.closest("#budgetToggle");
+    if(toggle){
+        toggleBudgetDetails();
+    }
+
+    const currencyToggle = event.target.closest("#otherCurrencyToggle");
+    if(currencyToggle){
+        const panel = document.getElementById("otherCurrencyPanel");
+        if(panel){
+            const isOpen = currencyToggle.getAttribute("aria-expanded") === "true";
+            currencyToggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+            panel.hidden = isOpen;
+        }
+    }
+});
+
+
+function getCountryCurrency(countryName){
+    return countryCurrency[countryName] || ["USD","US Dollar","$"];
+}
+
+function formatBudgetCurrency(value, code, symbol){
+    try {
+        return new Intl.NumberFormat(undefined,{
+            style:"currency",
+            currency:code,
+            maximumFractionDigits:0
+        }).format(Math.round(value));
+    } catch(error){
+        return symbol + Math.round(value).toLocaleString();
+    }
+}
+
+function formatFixedBudget(value, code, symbol){
+    /* Every displayed amount is a finalized fixed value. No ranges or
+       approximate symbols are shown anywhere in the budget UI. */
+    return formatBudgetCurrency(value, code, symbol);
+}
+
+function renderWorldCurrencyBudget(budget, preferredCode){
+    const select = document.getElementById("budgetCurrencySelect");
+    const grid = document.getElementById("currencyBudgetGrid");
+    const otherResult = document.getElementById("otherCurrencyResult");
+    if (!select || !grid) return;
+
+    const localCode = preferredCode || budget.currencyCode || "USD";
+    const localCurrency = supportedCurrencies.find(c => c[0] === localCode) || [localCode, localCode, localCode];
+    const localRate = fixedCurrencyRates[localCode] || 1;
+
+    /* Destination country currency is always the primary display. */
+    const localCurrencyName = document.getElementById("localCurrencyName");
+    if(localCurrencyName){
+        localCurrencyName.textContent = `${localCurrency[2]} ${localCode} — ${localCurrency[1]}`;
+    }
+
+    document.getElementById("stayBudgetTotal").textContent =
+        formatFixedBudget(budget.lowUSD * localRate, localCode, localCurrency[2]);
+
+    document.getElementById("stayBudgetDaily").textContent =
+        formatFixedBudget(budget.dailyLowUSD * localRate, localCode, localCurrency[2]);
+
+    const breakdown = [
+        ["costAccommodation", budget.accommodationLowUSD],
+        ["costFood", budget.foodLowUSD],
+        ["costTransport", budget.transportLowUSD],
+        ["costActivities", budget.activitiesLowUSD]
+    ];
+
+    breakdown.forEach(function(row){
+        const el = document.getElementById(row[0]);
+        if(el) el.textContent = formatBudgetCurrency(row[1] * localRate, localCode, localCurrency[2]);
+    });
+
+    const orderedCurrencies = supportedCurrencies.slice().sort(function(a,b){
+        if(a[0] === localCode) return -1;
+        if(b[0] === localCode) return 1;
+        return a[1].localeCompare(b[1]);
+    });
+
+    select.innerHTML = orderedCurrencies.map(function(c){
+        const localLabel = c[0] === localCode ? " — Destination Currency" : "";
+        return `<option value="${c[0]}">${c[0]} — ${c[1]}${localLabel}</option>`;
+    }).join("");
+    select.value = localCode;
+
+    function renderOtherCurrency(){
+        const selectedCode = select.value;
+        const currency = supportedCurrencies.find(c => c[0] === selectedCode) || localCurrency;
+        const rate = fixedCurrencyRates[selectedCode] || 1;
+        const amount = formatFixedBudget(budget.lowUSD * rate, selectedCode, currency[2]);
+
+        if(otherResult){
+            otherResult.innerHTML =
+                `<span>${currency[2]} ${currency[0]} — ${currency[1]}</span>` +
+                `<strong>${amount}</strong>` +
+                `<small>Same finalized trip cost • converted from the destination budget</small>`;
+        }
+    }
+
+    if(!select.dataset.bound){
+        select.addEventListener("change", renderOtherCurrency);
+        select.dataset.bound = "true";
+    }
+
+    /* Compact comparison list: it is inside a collapsible panel. */
+    grid.innerHTML = "";
+    orderedCurrencies.forEach(function(c){
+        const rate = fixedCurrencyRates[c[0]] || 1;
+        const item = document.createElement("button");
+        item.type = "button";
+        item.className = "currency-budget-item" + (c[0] === localCode ? " is-local" : "");
+        item.dataset.currency = c[0];
+        item.innerHTML =
+            `<span>${c[2]} ${c[0]}${c[0] === localCode ? " • LOCAL" : ""}</span>` +
+            `<strong>${formatBudgetCurrency(budget.lowUSD * rate, c[0], c[2])}</strong>`;
+        item.addEventListener("click", function(){
+            select.value = c[0];
+            renderOtherCurrency();
+        });
+        grid.appendChild(item);
+    });
+
+    renderOtherCurrency();
+}
+
+/* Fixed budget per traveller per full day in USD.
+   One exact daily value is used for every country. The displayed
+   total is finalized for the selected place, duration and travel style. */
+const countryDailyFixedUSD = {
+    "Albania":45,
+    "Andorra":90,
+    "Austria":110,
+    "Belarus":55,
+    "Belgium":100,
+    "Bosnia and Herzegovina":50,
+    "Bulgaria":55,
+    "Croatia":85,
+    "Cyprus":85,
+    "Czech Republic":75,
+    "Denmark":120,
+    "Estonia":80,
+    "Finland":105,
+    "France":110,
+    "Germany":105,
+    "Greece":85,
+    "Hungary":65,
+    "Iceland":140,
+    "Ireland":110,
+    "Italy":105,
+    "Latvia":75,
+    "Liechtenstein":120,
+    "Lithuania":75,
+    "Luxembourg":120,
+    "Malta":90,
+    "Moldova":45,
+    "Monaco":180,
+    "Montenegro":70,
+    "Netherlands":110,
+    "North Macedonia":50,
+    "Norway":140,
+    "Poland":65,
+    "Portugal":80,
+    "Romania":55,
+    "Russia":70,
+    "San Marino":95,
+    "Serbia":50,
+    "Slovakia":65,
+    "Slovenia":80,
+    "Spain":90,
+    "Sweden":115,
+    "Switzerland":150,
+    "Ukraine":50,
+    "United Kingdom":120,
+    "Vatican City":110
+};
+
+function getDailyFixedUSD(countryName){
+    return countryDailyFixedUSD[countryName] || 55;
+}
+
+function parseDurationDays(duration){
+    if(duration === "0.5 Day") return 0.5;
+    if(duration === "2 Days") return 2;
+    return 1;
+}
+
+function formatUSD(value){
+    return "$" + Math.round(value).toLocaleString();
+}
+
+function getTripBudget(details,styleKey){
+    const style = travelStyles[styleKey] || travelStyles.solo;
+    const duration = getPlaceDuration(details.place);
+    const days = parseDurationDays(duration);
+    const dailyUSD = getDailyFixedUSD(details.country);
+
+    const exactDailyUSD = dailyUSD * style.multiplier;
+    const exactTotalUSD = exactDailyUSD * days;
+
+    /* Exact fixed split: 35% accommodation, 25% food,
+       15% local transport and 25% activities. These are finalized
+       values, not live/approximate prices. */
+    return {
+        duration,
+        days,
+        lowUSD:exactTotalUSD,
+        highUSD:exactTotalUSD,
+        dailyLowUSD:exactDailyUSD,
+        dailyHighUSD:exactDailyUSD,
+        accommodationLowUSD:exactTotalUSD*0.35,
+        accommodationHighUSD:exactTotalUSD*0.35,
+        foodLowUSD:exactTotalUSD*0.25,
+        foodHighUSD:exactTotalUSD*0.25,
+        transportLowUSD:exactTotalUSD*0.15,
+        transportHighUSD:exactTotalUSD*0.15,
+        activitiesLowUSD:exactTotalUSD*0.25,
+        activitiesHighUSD:exactTotalUSD*0.25,
+        style:style,
+        currencyCode:getCountryCurrency(details.country)[0]
+    };
+}
+
+function getPlaceDuration(placeName){
+
+    const p = String(placeName || "").toLowerCase().trim();
+
+
+
+    const majorTwoDay = [
+
+        "taj mahal", "angkor wat", "borobudur", "bagan", "petra",
+
+        "burj khalifa", "grand bazaar", "great wall", "terracotta warriors",
+
+        "universal studios", "disneyland", "mount fuji", "hanifaru bay", "eiffel tower", "colosseum", "vatican museums", "alhambra", "neuschwanstein", "acropolis", "stonehenge", "mont saint-michel"
+
+    ];
+
+
+
+    const fullDay = [
+
+        "red fort", "qutub minar", "amber fort", "city palace", "agra fort",
+
+        "elephanta caves", "sarnath", "vivekananda rock memorial", "doddabetta peak",
+
+        "nilgiri mountain railway", "kodaikanal lake", "sigiriya rock fortress",
+
+        "galle fort", "ella rock", "nine arches bridge", "faisal mosque", "lahore fort",
+
+        "badshahi mosque", "hunza", "attabad lake", "potala palace", "forbidden city",
+
+        "summer palace", "west lake", "nami island", "jeju", "tokyo disney", "kyoto",
+
+        "nara", "fushimi inari", "osaka castle", "himeji castle", "ha long bay",
+
+        "hoi an", "cu chi tunnels", "grand palace", "phi phi", "petronas", "batu caves",
+
+        "gardens by the bay", "marina bay", "ubud", "uluwatu", "komodo", "bromo",
+
+        "rambagh palace", "dubai mall", "sheikh zayed", "alhambra"
+
+    ];
+
+
+
+    const halfDay = [
+
+        "india gate", "lotus temple", "national museum", "hawa mahal", "jantar mantar",
+
+        "marine drive", "gateway of india", "marina beach", "fort st. george",
+
+        "kapaleeshwarar", "ooty lake", "botanical gardens", "coaker's walk",
+
+        "pillar rocks", "silver cascade", "ganga aarti", "kandy lake",
+
+        "dambulla cave temple", "little adam's peak", "ravana falls", "clifton beach",
+
+        "mazar-e-quaid", "pakistan monument", "daman-e-koh", "tree of life",
+
+        "amwaj islands", "kuwait towers", "grand mosque", "green island", "schönbrunn", "brandenburg gate", "charles bridge", "sagrada família", "st. peter’s basilica", "matterhorn", "cliffs of moher", "geirangerfjord", "plitvice lakes"
+
+    ];
+
+
+
+    if (majorTwoDay.some(x => p.includes(x))) return "2 Days";
+
+    if (fullDay.some(x => p.includes(x))) return "1 Day";
+
+    if (halfDay.some(x => p.includes(x))) return "0.5 Day";
+
+
+
+    if (/museum|mosque|temple|church|shrine|memorial|monument|palace|fort|castle|tower/.test(p)) return "0.5 Day";
+
+    if (/beach|market|souq|bazaar|park|garden|lake|waterfall|viewpoint|sunset|square|promenade/.test(p)) return "0.5 Day";
+
+    if (/cave|island|reef|diving|snorkelling|cruise|safari|wildlife|national park/.test(p)) return "1 Day";
+
+    if (/mountain|peak|rock|trek|hiking|railway|valley|bay/.test(p)) return "1 Day";
+
+
+
+    return "0.5 Day";
+
+}
+
+
+
+function getPlaceDurationTip(duration){
+
+    if (duration === "0.5 Day") return "Best planned as a half-day visit; combine it with a nearby attraction.";
+
+    if (duration === "1 Day") return "Keep one full day so you can explore comfortably without rushing.";
+
+    return "Keep two days for a relaxed visit and nearby attractions.";
+
+}
+
+
+
+function getHotelSuggestions(details, styleKey){
+
+    const query = encodeURIComponent(details.place + ", " + details.country);
+
+    const style = travelStyles[styleKey] || travelStyles.solo;
+
+    const styleText = encodeURIComponent(style.label + " hotels");
+
+
+
+    const baseHotelUSD = Math.max(15, Math.round(getDailyFixedUSD(details.country) * 0.35));
+
+    return [
+
+        {
+
+            badge:"TOP MATCH",
+
+            fixedNightUSD:baseHotelUSD,
+
+            name:style.label + " Stay",
+
+            description:"Search comfortable, well-rated stays matched to the selected travel style.",
+
+            url:"https://www.google.com/maps/search/" + styleText + "+near+" + query
+
+        },
+
+        {
+
+            badge:"BEST VALUE",
+
+            fixedNightUSD:Math.max(12, Math.round(baseHotelUSD * 0.80)),
+
+            name:"Value Hotels",
+
+            description:"Compare location, guest ratings and current prices for the destination.",
+
+            url:"https://www.booking.com/searchresults.html?ss=" + query
+
+        },
+
+        {
+
+            badge:"MORE OPTIONS",
+
+            fixedNightUSD:Math.max(15, Math.round(baseHotelUSD * 0.70)),
+
+            name:"Alternative Stays",
+
+            description:"Check additional hotels and accommodation options before choosing.",
+
+            url:"https://www.agoda.com/search?text=" + query
+
+        }
+
+    ];
+
+}
+
+
+
+
+
+function showPlaceInfo(placeName, countryName){
+
+
+
+    const details = getPlaceDetails(placeName, countryName);
+
+
+
+    let modal = document.getElementById("placeInfoModal");
+
+
+
+    if (!modal) {
+
+
+
+        modal = document.createElement("div");
+
+        modal.id = "placeInfoModal";
+
+
+
+        modal.innerHTML = `
+
+            <div class="place-package-window"
+
+                 role="dialog"
+
+                 aria-modal="true"
+
+                 aria-labelledby="placeInfoTitle">
+
+
+
+                <div class="place-package-main">
+
+
+
+                    <div class="place-package-header">
+
+
+
+                        <div>
+
+                            <div class="package-eyebrow">
+
+                                TRAVELX • DESTINATION GUIDE
+
+                            </div>
+
+
+
+                            <h2 id="placeInfoTitle"></h2>
+
+
+
+                            <p class="package-location">
+
+                                <span>⌖</span>
+
+                                <span id="placeInfoLocation"></span>
+
+                            </p>
+
+                        </div>
+
+
+
+                        <button type="button"
+
+                                id="placeInfoClose"
+
+                                class="place-info-close"
+
+                                aria-label="Close place information">×</button>
+
+
+
+                    </div>
+
+
+
+
+
+                    <div class="package-facts">
+
+
+
+                        <div class="package-fact">
+
+                            <span class="fact-icon">◷</span>
+
+                            <div>
+
+                                <small>Recommended Duration</small>
+
+                                <strong id="placeInfoDuration">1 Day</strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="package-fact">
+
+                            <span class="fact-icon">✦</span>
+
+                            <div>
+
+                                <small>Experience Type</small>
+
+                                <strong id="placeInfoType">Sightseeing</strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="package-fact travel-style-fact">
+
+                            <span class="fact-icon">♧</span>
+
+                            <div class="travel-style-wrap">
+
+                                <small>Travel Style</small>
+
+                                <div class="travel-style-buttons" role="group" aria-label="Choose travel style">
+
+                                    <button type="button" class="travel-style-button active" data-style="solo">🧍 Solo</button>
+
+                                    <button type="button" class="travel-style-button" data-style="couple">👥 Couple</button>
+
+                                    <button type="button" class="travel-style-button" data-style="family">👨‍👩‍👧 Family</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="package-fact">
+
+                            <span class="fact-icon">☷</span>
+
+                            <div>
+
+                                <small>Language</small>
+
+                                <strong>Local • English</strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                    <div class="package-place-image">
+
+                        <img id="placeInfoImage"
+
+                             src=""
+
+                             alt="Tourist destination">
+
+                        <div class="image-overlay-label">
+
+                            <span id="placeInfoImageCountry"></span>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <!-- STAY + TOTAL BUDGET: immediately after the destination picture -->
+
+                    <div class="place-info-card hotel-card-section stay-planner-after-image">
+
+
+
+                        <div class="card-heading-row">
+
+                            <div>
+
+                                <span class="mini-label">PLAN YOUR STAY</span>
+
+                                <h4>Hotels & Fixed Total Trip Cost</h4>
+
+                            </div>
+
+                            <span class="section-count" id="hotelBudgetLabel"></span>
+
+                        </div>
+
+
+
+                        <p class="hotel-intro" id="hotelIntroText">
+
+                            Choose Solo, Couple or Family to view the fixed final trip budget for this place and its recommended duration.
+
+                        </p>
+
+
+
+                        <button type="button"
+                                class="stay-budget-summary world-currency-budget budget-toggle"
+                                id="budgetToggle"
+                                aria-expanded="false"
+                                aria-controls="budgetDetails">
+
+                            <div class="world-budget-main">
+
+                                <small>FINAL FIXED TOTAL TRIP COST</small>
+
+                                <strong id="stayBudgetTotal">$0</strong>
+
+                                <span id="stayBudgetMeta">Solo • 0.5 Day</span>
+
+                                <div class="stay-budget-daily">
+
+                                    <small>FINAL FIXED PER DAY</small>
+
+                                    <strong id="stayBudgetDaily">$0</strong>
+
+                                </div>
+
+                            </div>
+
+                            <div class="budget-toggle-arrow" aria-hidden="true">⌄</div>
+
+                        </button>
+
+
+
+                        <div class="budget-details" id="budgetDetails" hidden>
+
+                            <div class="local-currency-heading">
+                                <span>📍 DESTINATION CURRENCY</span>
+                                <strong id="localCurrencyName">Local currency</strong>
+                            </div>
+
+                            <div class="trip-cost-breakdown" id="tripCostBreakdown">
+
+                                <div><span>🏨 Accommodation</span><strong id="costAccommodation">$0</strong></div>
+
+                                <div><span>🍽️ Food</span><strong id="costFood">$0</strong></div>
+
+                                <div><span>🚕 Local transport</span><strong id="costTransport">$0</strong></div>
+
+                                <div><span>🎟️ Sightseeing & activities</span><strong id="costActivities">$0</strong></div>
+
+                            </div>
+
+
+
+                            <button type="button" class="other-currency-toggle" id="otherCurrencyToggle" aria-expanded="false" aria-controls="otherCurrencyPanel">
+                                <span>🌍 Other country currencies</span>
+                                <b>⌄</b>
+                            </button>
+
+                            <div class="other-currency-panel" id="otherCurrencyPanel" hidden>
+                                <div class="currency-select-box">
+                                    <label for="budgetCurrencySelect">Choose another currency</label>
+                                    <select id="budgetCurrencySelect" aria-label="Choose another budget currency"></select>
+                                </div>
+                                <div class="other-currency-result" id="otherCurrencyResult"></div>
+                                <div class="currency-budget-grid" id="currencyBudgetGrid"></div>
+                            </div>
+
+                            <p class="currency-note">✓ Finalized fixed amount. The destination currency is shown first. Open “Other country currencies” only when you want to compare the same fixed total in another currency.</p>
+
+                        </div>
+
+
+
+                        <div class="hotel-section-title">
+
+                            <span class="mini-label">STAY NEARBY</span>
+
+                            <h4>Suggested Hotels</h4>
+
+                        </div>
+
+
+
+                        <div id="hotelSuggestionList" class="hotel-suggestion-grid"></div>
+
+
+
+                        <div class="hotel-access-note">
+
+                            <span>✓</span>
+
+                            <div>
+
+                                <strong>Easy hotel access</strong>
+
+                                <small>Hotel searches use the selected place and travel style. Open a result to compare current prices and availability.</small>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                    <div class="package-content">
+
+
+
+                        <div class="package-section-intro">
+
+                            <span class="package-label">DESTINATION OVERVIEW</span>
+
+                            <h3 id="placeInfoName"></h3>
+
+                            <p id="placeInfoDescription"></p>
+
+                        </div>
+
+
+
+
+
+                        <div class="place-info-card">
+
+                            <h4>About this place</h4>
+
+                            <p id="placeInfoAbout"></p>
+
+                        </div>
+
+
+
+
+
+                        <div class="place-info-card">
+
+                            <h4>Highlights</h4>
+
+                            <ul id="placeInfoHighlights"></ul>
+
+                        </div>
+
+
+
+
+
+                        <div class="place-info-card">
+
+                            <h4>Why visit?</h4>
+
+                            <p id="placeInfoWhy"></p>
+
+                        </div>
+
+
+
+
+
+                        <div class="place-info-card">
+
+                            <div class="card-heading-row">
+
+                                <div>
+
+                                    <span class="mini-label">EXPLORE AROUND</span>
+
+                                    <h4>Nearby Places</h4>
+
+                                </div>
+
+                                <span class="section-count" id="nearbyCount"></span>
+
+                            </div>
+
+
+
+                            <div id="nearbyPlaces"
+
+                                 class="nearby-place-grid"></div>
+
+                        </div>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+        `;
+
+
+
+        document.body.appendChild(modal);
+
+
+
+
+
+        const style = document.createElement("style");
+
+
+
+        style.id = "placeInfoStyles";
+
+
+
+        style.textContent = `
+
+
+
+            #placeInfoModal{
+
+                position:fixed;
+
+                inset:0;
+
+                z-index:11000;
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:center;
+
+                padding:18px;
+
+                background:rgba(5,30,32,.72);
+
+                backdrop-filter:blur(5px);
+
+                opacity:0;
+
+                visibility:hidden;
+
+                pointer-events:none;
+
+                transition:opacity .2s ease,visibility .2s ease;
+
+            }
+
+
+
+
+
+            #placeInfoModal.show{
+
+                opacity:1;
+
+                visibility:visible;
+
+                pointer-events:auto;
+
+            }
+
+
+
+
+
+            .place-package-window{
+
+                width:min(1380px,96vw);
+
+                height:min(900px,94vh);
+
+                background:#fff;
+
+                border-radius:22px;
+
+                overflow:hidden;
+
+                box-shadow:0 30px 100px rgba(0,0,0,.38);
+
+                display:grid;
+
+                grid-template-columns:1fr;
+
+                transform:translateY(15px) scale(.985);
+
+                transition:transform .2s ease;
+
+            }
+
+
+
+
+
+            #placeInfoModal.show .place-package-window{
+
+                transform:translateY(0) scale(1);
+
+            }
+
+
+
+
+
+            .place-package-main{
+
+                min-width:0;
+
+                overflow-y:auto;
+
+                background:#fff;
+
+            }
+
+
+
+
+
+            .place-package-header{
+
+                padding:28px 34px 20px;
+
+                display:flex;
+
+                align-items:flex-start;
+
+                justify-content:space-between;
+
+                gap:20px;
+
+                border-bottom:1px solid var(--border);
+
+            }
+
+
+
+
+
+            .package-eyebrow{
+
+                color:var(--primary);
+
+                font-size:11px;
+
+                font-weight:900;
+
+                letter-spacing:2.2px;
+
+                margin-bottom:8px;
+
+            }
+
+
+
+
+
+            .place-package-header h2{
+
+                margin:0 0 7px;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:clamp(30px,4vw,48px);
+
+                line-height:1.08;
+
+                font-weight:600;
+
+                overflow-wrap:anywhere;
+
+            }
+
+
+
+
+
+            .package-location{
+
+                margin:0;
+
+                color:var(--text);
+
+                font-size:15px;
+
+            }
+
+
+
+
+
+            .package-location span:first-child{
+
+                color:var(--primary);
+
+                font-size:20px;
+
+                margin-right:5px;
+
+            }
+
+
+
+
+
+            .place-info-close{
+
+                width:46px;
+
+                height:46px;
+
+                flex:0 0 46px;
+
+                border:0;
+
+                border-radius:50%;
+
+                background:#eef6f5;
+
+                color:var(--heading);
+
+                font-size:30px;
+
+                line-height:1;
+
+                cursor:pointer;
+
+                transition:.2s ease;
+
+            }
+
+
+
+
+
+            .place-info-close:hover{
+
+                background:var(--primary);
+
+                color:#fff;
+
+                transform:rotate(4deg);
+
+            }
+
+
+
+
+
+            .package-facts{
+
+                display:grid;
+
+                grid-template-columns:repeat(4,1fr);
+
+                gap:15px;
+
+                padding:20px 34px;
+
+                border-bottom:1px solid var(--border);
+
+            }
+
+
+
+
+
+            .package-fact{
+
+                display:flex;
+
+                align-items:center;
+
+                gap:11px;
+
+                min-width:0;
+
+            }
+
+
+
+
+
+            .fact-icon{
+
+                width:38px;
+
+                height:38px;
+
+                flex:0 0 38px;
+
+                display:grid;
+
+                place-items:center;
+
+                border:1px solid #b9d9d6;
+
+                border-radius:50%;
+
+                color:#268f89;
+
+                font-size:18px;
+
+                background:#f7fbfb;
+
+            }
+
+
+
+
+
+            .package-fact small{
+
+                display:block;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:14px;
+
+                margin-bottom:2px;
+
+            }
+
+
+
+
+
+            .package-fact strong{
+
+                display:block;
+
+                color:#e89a13;
+
+                font-size:12px;
+
+                font-weight:700;
+
+            }
+
+
+
+
+
+            .package-place-image{
+
+                position:relative;
+
+                width:100%;
+
+                height:420px;
+
+                overflow:hidden;
+
+                background:#eaf1f2;
+
+            }
+
+
+
+
+
+            .package-place-image img{
+
+                width:100%;
+
+                height:100%;
+
+                object-fit:cover;
+
+                display:block;
+
+                background:#eaf1f2;
+
+                transition:opacity .25s ease, transform .45s ease;
+
+            }
+
+
+
+
+
+            .image-overlay-label{
+
+                position:absolute;
+
+                left:20px;
+
+                bottom:18px;
+
+                padding:9px 14px;
+
+                border-radius:22px;
+
+                color:#fff;
+
+                background:rgba(0,0,0,.52);
+
+                backdrop-filter:blur(6px);
+
+                font-size:12px;
+
+                font-weight:800;
+
+            }
+
+
+
+
+
+            .package-content{
+
+                padding:30px 34px 45px;
+
+            }
+
+
+
+
+
+            .package-section-intro{
+
+                margin-bottom:22px;
+
+            }
+
+
+
+
+
+            .package-label,
+
+            .mini-label{
+
+                display:block;
+
+                margin-bottom:7px;
+
+                color:var(--primary);
+
+                font-size:10px;
+
+                font-weight:900;
+
+                letter-spacing:1.8px;
+
+            }
+
+
+
+
+
+            .package-section-intro h3{
+
+                margin:0 0 10px;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:31px;
+
+                line-height:1.15;
+
+            }
+
+
+
+
+
+            .package-section-intro > p{
+
+                margin:0;
+
+                color:var(--text);
+
+                line-height:1.8;
+
+                font-size:15px;
+
+            }
+
+
+
+
+
+            .place-info-card{
+
+                margin-top:18px;
+
+                padding:22px;
+
+                border:1px solid var(--border);
+
+                border-radius:16px;
+
+                background:#f8fafb;
+
+            }
+
+
+
+
+
+            .place-info-card h4{
+
+                margin:0 0 10px;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:20px;
+
+            }
+
+
+
+
+
+            .place-info-card p{
+
+                margin:0;
+
+                color:var(--text);
+
+                line-height:1.8;
+
+                font-size:14px;
+
+            }
+
+
+
+
+
+            .place-info-card ul{
+
+                margin:0;
+
+                padding-left:21px;
+
+                color:var(--text);
+
+                line-height:1.9;
+
+                font-size:14px;
+
+            }
+
+
+
+
+
+            .card-heading-row{
+
+                display:flex;
+
+                align-items:flex-end;
+
+                justify-content:space-between;
+
+                gap:15px;
+
+                margin-bottom:12px;
+
+            }
+
+
+
+
+
+            .card-heading-row h4{
+
+                margin-bottom:0;
+
+            }
+
+
+
+
+
+            .section-count{
+
+                padding:6px 10px;
+
+                border-radius:20px;
+
+                background:#e8f6f5;
+
+                color:var(--primary);
+
+                font-size:11px;
+
+                font-weight:800;
+
+                white-space:nowrap;
+
+            }
+
+
+
+
+
+            .nearby-place-grid{
+
+                display:grid;
+
+                grid-template-columns:repeat(2,minmax(0,1fr));
+
+                gap:9px;
+
+            }
+
+
+
+
+
+            .nearby-place-button{
+
+                width:100%;
+
+                min-height:50px;
+
+                border:1px solid #dce7e8;
+
+                border-radius:11px;
+
+                background:#fff;
+
+                color:#425b70;
+
+                padding:10px 12px;
+
+                text-align:left;
+
+                font:inherit;
+
+                font-size:13px;
+
+                cursor:pointer;
+
+                transition:.2s ease;
+
+            }
+
+
+
+
+
+            .nearby-place-button:hover{
+
+                border-color:var(--primary);
+
+                background:#eef8f7;
+
+                transform:translateY(-2px);
+
+            }
+
+
+
+
+
+            .travel-style-wrap{
+
+                width:100%;
+
+            }
+
+
+
+            .travel-style-buttons{
+
+                display:flex;
+
+                flex-wrap:wrap;
+
+                gap:7px;
+
+                margin-top:7px;
+
+            }
+
+
+
+            .travel-style-button{
+
+                border:1px solid #d7e4e5;
+
+                border-radius:999px;
+
+                background:#fff;
+
+                color:#40586b;
+
+                padding:8px 11px;
+
+                font:inherit;
+
+                font-size:11px;
+
+                font-weight:800;
+
+                cursor:pointer;
+
+                transition:.2s ease;
+
+            }
+
+
+
+            .travel-style-button:hover{
+
+                border-color:var(--primary);
+
+                transform:translateY(-1px);
+
+            }
+
+
+
+            .travel-style-button.active{
+
+                background:var(--primary);
+
+                border-color:var(--primary);
+
+                color:#fff;
+
+                box-shadow:0 5px 15px rgba(8,123,115,.16);
+
+            }
+
+
+
+            .budget-toggle{
+                width:100%;
+                border:0;
+                text-align:left;
+                font:inherit;
+                color:inherit;
+                cursor:pointer;
+                position:relative;
+                padding-right:48px;
+                transition:box-shadow .2s ease, transform .2s ease;
+            }
+
+            .budget-toggle:hover{
+                box-shadow:0 7px 20px rgba(8,123,115,.12);
+            }
+
+            .budget-toggle:focus-visible{
+                outline:3px solid rgba(8,123,115,.25);
+                outline-offset:2px;
+            }
+
+            .budget-toggle-arrow{
+                position:absolute;
+                right:18px;
+                top:50%;
+                width:30px;
+                height:30px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:50%;
+                background:#e8f5f3;
+                color:var(--primary);
+                font-size:20px;
+                font-weight:900;
+                transform:translateY(-50%);
+                transition:transform .25s ease, background .25s ease;
+            }
+
+            .budget-toggle[aria-expanded="true"] .budget-toggle-arrow{
+                transform:translateY(-50%) rotate(180deg);
+                background:#d8efec;
+            }
+
+            .budget-details{
+                margin-top:10px;
+                padding:13px;
+                border:1px solid #d8e8e7;
+                border-radius:15px;
+                background:#f9fcfc;
+                animation:budgetDetailsOpen .25s ease;
+            }
+
+            @keyframes budgetDetailsOpen{
+                from{opacity:0;transform:translateY(-5px);}
+                to{opacity:1;transform:translateY(0);}
+            }
+
+            .budget-details[hidden]{
+                display:none;
+            }
+
+            .world-currency-budget{display:flex;justify-content:space-between;align-items:center;gap:18px;}
+
+            .world-budget-main{min-width:0;}
+
+            .local-currency-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:4px 0 10px;padding:10px 12px;border-radius:11px;background:#eef8f7;border:1px solid #d5eae8;}
+
+            .local-currency-heading span{font-size:10px;font-weight:900;color:#5f7388;letter-spacing:.5px;}
+
+            .local-currency-heading strong{font-size:12px;color:#123d3d;text-align:right;}
+
+            .currency-select-box{display:flex;flex-direction:column;gap:5px;min-width:170px;}
+
+            .currency-select-box label{font-size:10px;font-weight:900;color:#123d3d;text-transform:uppercase;}
+
+            #budgetCurrencySelect{width:100%;border:1px solid #cfe0df;border-radius:9px;padding:9px 10px;background:#fff;color:#123d3d;font-weight:800;}
+
+            .other-currency-toggle{width:100%;margin-top:11px;padding:11px 13px;border:1px solid #d8e7e7;border-radius:11px;background:#fff;display:flex;align-items:center;justify-content:space-between;color:#123d3d;font:inherit;font-size:12px;font-weight:900;cursor:pointer;}
+
+            .other-currency-toggle b{width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#e8f5f3;font-size:17px;transition:transform .2s ease;}
+
+            .other-currency-toggle[aria-expanded="true"] b{transform:rotate(180deg);}
+
+            .other-currency-panel{margin-top:8px;padding:11px;border:1px solid #e0ebeb;border-radius:12px;background:#f7fbfb;}
+
+            .other-currency-result{margin-top:9px;padding:11px;border-radius:10px;background:#eef8f7;border:1px solid #d5eae8;}
+
+            .other-currency-result span{display:block;font-size:10px;font-weight:900;color:#60738c;}
+
+            .other-currency-result strong{display:block;margin-top:4px;font-size:18px;color:#123d3d;}
+
+            .other-currency-result small{display:block;margin-top:3px;color:#7c8994;font-size:9px;}
+
+            .currency-budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px;max-height:250px;overflow:auto;padding-right:2px;}
+
+            .currency-budget-item{padding:8px 9px;border:1px solid #e1e8eb;border-radius:9px;background:#fff;text-align:left;cursor:pointer;font:inherit;}
+
+            .currency-budget-item:hover{border-color:#b9d9d6;background:#f2fafa;}
+
+            .currency-budget-item.is-local{border-color:#9bcfc9;background:#eef8f7;}
+
+            .currency-budget-item span{display:block;font-size:9px;color:#60738c;font-weight:800;}
+
+            .currency-budget-item strong{display:block;margin-top:3px;font-size:11px;color:#123d3d;}
+
+            .currency-note{margin:9px 0 0;color:#7c8994;font-size:10px;line-height:1.5;}
+
+
+
+            .stay-planner-after-image{
+
+                margin:28px 34px 0;
+
+            }
+
+
+
+            .hotel-section-title{
+
+                margin-top:22px;
+
+                padding-top:18px;
+
+                border-top:1px solid #e3ebec;
+
+            }
+
+
+
+            .hotel-section-title h4{
+
+                margin:2px 0 0;
+
+                color:var(--heading);
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:22px;
+
+            }
+
+
+
+            .trip-cost-breakdown{
+
+                display:grid;
+
+                grid-template-columns:repeat(4,1fr);
+
+                gap:9px;
+
+                margin:10px 0 4px;
+
+            }
+
+
+
+            .trip-cost-breakdown > div{
+
+                padding:11px 12px;
+
+                border:1px solid #e0e9ea;
+
+                border-radius:12px;
+
+                background:#fff;
+
+            }
+
+
+
+            .trip-cost-breakdown span{
+
+                display:block;
+
+                color:#60738c;
+
+                font-size:10px;
+
+                font-weight:800;
+
+                line-height:1.35;
+
+            }
+
+
+
+            .trip-cost-breakdown strong{
+
+                display:block;
+
+                margin-top:5px;
+
+                color:#123d3d;
+
+                font-size:12px;
+
+            }
+
+
+
+            .stay-budget-summary{
+
+                display:flex;
+
+                justify-content:space-between;
+
+                align-items:center;
+
+                gap:14px;
+
+                margin:14px 0 12px;
+
+                padding:15px 16px;
+
+                border:1px solid #d8e8e7;
+
+                border-radius:15px;
+
+                background:linear-gradient(135deg,#f2fbfa,#fff);
+
+            }
+
+
+
+            .stay-budget-summary small{
+
+                display:block;
+
+                color:var(--primary);
+
+                font-size:9px;
+
+                font-weight:900;
+
+                letter-spacing:1px;
+
+            }
+
+
+
+            .stay-budget-summary strong{
+
+                display:block;
+
+                margin-top:3px;
+
+                color:#1d3041;
+
+                font-size:22px;
+
+                line-height:1.15;
+
+            }
+
+
+
+            #stayBudgetMeta{
+
+                display:block;
+
+                margin-top:3px;
+
+                color:#718294;
+
+                font-size:11px;
+
+            }
+
+
+
+            .stay-budget-daily{
+
+                min-width:125px;
+
+                padding-left:14px;
+
+                border-left:1px solid #d8e8e7;
+
+            }
+
+
+
+            .stay-budget-daily strong{
+
+                font-size:17px;
+
+            }
+
+
+
+            .hotel-intro{
+
+                margin-bottom:15px !important;
+
+            }
+
+
+
+
+
+            .hotel-website-grid{
+
+                display:grid;
+
+                grid-template-columns:repeat(2,minmax(0,1fr));
+
+                gap:10px;
+
+            }
+
+
+
+            .hotel-suggestion-grid{
+
+                display:grid;
+
+                grid-template-columns:repeat(3,minmax(0,1fr));
+
+                gap:12px;
+
+                margin-top:14px;
+
+            }
+
+
+
+            .hotel-suggestion{
+
+                display:flex;
+
+                flex-direction:column;
+
+                justify-content:space-between;
+
+                min-height:175px;
+
+                padding:16px;
+
+                border:1px solid #dce7e8;
+
+                border-radius:16px;
+
+                background:linear-gradient(180deg,#ffffff,#f8fbfb);
+
+                box-shadow:0 5px 16px rgba(28,55,70,.05);
+
+                transition:.2s ease;
+
+            }
+
+
+
+            .hotel-suggestion:hover{
+
+                transform:translateY(-3px);
+
+                border-color:var(--primary);
+
+                box-shadow:0 10px 24px rgba(8,123,115,.10);
+
+            }
+
+
+
+            .hotel-suggestion-badge{
+
+                display:inline-flex;
+
+                align-items:center;
+
+                width:max-content;
+
+                padding:6px 9px;
+
+                border-radius:20px;
+
+                background:#eef8f7;
+
+                color:var(--primary);
+
+                font-size:10px;
+
+                font-weight:900;
+
+                letter-spacing:.7px;
+
+                text-transform:uppercase;
+
+            }
+
+
+
+            .hotel-suggestion h5{
+
+                margin:12px 0 5px;
+
+                color:#1d3041;
+
+                font-size:16px;
+
+                line-height:1.25;
+
+            }
+
+
+
+            .hotel-fixed-price{
+                display:block;
+                margin:0 0 12px;
+                color:var(--primary);
+                font-size:15px;
+                font-weight:900;
+            }
+
+            .hotel-suggestion p{
+
+                margin:0 0 13px;
+
+                color:#718294;
+
+                font-size:12px;
+
+                line-height:1.55;
+
+            }
+
+
+
+            .hotel-search-button{
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:center;
+
+                gap:7px;
+
+                width:100%;
+
+                padding:10px 12px;
+
+                border-radius:10px;
+
+                background:var(--primary);
+
+                color:#fff;
+
+                text-decoration:none;
+
+                font-size:12px;
+
+                font-weight:800;
+
+                transition:.2s ease;
+
+            }
+
+
+
+            .hotel-search-button:hover,
+
+            .hotel-search-button:focus{
+
+                background:var(--primary-dark);
+
+                outline:none;
+
+            }
+
+
+
+            .hotel-access-note{
+
+                display:flex;
+
+                align-items:flex-start;
+
+                gap:10px;
+
+                margin-top:14px;
+
+                padding:12px 13px;
+
+                border:1px dashed #b9d9d6;
+
+                border-radius:12px;
+
+                background:#f7fbfb;
+
+            }
+
+
+
+            .hotel-access-note > span{
+
+                display:grid;
+
+                place-items:center;
+
+                width:24px;
+
+                height:24px;
+
+                flex:0 0 24px;
+
+                border-radius:50%;
+
+                background:#dff3f1;
+
+                color:var(--primary);
+
+                font-size:13px;
+
+                font-weight:900;
+
+            }
+
+
+
+            .hotel-access-note strong{
+
+                display:block;
+
+                color:#1d3041;
+
+                font-size:12px;
+
+            }
+
+
+
+            .hotel-access-note small{
+
+                display:block;
+
+                margin-top:2px;
+
+                color:#718294;
+
+                font-size:11px;
+
+                line-height:1.45;
+
+            }
+
+
+
+            .budget-badge{
+
+                display:inline-flex;
+
+                align-items:center;
+
+                gap:5px;
+
+            }
+
+
+
+
+
+            .hotel-website{
+
+                display:flex;
+
+                align-items:center;
+
+                justify-content:space-between;
+
+                gap:10px;
+
+                padding:13px 14px;
+
+                border:1px solid #dce7e8;
+
+                border-radius:12px;
+
+                background:#fff;
+
+                color:var(--heading);
+
+                text-decoration:none;
+
+                transition:.2s ease;
+
+            }
+
+
+
+
+
+            .hotel-website:hover{
+
+                border-color:var(--primary);
+
+                transform:translateY(-2px);
+
+                box-shadow:0 7px 18px rgba(8,123,115,.10);
+
+            }
+
+
+
+
+
+            .hotel-website strong{
+
+                font-size:13px;
+
+            }
+
+
+
+
+
+            .hotel-website span{
+
+                color:var(--primary);
+
+                font-size:17px;
+
+            }
+
+
+
+
+
+            .place-package-sidebar{
+
+                background:#f8f8f8;
+
+                border-left:1px solid var(--border);
+
+                overflow-y:auto;
+
+            }
+
+
+
+
+
+            .sidebar-sticky{
+
+                padding:40px 22px 30px;
+
+            }
+
+
+
+
+
+            .sidebar-heading span,
+
+            .enquiry-title span{
+
+                color:var(--primary);
+
+                font-size:10px;
+
+                font-weight:900;
+
+                letter-spacing:2px;
+
+            }
+
+
+
+
+
+            .sidebar-heading h3{
+
+                margin:7px 0 22px;
+
+                color:#111;
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:30px;
+
+                line-height:1.15;
+
+            }
+
+
+
+
+
+            .budget-planner-card{
+
+                display:flex;
+
+                align-items:flex-start;
+
+                gap:10px;
+
+                margin-bottom:16px;
+
+                padding:13px;
+
+                border:1px solid #dce7e8;
+
+                border-radius:14px;
+
+                background:#fff;
+
+                box-shadow:0 5px 15px rgba(28,55,70,.04);
+
+            }
+
+
+
+            .budget-planner-icon{
+
+                display:grid;
+
+                place-items:center;
+
+                width:34px;
+
+                height:34px;
+
+                flex:0 0 34px;
+
+                border-radius:10px;
+
+                background:#eef8f7;
+
+                color:var(--primary);
+
+                font-size:15px;
+
+                font-weight:900;
+
+            }
+
+
+
+            .budget-planner-card small{
+
+                display:block;
+
+                color:var(--primary);
+
+                font-size:9px;
+
+                font-weight:900;
+
+                letter-spacing:1px;
+
+            }
+
+
+
+            .budget-planner-card strong{
+
+                display:block;
+
+                margin-top:3px;
+
+                color:#1d3041;
+
+                font-size:11px;
+
+                line-height:1.35;
+
+            }
+
+
+
+            .budget-planner-card p{
+
+                margin-top:4px;
+
+                color:#7c8994;
+
+                font-size:10px;
+
+                line-height:1.4;
+
+            }
+
+
+
+            .contact-item{
+
+                display:flex;
+
+                align-items:center;
+
+                gap:11px;
+
+                padding:10px 0;
+
+                border-bottom:1px solid #e2e5e6;
+
+            }
+
+
+
+
+
+            .contact-icon{
+
+                width:40px;
+
+                height:40px;
+
+                flex:0 0 40px;
+
+                display:grid;
+
+                place-items:center;
+
+                border-radius:50%;
+
+                background:#fff;
+
+                color:var(--heading);
+
+                font-size:17px;
+
+                box-shadow:0 3px 12px rgba(0,0,0,.05);
+
+            }
+
+
+
+
+
+            .contact-item small{
+
+                display:block;
+
+                color:#7c8994;
+
+                font-size:10px;
+
+                margin-bottom:2px;
+
+            }
+
+
+
+
+
+            .contact-item strong{
+
+                display:block;
+
+                color:#1d3041;
+
+                font-size:12px;
+
+                overflow-wrap:anywhere;
+
+            }
+
+.enquiry-title h4{
+
+                margin:5px 0 15px;
+
+                color:#111;
+
+                font-family:Georgia,"Times New Roman",serif;
+
+                font-size:22px;
+
+                font-weight:500;
+
+            }
+
+.state-section-heading{grid-column:1/-1;display:flex;align-items:baseline;gap:10px;margin:18px 0 4px;padding:10px 14px;border-left:4px solid var(--primary);background:#f1f8f7;border-radius:8px}.state-section-heading span{color:var(--primary);font-size:9px;font-weight:900;letter-spacing:1.5px}.state-section-heading strong{color:#1d3041;font-size:16px}
+
+.directory-back-button{
+
+                margin-bottom:12px;
+
+                border:1px solid #d9e5e6;
+
+                border-radius:20px;
+
+                background:#fff;
+
+                color:var(--primary);
+
+                padding:8px 13px;
+
+                font-size:12px;
+
+                font-weight:800;
+
+                cursor:pointer;
+
+            }
+
+
+
+
+
+            @media(max-width:1050px){
+
+
+
+                .place-package-window{
+
+                    grid-template-columns:1fr;
+
+                }
+
+
+
+                .package-facts{
+
+                    grid-template-columns:repeat(2,1fr);
+
+                }
+
+
+
+                .package-place-image{
+
+                    height:300px;
+
+                }
+
+            }
+
+
+
+
+
+            @media(max-width:800px){
+
+
+
+                #placeInfoModal{
+
+                    padding:8px;
+
+                    align-items:center;
+
+                }
+
+
+
+                .place-package-window{
+
+                    width:97vw;
+
+                    height:95vh;
+
+                    grid-template-columns:1fr;
+
+                }
+
+
+
+
+
+
+
+                .sidebar-sticky{
+
+                    padding:25px 20px 30px;
+
+                }
+
+
+
+                .package-facts{
+
+                    padding:18px 20px;
+
+                }
+
+
+
+                .place-package-header{
+
+                    padding:22px 20px 17px;
+
+                }
+
+
+
+                .package-content{
+
+                    padding:24px 20px 35px;
+
+                }
+
+
+
+                .stay-planner-after-image{
+
+                    margin:22px 20px 0;
+
+                }
+
+
+
+                .trip-cost-breakdown{
+
+                    grid-template-columns:repeat(2,1fr);
+
+                }
+
+            }
+
+
+
+
+
+            @media(max-width:700px){
+
+                .world-currency-budget{align-items:stretch;flex-direction:column;}
+
+                .currency-select-box{width:100%;}
+
+                #budgetCurrencySelect{width:100%;}
+
+                .currency-budget-grid{grid-template-columns:repeat(2,1fr);}
+
+            }
+
+
+
+            @media(max-width:560px){
+
+
+
+                .package-facts{
+
+                    grid-template-columns:1fr;
+
+                    gap:12px;
+
+                }
+
+
+
+                .package-place-image{
+
+                    height:230px;
+
+                }
+
+
+
+                .package-section-intro h3{
+
+                    font-size:27px;
+
+                }
+
+
+
+                .nearby-place-grid,
+
+                .hotel-website-grid,
+
+                .hotel-suggestion-grid{
+
+                    grid-template-columns:1fr;
+
+                }
+
+
+
+                .stay-budget-summary{
+
+                    align-items:flex-start;
+
+                    flex-direction:column;
+
+                }
+
+
+
+                .stay-budget-daily{
+
+                    width:100%;
+
+                    min-width:0;
+
+                    padding:10px 0 0;
+
+                    border-left:0;
+
+                    border-top:1px solid #d8e8e7;
+
+                }
+
+
+
+                .place-info-card{
+
+                    padding:17px;
+
+                }
+
+
+
+                .sidebar-heading h3{
+
+                    font-size:27px;
+
+                }
+
+            }
+
+
+
+        `;
+
+
+
+        document.head.appendChild(style);
+
+
+
+
+
+        document.getElementById("placeInfoClose")
+
+            .addEventListener("click", closePlaceInfo);
+
+
+
+
+
+        modal.addEventListener("click", function(event){
+
+
+
+            if (event.target === modal) {
+
+                closePlaceInfo();
+
+            }
+
+
+
+        });
+
+document.getElementById("nearbyPlaces")
+
+            .addEventListener("click", function(event){
+
+
+
+                const button =
+
+                    event.target.closest(".nearby-place-button");
+
+
+
+                if (!button) return;
+
+
+
+                showPlaceInfo(
+
+                    button.dataset.place,
+
+                    button.dataset.country
+
+                );
+
+
+
+            });
+
+
+
+    }
+
+
+
+
+
+    document.getElementById("placeInfoTitle").textContent =
+
+        details.place;
+
+
+
+    document.getElementById("placeInfoName").textContent =
+
+        details.place;
+
+
+
+    document.getElementById("placeInfoLocation").textContent =
+
+        details.country;
+
+
+
+    document.getElementById("placeInfoImageCountry").textContent =
+
+        details.country;
+
+
+
+
+
+    const image =
+
+        document.getElementById("placeInfoImage");
+
+
+
+    const fallbackImage =
+
+        details.countryData && details.countryData.image
+
+            ? details.countryData.image
+
+            : "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=85";
+
+
+
+    image.src = fallbackImage;
+
+    image.alt = details.place + " in " + details.country;
+
+
+
+    /*
+
+       Get a destination-specific photograph from Wikipedia.
+
+       This means "Taj Mahal" gets a Taj Mahal image,
+
+       "India Gate" gets an India Gate image, etc.
+
+       If a matching image is not available, the country image
+
+       is used as a safe fallback.
+
+    */
+
+    loadPlaceImage(
+
+        details.place,
+
+        details.country,
+
+        image,
+
+        fallbackImage
+
+    );
+
+
+
+
+
+    const duration = getPlaceDuration(details.place);
+
+
+
+    document.getElementById("placeInfoDuration").textContent = duration;
+
+
+
+
+
+    document.getElementById("placeInfoType").textContent =
+
+        details.place.toLowerCase().includes("beach")
+
+            ? "Beach & Leisure"
+
+            : details.place.toLowerCase().includes("temple")
+
+              ? "Culture & Heritage"
+
+              : details.place.toLowerCase().includes("museum")
+
+                ? "History & Culture"
+
+                : details.place.toLowerCase().includes("park")
+
+                  ? "Nature & Wildlife"
+
+                  : "Sightseeing";
+
+
+
+
+
+    document.getElementById("placeInfoDescription").textContent =
+
+        details.place +
+
+        " is a notable tourist attraction in " +
+
+        details.country +
+
+        ", offering visitors an opportunity to experience the destination's "
+
+        + "culture, scenery, history and local character.";
+
+
+
+
+
+    document.getElementById("placeInfoAbout").textContent =
+
+        details.place +
+
+        " is part of the TravelX destination directory for " +
+
+        details.country +
+
+        ". Visitors can plan sightseeing around this attraction, "
+
+        + "combine it with nearby places and choose accommodation that "
+
+        + "matches their travel style. Recommended duration: "
+
+        + duration + ". " + getPlaceDurationTip(duration);
+
+
+
+
+
+    document.getElementById("placeInfoWhy").textContent =
+
+        "Visit " +
+
+        details.place +
+
+        " to add a memorable local experience to your " +
+
+        details.country +
+
+        " itinerary. It can be combined with other nearby attractions "
+
+        + "for a convenient day of exploration.";
+
+
+
+
+
+    const highlights =
+
+        document.getElementById("placeInfoHighlights");
+
+
+
+    highlights.innerHTML = "";
+
+
+
+    const highlightItems = [
+
+        "Sightseeing and photography",
+
+        "Local culture and destination experience",
+
+        "Easy to combine with other attractions",
+
+        "Suitable for itinerary planning"
+
+    ];
+
+
+
+    highlightItems.forEach(function(item){
+
+
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        highlights.appendChild(li);
+
+
+
+    });
+
+
+
+
+
+    const nearbyBox =
+
+        document.getElementById("nearbyPlaces");
+
+
+
+    nearbyBox.innerHTML = "";
+
+
+
+    document.getElementById("nearbyCount").textContent =
+
+        details.nearby.length + " nearby";
+
+
+
+
+
+    if (!details.nearby.length) {
+
+
+
+        const empty = document.createElement("p");
+
+
+
+        empty.textContent =
+
+            "Nearby destination information is not available in the current directory.";
+
+
+
+        nearbyBox.appendChild(empty);
+
+
+
+    } else {
+
+
+
+        details.nearby.forEach(function(place){
+
+
+
+            const button =
+
+                document.createElement("button");
+
+
+
+            button.type = "button";
+
+            button.className = "nearby-place-button";
+
+            button.dataset.place = place;
+
+            button.dataset.country = details.country;
+
+            button.textContent = place;
+
+            button.title = "Open details for " + place;
+
+
+
+            nearbyBox.appendChild(button);
+
+
+
+        });
+
+
+
+    }
+
+
+
+
+
+    function updateStayRecommendations(styleKey){
+
+        selectedTravelStyle = styleKey;
+
+
+
+        document.querySelectorAll("#placeInfoModal .travel-style-button").forEach(function(button){
+
+            const active = button.dataset.style === styleKey;
+
+            button.classList.toggle("active", active);
+
+            button.setAttribute("aria-pressed", active ? "true" : "false");
+
+        });
+
+
+
+        const budget = getTripBudget(details, styleKey);
+
+        const style = budget.style;
+
+
+
+        document.getElementById("stayBudgetTotal").textContent =
+
+            formatFixedBudget(
+                budget.lowUSD * fixedCurrencyRates[getCountryCurrency(details.country)[0]],
+                getCountryCurrency(details.country)[0],
+                getCountryCurrency(details.country)[2]
+            );
+
+
+
+        document.getElementById("stayBudgetDaily").textContent =
+
+            formatFixedBudget(
+                budget.dailyLowUSD * fixedCurrencyRates[getCountryCurrency(details.country)[0]],
+                getCountryCurrency(details.country)[0],
+                getCountryCurrency(details.country)[2]
+            );
+
+
+
+        document.getElementById("stayBudgetMeta").textContent =
+
+            style.icon + " " + style.label + " • " + budget.duration;
+
+
+
+        currentBudgetForCurrency = budget;
+
+        renderWorldCurrencyBudget(budget, getCountryCurrency(details.country)[0]);
+
+
+
+        document.getElementById("hotelBudgetLabel").textContent =
+
+            style.icon + " " + style.label + " • " + budget.duration;
+
+
+
+        document.getElementById("hotelIntroText").textContent =
+
+            style.note + ". Final fixed cost includes accommodation, food, local transport and sightseeing for the recommended duration. No live or approximate price calculation is used.";
+
+
+
+        document.getElementById("tripCostBreakdown").dataset.low = budget.lowUSD;
+
+        document.getElementById("tripCostBreakdown").dataset.high = budget.highUSD;
+
+
+
+        const hotelBox = document.getElementById("hotelSuggestionList");
+
+        hotelBox.innerHTML = "";
+
+
+
+        getHotelSuggestions(details, styleKey).forEach(function(site){
+
+            const card = document.createElement("div");
+
+            card.className = "hotel-suggestion";
+
+
+
+            const badge = document.createElement("span");
+
+            badge.className = "hotel-suggestion-badge";
+
+            badge.textContent = site.badge;
+
+
+
+            const title = document.createElement("h5");
+
+            title.textContent = site.name;
+
+
+
+            const description = document.createElement("p");
+
+            description.textContent = site.description;
+
+            const hotelPrice = document.createElement("strong");
+            hotelPrice.className = "hotel-fixed-price";
+            const hotelCurrency = getCountryCurrency(details.country);
+            hotelPrice.textContent =
+                formatBudgetCurrency(
+                    site.fixedNightUSD * (fixedCurrencyRates[hotelCurrency[0]] || 1),
+                    hotelCurrency[0],
+                    hotelCurrency[2]
+                ) + " / night";
+
+            const link = document.createElement("a");
+
+            link.className = "hotel-search-button";
+
+            link.href = site.url;
+
+            link.target = "_self";
+
+            link.rel = "noopener noreferrer";
+
+            link.setAttribute("aria-label", "Search " + site.name + " for " + details.place + ", " + details.country);
+
+            link.innerHTML = "View stays <span>→</span>";
+
+
+
+            card.appendChild(badge);
+
+            card.appendChild(title);
+
+            card.appendChild(description);
+
+            card.appendChild(hotelPrice);
+
+            card.appendChild(link);
+
+            hotelBox.appendChild(card);
+
+        });
+
+    }
+
+
+
+    document.querySelectorAll("#placeInfoModal .travel-style-button").forEach(function(button){
+
+        button.onclick = function(){
+
+            updateStayRecommendations(button.dataset.style);
+
+        };
+
+    });
+
+
+
+    updateStayRecommendations(selectedTravelStyle);
+
+    /* Fixed currency table is used; no live exchange-rate request is made. */
+
+
+
+    modal.classList.add("show");
+
+    modal.setAttribute("aria-hidden", "false");
+
+
+
+    document.body.style.overflow = "hidden";
+
+
+
+}
+
+
+
+
+
+function closePlaceInfo(){
+
+    const modal = document.getElementById("placeInfoModal");
+
+
+
+    if (!modal) return;
+
+
+
+    modal.classList.remove("show");
+
+    modal.setAttribute("aria-hidden", "true");
+
+}
+
+
+
+
+
+document.addEventListener("keydown", function(event){
+
+    if (event.key !== "Escape") return;
+
+
+
+    const placeModal =
+
+        document.getElementById("placeInfoModal");
+
+
+
+    if (placeModal && placeModal.classList.contains("show")) {
+
+        closePlaceInfo();
+
+        return;
+
+    }
+
+
+
+    const countryOverlay =
+
+        document.getElementById("countryDirectoryOverlay");
+
+
+
+    if (countryOverlay && countryOverlay.classList.contains("show")) {
+
+        closeCountryDirectory();
+
+    }
+
+});
+
+
+
+
+
+function createCard(country){
+
+
+
+    const card =
+
+        document.createElement("article");
+
+
+
+    card.className =
+
+        "destination-card";
+
+
+
+    card.dataset.region =
+
+        country.region;
+
+
+
+    card.dataset.search =
+
+        (
+
+            country.name +
+
+            " " +
+
+            country.region +
+
+            " " +
+
+            country.places.join(" ")
+
+        ).toLowerCase();
+
+
+
+
+
+    card.setAttribute(
+
+        "role",
+
+        "button"
+
+    );
+
+
+
+    card.setAttribute(
+
+        "tabindex",
+
+        "0"
+
+    );
+
+
+
+    card.setAttribute(
+
+        "aria-label",
+
+        `Open tourist places in ${country.name}`
+
+    );
+
+
+
+
+
+    card.addEventListener(
+
+        "click",
+
+        function(){
+
+
+
+            openCountryDirectory(
+
+                country.name
+
+            );
+
+
+
+        }
+
+    );
+
+
+
+
+
+    card.addEventListener(
+
+        "keydown",
+
+        function(event){
+
+
+
+            if(
+
+                event.key === "Enter" ||
+
+                event.key === " "
+
+            ){
+
+
+
+                event.preventDefault();
+
+
+
+                openCountryDirectory(
+
+                    country.name
+
+                );
+
+
+
+            }
+
+
+
+        }
+
+    );
+
+
+
+
+
+    card.innerHTML = `
+
+
+
+        <div class="card-image">
+
+
+
+            <img
+
+                src="${country.image}"
+
+                alt="Tourist attractions in ${escapeHTML(country.name)}"
+
+                loading="lazy"
+
+            >
+
+
+
+            <span class="country-number">
+
+                ${country.number}
+
+            </span>
+
+
+
+            <span class="location-tag">
+
+                ${country.emoji}
+
+                ${escapeHTML(country.name)}
+
+            </span>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="card-content">
+
+
+
+            <p class="card-location">
+
+
+
+                ${country.emoji}
+
+                ${escapeHTML(country.region)}
+
+
+
+            </p>
+
+
+
+
+
+            <h3>
+
+                ${escapeHTML(country.name)}
+
+            </h3>
+
+
+
+
+
+            <p class="card-description">
+
+
+
+                ${escapeHTML(country.description)}
+
+
+
+            </p>
+
+
+
+
+
+            <div class="card-footer">
+
+
+
+                <span class="region">
+
+
+
+                    ${escapeHTML(country.region)}
+
+
+
+                </span>
+
+
+
+
+
+                <span
+
+                    class="explore-link"
+
+                    aria-hidden="true">
+
+
+
+                    View Tourist Places
+
+
+
+                    <span>→</span>
+
+
+
+                </span>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    `;
+
+
+
+
+
+    const cardImage = card.querySelector("img");
+
+    if (cardImage) {
+
+        cardImage.onerror = function(){
+
+            this.onerror = null;
+
+            this.src = "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80";
+
+        };
+
+    }
+
+
+
+    return card;
+
+
+
+}
+
+
+
+
+
+/* =========================================================
+
+   DISPLAY COUNTRIES
+
+   ========================================================= */
+
+
+
+function displayCountries(){
+
+
+
+    const searchTerm =
+
+        searchInput.value
+
+            .trim()
+
+            .toLowerCase();
+
+
+
+
+
+    container.innerHTML = "";
+
+
+
+
+
+    const filtered =
+
+        countries.filter(
+
+            country => {
+
+
+
+                const matchesRegion =
+
+                    activeRegion === "all" ||
+
+                    country.region === activeRegion;
+
+
+
+
+
+                const searchableText =
+
+                    (
+
+                        country.name +
+
+                        " " +
+
+                        country.region +
+
+                        " " +
+
+                        country.places.join(" ")
+
+                    ).toLowerCase();
+
+
+
+
+
+                const matchesSearch =
+
+                    searchableText.includes(
+
+                        searchTerm
+
+                    );
+
+
+
+
+
+                return (
+
+                    matchesRegion &&
+
+                    matchesSearch
+
+                );
+
+
+
+            }
+
+        );
+
+
+
+
+
+    filtered.forEach(
+
+        country => {
+
+
+
+            container.appendChild(
+
+                createCard(country)
+
+            );
+
+
+
+        }
+
+    );
+
+
+
+
+
+    noResults.style.display =
+
+        filtered.length === 0
+
+            ? "block"
+
+            : "none";
+
+
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SEARCH
+
+   ========================================================= */
+
+
+
+searchInput.addEventListener(
+
+    "input",
+
+    displayCountries
+
+);
+
+
+
+
+
+/* =========================================================
+
+   REGION FILTER
+
+   ========================================================= */
+
+
+
+filterButtons.forEach(
+
+    button => {
+
+
+
+        button.addEventListener(
+
+            "click",
+
+            function(){
+
+
+
+                filterButtons.forEach(
+
+                    btn => {
+
+
+
+                        btn.classList.remove(
+
+                            "active"
+
+                        );
+
+
+
+                    }
+
+                );
+
+
+
+
+
+                this.classList.add(
+
+                    "active"
+
+                );
+
+
+
+
+
+                activeRegion =
+
+                    this.dataset.region;
+
+
+
+
+
+                displayCountries();
+
+
+
+
+
+                window.scrollTo({
+
+
+
+                    top:
+
+                        document.querySelector(
+
+                            ".destinations"
+
+                        ).offsetTop - 20,
+
+
+
+                    behavior:"smooth"
+
+
+
+                });
+
+
+
+            }
+
+        );
+
+
+
+    }
+
+);
+
+
+
+
+
+/* =========================================================
+
+   INITIAL LOAD
+
+   ========================================================= */
+
+
+
+displayCountries();
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
