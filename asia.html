@@ -4607,813 +4607,204 @@ function escapeHTML(value){
 
 
 
-function openCountryDirectory(countryName) {
-
-    const selectedCountry = countries.find(
-
-        country => country.name === countryName
-
-    );
-
-
-
-    if (!selectedCountry) return;
-
-
-
-    // Keep the original page and directory alive. Opening a place only shows details; it never removes the list.
-
-    let overlay = document.getElementById("countryDirectoryOverlay");
-
-
-
-    if (!overlay) {
-
-        overlay = document.createElement("div");
-
-        overlay.id = "countryDirectoryOverlay";
-
-        overlay.innerHTML = `
-
-            <div class="country-directory-window" role="dialog"
-
-                 aria-modal="true" aria-labelledby="directoryTitle">
-
-
-
-                <div class="directory-top">
-
-                    <div>
-
-                        <div class="directory-small">TravelX • Tourist Directory</div>
-
-                        <h2 id="directoryTitle"></h2>
-
-                        <p id="directorySubtitle"></p>
-
-                    </div>
-
-
-
-                    <button type="button" class="directory-close"
-
-                            id="directoryClose" aria-label="Close directory">×</button>
-
-                </div>
-
-
-
-                <div class="directory-toolbar">
-
-                    <input type="search" id="directoryPlaceSearch"
-
-                           placeholder="Search tourist places in this country..."
-
-                           autocomplete="off">
-
-                </div>
-
-
-
-                <div class="directory-content">
-
-                    <div class="directory-country-info">
-
-                        <span id="directoryRegion"></span>
-
-                        <span id="directoryCount"></span>
-
-                    </div>
-
-                    <p id="directoryDescription"></p>
-
-                    <div id="directoryPlaces" class="directory-places"></div>
-
-                </div>
-
-            </div>
-
-        `;
-
-
-
-        document.body.appendChild(overlay);
-
-
-
-        const style = document.createElement("style");
-
-        style.id = "countryDirectoryStyles";
-
-        style.textContent = `
-
-            #countryDirectoryOverlay{
-
-                position:fixed;
-
-                inset:0;
-
-                z-index:10000;
-
-                display:flex;
-
-                align-items:center;
-
-                justify-content:center;
-
-                padding:20px;
-
-                background:rgba(0,0,0,.62);
-
-                backdrop-filter:blur(4px);
-
-                opacity:0;
-
-                visibility:hidden;
-
-                pointer-events:none;
-
-                transition:opacity .2s ease,visibility .2s ease;
-
-            }
-
-
-
-            #countryDirectoryOverlay.show{
-
-                opacity:1;
-
-                visibility:visible;
-
-                pointer-events:auto;
-
-            }
-
-
-
-            .country-directory-window{
-
-                width:min(1180px,94vw);
-
-                height:min(820px,92vh);
-
-                background:#fff;
-
-                border-radius:22px;
-
-                overflow:hidden;
-
-                box-shadow:0 30px 90px rgba(0,0,0,.35);
-
-                display:flex;
-
-                flex-direction:column;
-
-                transform:translateY(12px) scale(.985);
-
-                transition:transform .2s ease;
-
-            }
-
-
-
-            #countryDirectoryOverlay.show .country-directory-window{
-
-                transform:translateY(0) scale(1);
-
-            }
-
-
-
-            .directory-top{
-
-                flex:0 0 auto;
-
-                padding:24px 28px;
-
-                background:#0b918c;
-
-                color:#fff;
-
-                display:flex;
-
-                align-items:flex-start;
-
-                justify-content:space-between;
-
-                gap:20px;
-
-            }
-
-
-
-            .directory-small{
-
-                color:#b9eee9;
-
-                font-size:11px;
-
-                font-weight:800;
-
-                letter-spacing:2px;
-
-                text-transform:uppercase;
-
-                margin-bottom:7px;
-
-            }
-
-
-
-            .directory-top h2{
-
-                margin:0 0 5px;
-
-                font-family:Georgia,"Times New Roman",serif;
-
-                font-size:clamp(28px,4vw,44px);
-
-                line-height:1.1;
-
-            }
-
-
-
-            .directory-top p{
-
-                margin:0;
-
-                opacity:.9;
-
-                font-size:14px;
-
-            }
-
-
-
-            .directory-close{
-
-                width:46px;
-
-                height:46px;
-
-                flex:0 0 46px;
-
-                border:0;
-
-                border-radius:50%;
-
-                background:rgba(255,255,255,.18);
-
-                color:#fff;
-
-                font-size:30px;
-
-                line-height:1;
-
-                cursor:pointer;
-
-            }
-
-
-
-            .directory-close:hover{
-
-                background:rgba(255,255,255,.30);
-
-            }
-
-
-
-            .directory-toolbar{
-
-                flex:0 0 auto;
-
-                padding:15px 24px;
-
-                border-bottom:1px solid #e4ebed;
-
-                background:#fff;
-
-            }
-
-
-
-            #directoryPlaceSearch{
-
-                width:100%;
-
-                height:46px;
-
-                padding:0 18px;
-
-                border:1px solid #d8e2e4;
-
-                border-radius:24px;
-
-                outline:none;
-
-                font-size:14px;
-
-            }
-
-
-
-            #directoryPlaceSearch:focus{
-
-                border-color:#0b918c;
-
-                box-shadow:0 0 0 3px rgba(11,145,140,.10);
-
-            }
-
-
-
-            .directory-content{
-
-                overflow-y:auto;
-
-                padding:28px;
-
-                color:#58718a;
-
-            }
-
-
-
-            .directory-country-info{
-
-                display:flex;
-
-                align-items:center;
-
-                justify-content:space-between;
-
-                gap:15px;
-
-                margin-bottom:10px;
-
-            }
-
-
-
-            #directoryRegion{
-
-                color:#087b73;
-
-                font-size:12px;
-
-                font-weight:800;
-
-                letter-spacing:1.5px;
-
-                text-transform:uppercase;
-
-            }
-
-
-
-            #directoryCount{
-
-                padding:8px 13px;
-
-                border-radius:20px;
-
-                background:#eaf7f5;
-
-                color:#075e59;
-
-                font-size:12px;
-
-                font-weight:800;
-
-                white-space:nowrap;
-
-            }
-
-
-
-            #directoryDescription{
-
-                margin:0 0 24px;
-
-                line-height:1.7;
-
-            }
-
-
-
-            .directory-places{
-
-                display:grid;
-
-                grid-template-columns:repeat(3,minmax(0,1fr));
-
-                gap:10px;
-
-            }
-
-
-
-            .directory-place{
-
-                width:100%;
-
-                min-height:54px;
-
-                padding:11px 13px;
-
-                border:0;
-
-                border-radius:11px;
-
-                background:#f2f6f7;
-
-                color:#425b70;
-
-                display:flex;
-
-                align-items:center;
-
-                gap:10px;
-
-                text-align:left;
-
-                cursor:pointer;
-
-                font:inherit;
-
-                transition:transform .15s ease,background .15s ease,box-shadow .15s ease;
-
-            }
-
-
-
-            .directory-place:hover{
-
-                background:#e3f3f1;
-
-                transform:translateY(-2px);
-
-                box-shadow:0 5px 15px rgba(8,123,115,.12);
-
-            }
-
-
-
-            .directory-place:focus{
-
-                outline:3px solid rgba(8,123,115,.22);
-
-                outline-offset:2px;
-
-            }
-
-
-
-            .directory-place-number{
-
-                width:27px;
-
-                height:27px;
-
-                flex:0 0 27px;
-
-                display:grid;
-
-                place-items:center;
-
-                border-radius:50%;
-
-                background:#fff;
-
-                color:#087b73;
-
-                font-size:11px;
-
-                font-weight:800;
-
-            }
-
-
-
-            .directory-place-name{
-
-                flex:1;
-
-                min-width:0;
-
-                overflow-wrap:anywhere;
-
-                line-height:1.35;
-
-            }
-
-            .directory-place-arrow{
-                color:#087b73;
-                font-size:18px;
-                font-weight:900;
-                transition:transform .18s ease;
-            }
-
-            .directory-place:hover .directory-place-arrow{
-                transform:translateX(4px);
-            }
-
-
-
-            .directory-no-results{
-
-                grid-column:1/-1;
-
-                padding:35px 15px;
-
-                text-align:center;
-
-                color:#718496;
-
-            }
-
-
-
-            @media(max-width:900px){
-
-                .directory-places{
-
-                    grid-template-columns:repeat(2,minmax(0,1fr));
-
-                }
-
-            }
-
-
-
-            @media(max-width:600px){
-
-                #countryDirectoryOverlay{
-
-                    padding:8px;
-
-                }
-
-
-
-                .country-directory-window{
-
-                    width:96vw;
-
-                    height:94vh;
-
-                    border-radius:17px;
-
-                }
-
-
-
-                .directory-top{
-
-                    padding:18px;
-
-                }
-
-
-
-                .directory-toolbar{
-
-                    padding:12px 15px;
-
-                }
-
-
-
-                .directory-content{
-
-                    padding:20px 15px 28px;
-
-                }
-
-
-
-                .directory-country-info{
-
-                    align-items:flex-start;
-
-                    flex-direction:column;
-
-                }
-
-
-
-                .directory-places{
-
-                    grid-template-columns:1fr;
-
-                }
-
-            }
-
-        `;
-
-        document.head.appendChild(style);
-
-
-
-        document.getElementById("directoryClose").addEventListener(
-
-            "click",
-
-            closeCountryDirectory
-
-        );
-
-
-
-        document.getElementById("directoryPlaceSearch").addEventListener(
-
-            "input",
-
-            filterDirectoryPlaces
-
-        );
-
-
-
-        // Event delegation: place names are stored as DOM data, not inside
-
-        // onclick strings. Therefore apostrophes, quotes and special characters
-
-        // can never break the click handler.
-
-        document.getElementById("directoryPlaces").addEventListener(
-
-            "click",
-
-            function(event){
-
-                const button = event.target.closest(".directory-place");
-
-                if (!button) return;
-
-
-
-                const placeIndex = Number(button.dataset.placeIndex);
-
-                const countryIndex = Number(button.dataset.countryIndex);
-
-
-
-                if (
-
-                    !Number.isInteger(placeIndex) ||
-
-                    !Number.isInteger(countryIndex)
-
-                ) return;
-
-
-
-                const country = countries[countryIndex];
-
-                if (!country || !country.places[placeIndex]) return;
-
-
-
-                showPlaceInfo(
-
-                    country.places[placeIndex],
-
-                    country.name
-
-                );
-
-            }
-
-        );
-
-    }
-
-
-
-    const countryIndex = countries.indexOf(selectedCountry);
-
-
-
-    document.getElementById("directoryTitle").textContent =
-
-        selectedCountry.name + " Tourist Places";
-
-
-
-    document.getElementById("directorySubtitle").textContent =
-
-        "Explore the tourist places of " + selectedCountry.name + ".";
-
-
-
-    document.getElementById("directoryRegion").textContent =
-
-        selectedCountry.emoji + " " + selectedCountry.region;
-
-
-
-    document.getElementById("directoryCount").textContent =
-
-        selectedCountry.places.length + " Tourist Places";
-
-
-
-    document.getElementById("directoryDescription").textContent =
-
-        selectedCountry.description;
-
-
-
-    const placesBox = document.getElementById("directoryPlaces");
-
-    placesBox.innerHTML = "";
-
-
-
-    let currentState = "";
-    selectedCountry.places.forEach(function(place, index){
-
-        const parsedPlace = splitStatePlace(place);
-        if (parsedPlace.state && parsedPlace.state !== currentState) {
-            currentState = parsedPlace.state;
-            const stateHeading = document.createElement("div");
-            stateHeading.className = "state-section-heading";
-            stateHeading.innerHTML = "<span>STATE / UT</span><strong>" + parsedPlace.state + "</strong>";
-            placesBox.appendChild(stateHeading);
-        }
-
-        const button = document.createElement("button");
-
-
-
-        button.type = "button";
-
-        button.className = "directory-place";
-
-        button.dataset.placeIndex = String(index);
-
-        button.dataset.countryIndex = String(countryIndex);
-
-        button.title = "Open information about " + parsedPlace.place;
-        button.setAttribute("aria-label", "Open details for " + parsedPlace.place);
-
-
-
-        const number = document.createElement("span");
-
-        number.className = "directory-place-number";
-
-        number.textContent = String(index + 1);
-
-
-
-        const name = document.createElement("span");
-
-        name.className = "directory-place-name";
-
-        name.textContent = parsedPlace.place;
-
-
-
-        button.appendChild(number);
-
-        button.appendChild(name);
-
-        placesBox.appendChild(button);
-
-    });
-
-
-
-    const input = document.getElementById("directoryPlaceSearch");
-
-    input.value = "";
-
-
-
-    overlay.classList.add("show");
-
-    overlay.setAttribute("aria-hidden", "false");
-
-    document.body.style.overflow = "hidden";
-
-
-
-    setTimeout(function(){
-
-        input.focus();
-
-    }, 50);
-
+let directoryCountry = null;
+let directoryCategory = "all";
+
+function getDirectoryCategory(placeName){
+    const t = String(placeName || "").toLowerCase();
+    if (/beach|island|coast|bay|lagoon|shore|marine|coral/.test(t)) return ["beach","🏖️","Beaches & Islands"];
+    if (/mountain|hill|peak|valley|lake|waterfall|forest|park|garden|desert|cave|river|cliff|wildlife|safari|nature|national park/.test(t)) return ["nature","🌿","Nature & Wildlife"];
+    if (/temple|monastery|mosque|church|cathedral|shrine|pagoda|dzong|gurdwara/.test(t)) return ["heritage","🛕","Religious & Heritage"];
+    if (/fort|palace|castle|monument|museum|tower|square|memorial|statue|citadel|arch|ruins|old town/.test(t)) return ["heritage","🏛️","Historic Places"];
+    if (/trek|trekking|hiking|rafting|diving|snorkeling|ski|adventure|climb|canyon|canyoning|paragliding|safari/.test(t)) return ["adventure","🧗","Adventure"];
+    if (/village|culture|cultural|arts|art|market|bazaar|festival|traditional|souq/.test(t)) return ["culture","🎭","Culture & Markets"];
+    if (/city|downtown|district|shopping|mall|street|center|centre/.test(t)) return ["city","🌆","City Experiences"];
+    return ["culture","📍","Tourist Attraction"];
 }
 
+function getDirectoryArea(placeName, countryName){
+    const raw = String(placeName || "").replace(/\\s+/g," ").trim();
+    if (raw.includes(" | ")) return raw.split(" | ")[0].trim();
+    if (raw.includes(" – ")) return raw.split(" – ")[0].trim();
+    if (raw.includes(" - ")) return raw.split(" - ")[0].trim();
+    return countryName;
+}
 
+function getDirectoryPlaceName(placeName){
+    const raw = String(placeName || "").replace(/\\s+/g," ").trim();
+    let value = raw;
+    if (value.includes(" | ")) value = value.split(" | ").slice(1).join(" | ");
+    if (value.includes(" – ")) value = value.split(" – ").slice(1).join(" – ");
+    else if (value.includes(" - ")) value = value.split(" - ").slice(1).join(" - ");
+    return value.trim();
+}
 
+function renderCountryDirectory(){
+    if (!directoryCountry) return;
+    const box = document.getElementById("directoryPlaces");
+    const input = document.getElementById("directoryPlaceSearch");
+    if (!box) return;
+    const term = (input ? input.value : "").trim().toLowerCase();
+    const countryIndex = countries.indexOf(directoryCountry);
+    box.innerHTML = "";
+    let shown = 0;
+    let lastArea = "";
 
+    directoryCountry.places.forEach(function(place,index){
+        const name = getDirectoryPlaceName(place);
+        const area = getDirectoryArea(place,directoryCountry.name);
+        const meta = getDirectoryCategory(name);
+        const searchable = (name + " " + area + " " + place).toLowerCase();
+        if (term && !searchable.includes(term)) return;
+        if (directoryCategory !== "all" && meta[0] !== directoryCategory) return;
+        shown++;
+
+        if (area !== lastArea){
+            lastArea = area;
+            const heading = document.createElement("div");
+            heading.className = "directory-area-heading";
+            heading.innerHTML = '<span class="area-line"></span><div><small>EXPLORE IN</small><strong>' + escapeHTML(area) + '</strong></div><span class="area-count">' + directoryCountry.places.filter(function(p){ return getDirectoryArea(p,directoryCountry.name) === area; }).length + ' places</span>';
+            box.appendChild(heading);
+        }
+
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = "directory-place-card";
+        card.dataset.placeIndex = String(index);
+        card.dataset.countryIndex = String(countryIndex);
+        card.innerHTML = `
+            <span class="place-card-number">${String(index+1).padStart(2,"0")}</span>
+            <div class="place-card-icon">${meta[1]}</div>
+            <div class="place-card-body">
+                <div class="place-card-area">${escapeHTML(area)}</div>
+                <div class="place-card-title">${escapeHTML(name)}</div>
+                <div class="place-card-bottom"><span>${escapeHTML(meta[2])}</span><b>Explore <i>→</i></b></div>
+            </div>`;
+        box.appendChild(card);
+    });
+
+    document.getElementById("directoryCount").textContent = shown + " of " + directoryCountry.places.length + " destinations";
+    if (!shown){
+        box.innerHTML = '<div class="directory-empty"><div>🔎</div><h3>No destinations found</h3><p>Try another search or category.</p></div>';
+    }
+}
+
+function openCountryDirectory(countryName){
+    const selectedCountry = countries.find(function(country){ return country.name === countryName; });
+    if (!selectedCountry) return;
+    directoryCountry = selectedCountry;
+    directoryCategory = "all";
+
+    let overlay = document.getElementById("countryDirectoryOverlay");
+    if (!overlay){
+        overlay = document.createElement("div");
+        overlay.id = "countryDirectoryOverlay";
+        overlay.innerHTML = `
+            <div class="country-directory-window" role="dialog" aria-modal="true">
+                <div class="directory-hero">
+                    <div class="directory-hero-image"></div>
+                    <div class="directory-hero-shade"></div>
+                    <div class="directory-hero-content">
+                        <div class="directory-breadcrumb">TRAVELX <span>•</span> COUNTRY EXPLORER</div>
+                        <div class="directory-country-line"><span id="directoryEmoji"></span><span id="directoryRegion"></span></div>
+                        <h2 id="directoryTitle"></h2>
+                        <p id="directorySubtitle"></p>
+                    </div>
+                    <button class="directory-close" id="directoryClose" type="button" aria-label="Close">×</button>
+                    <div class="directory-hero-stats">
+                        <div><strong id="directoryHeroCount">0</strong><span>Destinations</span></div>
+                        <div><strong>🌏</strong><span>Explore Asia</span></div>
+                        <div><strong>✦</strong><span>Travel Guide</span></div>
+                    </div>
+                </div>
+                <div class="directory-toolbar">
+                    <div class="directory-search-wrap"><span>⌕</span><input id="directoryPlaceSearch" type="search" placeholder="Search tourist places, cities or attractions..." autocomplete="off"></div>
+                    <div class="directory-filters" id="directoryFilters">
+                        <button class="directory-filter active" data-category="all">✨ All</button>
+                        <button class="directory-filter" data-category="heritage">🏛️ Heritage</button>
+                        <button class="directory-filter" data-category="nature">🌿 Nature</button>
+                        <button class="directory-filter" data-category="beach">🏖️ Beaches</button>
+                        <button class="directory-filter" data-category="culture">🎭 Culture</button>
+                        <button class="directory-filter" data-category="adventure">🧗 Adventure</button>
+                        <button class="directory-filter" data-category="city">🌆 City</button>
+                    </div>
+                </div>
+                <div class="directory-intro"><div><small>DISCOVER</small><h3 id="directorySectionTitle"></h3></div><p id="directoryDescription"></p><span class="directory-count-pill" id="directoryCount"></span></div>
+                <div class="directory-content"><div id="directoryPlaces" class="directory-place-grid"></div></div>
+            </div>`;
+        document.body.appendChild(overlay);
+
+        const style = document.createElement("style");
+        style.id = "countryDirectoryStyles";
+        style.textContent = `
+#countryDirectoryOverlay{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(5,18,28,.72);backdrop-filter:blur(9px);opacity:0;visibility:hidden;pointer-events:none;transition:.28s ease}
+#countryDirectoryOverlay.show{opacity:1;visibility:visible;pointer-events:auto}
+.country-directory-window{width:min(1280px,96vw);height:min(900px,94vh);background:#f6f8fa;border-radius:28px;overflow:hidden;box-shadow:0 35px 100px rgba(0,0,0,.4);display:flex;flex-direction:column;transform:translateY(20px) scale(.97);transition:.3s ease}
+#countryDirectoryOverlay.show .country-directory-window{transform:none}
+.directory-hero{height:265px;min-height:265px;position:relative;color:#fff;overflow:hidden}
+.directory-hero-image{position:absolute;inset:0;background-position:center;background-size:cover;background-repeat:no-repeat;transform:scale(1.03);transition:transform 7s ease}
+#countryDirectoryOverlay.show .directory-hero-image{transform:scale(1.08)}
+.directory-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,29,34,.92),rgba(3,29,34,.64) 48%,rgba(3,29,34,.18)),linear-gradient(0deg,rgba(0,0,0,.45),transparent 55%)}
+.directory-hero-content{position:relative;z-index:2;padding:30px 36px;max-width:820px}
+.directory-breadcrumb{font-size:10px;font-weight:900;letter-spacing:2.4px;color:#a9eee6;margin-bottom:17px}
+.directory-breadcrumb span{margin:0 5px;color:#fff}
+.directory-country-line{display:flex;align-items:center;gap:9px;color:#d7fffa;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+#directoryEmoji{font-size:20px;line-height:1}
+#directoryTitle{font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,5vw,64px);line-height:1;margin:0 0 9px;text-shadow:0 3px 18px rgba(0,0,0,.3)}
+#directorySubtitle{margin:0;color:rgba(255,255,255,.9);font-size:14px;max-width:650px}
+.directory-close{position:absolute;right:22px;top:20px;z-index:5;width:48px;height:48px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(255,255,255,.13);color:#fff;font-size:29px;cursor:pointer;backdrop-filter:blur(10px);transition:.2s}
+.directory-close:hover{background:rgba(255,255,255,.28);transform:rotate(90deg)}
+.directory-hero-stats{position:absolute;right:28px;bottom:24px;z-index:3;display:flex;gap:9px}
+.directory-hero-stats div{min-width:105px;padding:10px 14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);border-radius:15px;backdrop-filter:blur(10px);text-align:center}
+.directory-hero-stats strong{display:block;color:#fff;font-size:18px;line-height:1.1}.directory-hero-stats span{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#d4eeec;font-weight:800}
+.directory-toolbar{background:#fff;border-bottom:1px solid #e4eaee;padding:16px 25px 14px}
+.directory-search-wrap{height:49px;border:1px solid #d9e3e7;background:#f8fafb;border-radius:16px;display:flex;align-items:center;gap:10px;padding:0 16px;transition:.2s}
+.directory-search-wrap:focus-within{border-color:#087b73;box-shadow:0 0 0 4px rgba(8,123,115,.09);background:#fff}.directory-search-wrap>span{font-size:23px;color:#087b73}.directory-search-wrap input{width:100%;border:0;outline:0;background:transparent;font-size:14px;color:#263f53}
+.directory-filters{display:flex;gap:8px;overflow-x:auto;padding-top:11px;scrollbar-width:none}.directory-filters::-webkit-scrollbar{display:none}
+.directory-filter{white-space:nowrap;border:1px solid #dce5e9;background:#fff;color:#607386;border-radius:22px;padding:8px 13px;font-size:11px;font-weight:800;cursor:pointer;transition:.2s}.directory-filter:hover{transform:translateY(-2px);border-color:#087b73;color:#087b73}.directory-filter.active{background:#087b73;color:#fff;border-color:#087b73;box-shadow:0 7px 16px rgba(8,123,115,.18)}
+.directory-intro{padding:20px 27px 12px;display:flex;align-items:end;justify-content:space-between;gap:20px;background:#f6f8fa}.directory-intro small{font-size:9px;letter-spacing:2px;color:#087b73;font-weight:900}.directory-intro h3{margin:3px 0 0;font-family:Georgia,"Times New Roman",serif;font-size:25px;color:#18384a}.directory-intro p{margin:0;max-width:600px;font-size:12px;line-height:1.5;color:#718192}.directory-count-pill{white-space:nowrap;background:#e6f6f3;color:#087b73;border-radius:20px;padding:8px 12px;font-size:10px;font-weight:900}
+.directory-content{overflow-y:auto;padding:0 27px 30px}.directory-place-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding-bottom:15px}
+.directory-area-heading{grid-column:1/-1;display:flex;align-items:center;gap:12px;margin:15px 0 1px;padding:9px 2px 8px;border-bottom:1px solid #dfe7eb}.directory-area-heading .area-line{width:4px;height:35px;border-radius:5px;background:#087b73}.directory-area-heading div{flex:1}.directory-area-heading small{display:block;font-size:8px;color:#8b9aa6;font-weight:900;letter-spacing:1.5px}.directory-area-heading strong{display:block;color:#203c50;font-size:16px}.area-count{font-size:10px;color:#8796a3;font-weight:800}
+.directory-place-card{position:relative;min-height:152px;border:1px solid #e0e7eb;border-radius:18px;background:#fff;padding:17px;text-align:left;display:flex;gap:13px;cursor:pointer;overflow:hidden;box-shadow:0 5px 18px rgba(26,55,72,.055);transition:.23s;font:inherit}.directory-place-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#087b73,#5ed1c5);transform:scaleX(0);transform-origin:left;transition:.25s}.directory-place-card:hover{transform:translateY(-5px);border-color:#b9dfdb;box-shadow:0 16px 32px rgba(8,123,115,.13)}.directory-place-card:hover:before{transform:scaleX(1)}
+.place-card-number{position:absolute;right:13px;top:11px;font-size:10px;font-weight:900;color:#a6b3bd;letter-spacing:1px}.place-card-icon{width:47px;height:47px;flex:0 0 47px;border-radius:14px;background:#eaf7f5;display:grid;place-items:center;font-size:23px}.place-card-body{min-width:0;flex:1;padding-top:1px}.place-card-area{text-transform:uppercase;letter-spacing:1px;color:#91a0ac;font-size:8px;font-weight:900;margin-bottom:5px;padding-right:25px}.place-card-title{font-size:15px;font-weight:850;color:#284459;line-height:1.3;padding-right:18px;min-height:39px}.place-card-bottom{margin-top:13px;display:flex;justify-content:space-between;align-items:center;gap:8px}.place-card-bottom span{background:#f1f4f6;color:#657688;border-radius:20px;padding:5px 8px;font-size:8px;font-weight:900;text-transform:uppercase}.place-card-bottom b{font-size:10px;color:#087b73;white-space:nowrap}.place-card-bottom i{font-style:normal;font-size:15px;margin-left:3px}.directory-empty{grid-column:1/-1;background:#fff;border:1px solid #e2e9ed;border-radius:18px;text-align:center;padding:55px 20px;color:#748493}.directory-empty div{font-size:38px}.directory-empty h3{margin:8px 0 3px;color:#294356}.directory-empty p{font-size:12px}
+@media(max-width:950px){.directory-place-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.directory-hero-stats{display:none}}
+@media(max-width:620px){#countryDirectoryOverlay{padding:7px}.country-directory-window{width:97vw;height:96vh;border-radius:20px}.directory-hero{height:230px;min-height:230px}.directory-hero-content{padding:25px 20px}.directory-close{right:15px;top:15px;width:42px;height:42px}.directory-toolbar{padding:12px 15px}.directory-intro{padding:16px 15px 10px;display:block}.directory-intro p{margin-top:8px}.directory-count-pill{display:inline-block;margin-top:8px}.directory-content{padding:0 15px 25px}.directory-place-grid{grid-template-columns:1fr}.directory-area-heading{margin-top:12px}
+}
+`;
+        document.head.appendChild(style);
+
+        document.getElementById("directoryClose").addEventListener("click", closeCountryDirectory);
+        document.getElementById("directoryPlaceSearch").addEventListener("input", renderCountryDirectory);
+        document.getElementById("directoryFilters").addEventListener("click", function(e){
+            const btn=e.target.closest(".directory-filter"); if(!btn)return;
+            directoryCategory=btn.dataset.category;
+            document.querySelectorAll(".directory-filter").forEach(function(b){b.classList.toggle("active",b===btn);});
+            renderCountryDirectory();
+        });
+        document.getElementById("directoryPlaces").addEventListener("click", function(e){
+            const card=e.target.closest(".directory-place-card"); if(!card)return;
+            const c=countries[Number(card.dataset.countryIndex)]; const i=Number(card.dataset.placeIndex);
+            if(c && c.places && c.places[i]) showPlaceInfo(c.places[i],c.name);
+        });
+        overlay.addEventListener("click", function(e){ if(e.target===overlay) closeCountryDirectory(); });
+    }
+
+    document.getElementById("directoryEmoji").textContent = selectedCountry.emoji;
+    document.getElementById("directoryRegion").textContent = selectedCountry.region;
+    document.getElementById("directoryTitle").textContent = selectedCountry.name;
+    document.getElementById("directorySubtitle").textContent = "Explore the most memorable tourist places and experiences in " + selectedCountry.name + ".";
+    document.getElementById("directorySectionTitle").textContent = selectedCountry.name + " destinations";
+    document.getElementById("directoryDescription").textContent = selectedCountry.description;
+    document.getElementById("directoryHeroCount").textContent = selectedCountry.places.length;
+    document.querySelector(".directory-hero-image").style.backgroundImage = "url('" + selectedCountry.image.replace(/'/g,"\\'") + "')";
+    document.getElementById("directoryPlaceSearch").value = "";
+    document.querySelectorAll(".directory-filter").forEach(function(b){b.classList.toggle("active",b.dataset.category==="all");});
+    renderCountryDirectory();
+    overlay.classList.add("show");
+    overlay.setAttribute("aria-hidden","false");
+    document.body.style.overflow="hidden";
+    setTimeout(function(){document.getElementById("directoryPlaceSearch").focus();},120);
+}
 
 function filterDirectoryPlaces(){
 
