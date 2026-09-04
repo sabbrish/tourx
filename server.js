@@ -1,4 +1,4 @@
-const path = require("path");
+﻿const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, ".env") });
 require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 
@@ -565,16 +565,21 @@ for (const route of ["/api/flights", "/api/hotels", "/api/weather"]) {
 }
 
 app.get(/.*/, (req, res) => res.sendFile(path.join(__dirname, "index.html")));
-app.listen(PORT, HOST, async () => {
-  try {
-    await pool.query("SELECT 1");
-    console.log("==============================================");
-    console.log(`TravelX running: http://${HOST}:${PORT}`);
-    console.log("PostgreSQL: connected");
-    console.log(`OpenRouter AI: ${OPENROUTER_API_KEY ? "configured" : "NOT configured"}`);
-    console.log(`Login notifications: ${OWNER_EMAIL && RESEND_API_KEY ? "email configured" : "terminal only"}`);
-    console.log("==============================================");
-  } catch (err) {
-    console.error("Server started, but PostgreSQL connection failed:", err.message);
-  }
-});
+
+if (!process.env.VERCEL) {
+  app.listen(PORT, HOST, async () => {
+    try {
+      await pool.query("SELECT 1");
+      console.log("==============================================");
+      console.log(`TravelX running: http://${HOST}:${PORT}`);
+      console.log("PostgreSQL: connected");
+      console.log(`OpenRouter AI: ${OPENROUTER_API_KEY ? "configured" : "NOT configured"}`);
+      console.log(`Login notifications: ${OWNER_EMAIL && RESEND_API_KEY ? "email configured" : "terminal only"}`);
+      console.log("==============================================");
+    } catch (err) {
+      console.error("Server started, but PostgreSQL connection failed:", err.message);
+    }
+  });
+}
+
+module.exports = app;

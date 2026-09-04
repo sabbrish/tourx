@@ -10642,7 +10642,7 @@ const WEATHER_URL = SERVER_URL + "/api/weather";
                 "hotel and weather services through the secure TravelX backend.\n\n" +
                 "Tell me where you want to go — or ask me anything about tourism.",
                 "assistant",
-                true
+                false
             );
             return;
         }
@@ -11807,7 +11807,7 @@ const WEATHER_URL = SERVER_URL + "/api/weather";
             if (!Array.isArray(destinations) || !destinations.length) return;
 
             container.innerHTML = destinations.map(d => `
-                <article class="destination-card">
+                <a class="destination-card" href="${destinationHref(d)}">
                     <div class="card-image">
                         <img src="${escapeHtml(d.image_url)}"
                              alt="${escapeHtml(d.title)}"
@@ -11818,20 +11818,13 @@ const WEATHER_URL = SERVER_URL + "/api/weather";
                         <p class="card-location">${escapeHtml(d.continent || "")}</p>
                         <h3>${escapeHtml(d.title)}</h3>
                         <p>${escapeHtml(d.short_description || "")}</p>
-                        <a class="explore-link" href="#contact"
-                           data-destination="${escapeHtml(d.title)}">
-                           Explore <span>→</span>
-                        </a>
+                        <span class="explore-link"
+                              data-destination="${escapeHtml(d.title)}">
+                           Explore destination <span>→</span>
+                        </span>
                     </div>
-                </article>
+                </a>
             `).join("");
-
-            container.querySelectorAll("[data-destination]").forEach(link => {
-                link.addEventListener("click", () => {
-                    const search = document.querySelector(".search-input-wrapper input");
-                    if (search) search.value = link.dataset.destination;
-                });
-            });
         } catch (error) {
             console.error("TravelX destination database error:", error);
             // Keep the original HTML cards as a fallback.
@@ -11843,6 +11836,23 @@ const WEATHER_URL = SERVER_URL + "/api/weather";
             "&": "&amp;", "<": "&lt;", ">": "&gt;",
             '"': "&quot;", "'": "&#039;"
         }[ch]));
+    }
+
+    // Map a database destination to one of the site's static continent pages.
+    function destinationHref(d) {
+        const pageByKey = {
+            "asia": "asia.html",
+            "europe": "europe.html",
+            "africa": "africa.html",
+            "north america": "north-america.html",
+            "south america": "south-america.html",
+            "australia": "australia.html",
+            "australia & oceania": "australia.html",
+            "oceania": "australia.html",
+            "islands": "islands.html"
+        };
+        const key = String(d.continent || d.title || "").toLowerCase().trim();
+        return pageByKey[key] || "#destinations";
     }
 
     // Connect the existing hero search to PostgreSQL.
