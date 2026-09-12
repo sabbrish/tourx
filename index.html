@@ -10146,7 +10146,12 @@ html.translated-rtl body {
 </div>
 
 <script>
-function txChangeLanguage(lang) {
+function txChangeLanguage(lang, skipSave) {
+    if (!skipSave) {
+        try { localStorage.setItem('txLang', lang); } catch (e) {}
+    }
+    var sel = document.getElementById('txLangSelect');
+    if (sel) sel.value = lang;
     var applyLang = function () {
         var combo = document.querySelector('#google_translate_element select.goog-te-combo');
         if (combo) {
@@ -10169,6 +10174,14 @@ function googleTranslateElementInit() {
         { pageLanguage: 'en', autoDisplay: false },
         'google_translate_element'
     );
+    /* Re-apply the language saved from any other page on this site,
+       so picking a language once translates every page you visit. */
+    try {
+        var saved = localStorage.getItem('txLang');
+        if (saved && saved !== 'en') {
+            txChangeLanguage(saved, true);
+        }
+    } catch (e) {}
 }
 
 /* Continuously strip any Google-injected banner/tooltip/body-offset
